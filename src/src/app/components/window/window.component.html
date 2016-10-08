@@ -1,3 +1,11 @@
-<h1>
-  {{title}}
-</h1>
+<div class="main-panel" [ngClass]="{'is-slid': !!inputData}">
+
+    <button (click)="onCloseClicked()" style="position:absolute;left:0;top:0;">Close</button>
+
+    <div *ngIf="inputData" [ngSwitch]="inputData.node.group">
+        <prm *ngSwitchCase="'prm'" [content]="inputData.node.data"></prm>
+        <tdm *ngSwitchCase="'tdm'" [content]="inputData.node.data"></tdm>
+        <ntm *ngSwitchCase="'ntm'" [content]="inputData.node.data"></ntm>
+        <txt *ngSwitchCase="'txt'" [content]="inputData.node.data"></txt>
+    </div>
+</div>
