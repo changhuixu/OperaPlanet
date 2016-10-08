@@ -1,0 +1,22 @@
+.prmBody {
+  background-color: #d9f5e9;
+}
+
+.headTitle {
+  background-color: #2FC5F5;
+  color: white;
+}
+
+.organization {
+  color: cornsilk;
+}
+
+.itemsList{
+  font-size:16px;
+  color: #00001d !important;
+}
+
+.itemsLable{
+  font-size:18px;
+  color: #00001d !important;
+}
