@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {DataService} from "../../services/ParseService";
 
 @Component({
   selector: 'opera-item',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class OperaComponent {
   title = 'Opera Component';
+
 }
