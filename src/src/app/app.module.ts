@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 import {GraphComponent} from "./components/graph/graph.component";
 import {PrmComponent} from "./components/contentTypePRM/PrmComponent";
 import {WindowComponent} from "./components/window/window.component";
+import {TdmComponent} from "./components/contentTypeTDM/TdmComponent";
+import {NtmComponent} from "./components/contentTypeNTM/NtmComponent";
+import {TxtComponent} from "./components/contentTypeTXT/TxtComponent";
 
 
 @NgModule({
@@ -14,6 +17,9 @@ import {WindowComponent} from "./components/window/window.component";
     AppComponent,
     GraphComponent,
     PrmComponent,
+    TdmComponent,
+    NtmComponent,
+    TxtComponent,
     WindowComponent,
     GraphComponent
   ],

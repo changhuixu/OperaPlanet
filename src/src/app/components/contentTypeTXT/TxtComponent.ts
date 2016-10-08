@@ -4,11 +4,11 @@ import {Input} from "@angular/core/src/metadata/directives";
 
 
 @Component({
-  selector: 'prm',
+  selector: 'txt',
   templateUrl: './template.html',
   styleUrls: ['./style.css']
 })
-export class PrmComponent {
+export class TxtComponent {
   title = 'app works!';
   @Input('content') data:any;
 

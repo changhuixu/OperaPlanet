@@ -1,0 +1,61 @@
+<h2>TXT</h2>
+<div class="container prmBody">
+  <div class="jumbotron headTitle">
+    <h1>{{data["bf:InstanceTitle"]}}</h1>
+    <h4 class="organization pull-right">{{data["Organization"]}}</h4>
+  </div>
+  <br><br>
+
+  <div class="col-xs-6 itemsList">
+      <div class="">
+        <dl class="dl-horizontal">
+          <dt>
+            <label>
+              <a class="itemLable" href="http://bibfra.me/vocab/lite/creator">Creator:</a>
+            </label>
+          </dt>
+          <dd>
+            <ul class="list-unstyled">
+              <li>
+                <a href='{{data["bf:Person"]["@id"]}}'>
+                  <i class="fa bf-fa-Person fa-fw"></i>
+                  {{data["bf:Person"]["rdfs:label"]}}
+                </a>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+
+      <div class="">
+        <dl class="dl-horizontal">
+          <dt>
+            <label>
+              <a href="http://bibfra.me/vocab/lite/contributor">Contributor</a>
+            </label>
+          </dt>
+          <dd>
+            <ul class="list-unstyled">
+              <li>
+                <a href="http://id.loc.gov/rwo/agents/n80057191">
+                    <i class="fa bf-fa-Person  catalog-resource   fa-fw"></i>
+                    Da Ponte, Lorenzo, 1749-1838
+                </a>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+
+      
+
+  </div>
+  <div class="col-xs-6">
+    <iframe width="100%" height="450" scrolling="no" frameborder="no"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/210387165&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true">
+    </iframe>
+  </div>
+</div>
+
+
+<pre>{{data | json }}</pre>
