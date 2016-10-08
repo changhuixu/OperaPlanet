@@ -6,8 +6,11 @@ let vis =  require('vis');
   template: '<div #container></div>',
   styles : [`
       :host {
-          width: 550px;
-          height: 550px;
+          position:fixed;
+          left:0;
+          top:0;
+          right:100%;
+          bottom:100%;
       }`]
 })
 export class GraphComponent {
