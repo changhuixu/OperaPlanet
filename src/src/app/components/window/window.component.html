@@ -1,16 +1,8 @@
 <div class="main-panel" [ngClass]="{'is-slid': !!inputData}">
 
-    <button (click)="onCloseClicked()">Close</button>
+    <button (click)="onCloseClicked()" style="position:absolute;left:0;top:0;">Close</button>
 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis dolor in consectetur lobortis. Phasellus sodales eros sollicitudin velit tincidunt, in luctus ante auctor. In hac habitasse platea dictumst. Curabitur viverra efficitur sem, in tincidunt leo sollicitudin in. Etiam scelerisque maximus ante, mattis interdum nibh convallis at. Nullam vehicula augue ac lacinia fringilla. Duis porttitor, dolor sed commodo tempor, turpis tortor pharetra dolor, nec pharetra arcu mi vitae nisl. Aliquam vehicula convallis tellus vitae pellentesque. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus pellentesque est ac massa volutpat ullamcorper. In fermentum vitae velit vitae pharetra. In vitae erat ut enim ultrices scelerisque non at mi. Aenean faucibus diam in lectus pulvinar, quis mattis ipsum placerat.
-
-    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin eget finibus sem. Donec a ornare turpis. Nullam commodo sapien vitae neque pulvinar varius. Donec eleifend augue vitae eleifend blandit. Aenean porta quis libero in feugiat. Fusce neque massa, aliquet in eleifend vitae, consectetur sit amet lectus. Mauris risus diam, eleifend dapibus hendrerit eu, consectetur vitae massa.
-
-    Donec non sem ac libero vestibulum dignissim ut quis risus. In rutrum leo purus. Aenean rhoncus ipsum leo, sit amet rhoncus magna dapibus sit amet. Vivamus mollis ante in dui placerat, eu sollicitudin sem tincidunt. Proin consequat mi ex, tristique eleifend lacus tincidunt ut. Donec elementum nibh sed accumsan scelerisque. Curabitur pellentesque pretium nibh, a hendrerit massa. Duis molestie scelerisque tellus feugiat egestas. Mauris at fringilla dolor. Fusce dapibus sem nec pulvinar auctor. Ut sem tortor, placerat vitae est ac, porttitor porttitor tellus. Integer malesuada in arcu sed dignissim. Donec vitae convallis tortor, sed blandit nibh. Integer luctus varius leo non tincidunt. Praesent sodales sodales diam non sollicitudin.
-
-    Suspendisse condimentum nulla eget tincidunt rutrum. Mauris dignissim purus erat, placerat mattis purus tincidunt a. Sed eleifend orci quis quam hendrerit aliquam. Vivamus vel pulvinar magna, et iaculis magna. Nunc faucibus viverra tortor, ac venenatis tellus porta id. Suspendisse rhoncus quis mi in commodo. Nam quam quam, suscipit sit amet turpis eu, placerat dignissim urna. Fusce a vulputate risus. Nunc accumsan, sapien ac fermentum tempus, odio libero sollicitudin quam, quis aliquam dui nulla a mi. Quisque dapibus faucibus lectus, nec porta nunc euismod id.
-
-    Sed sollicitudin magna scelerisque risus venenatis tristique. Donec varius vel metus fermentum auctor. Mauris luctus nibh suscipit leo laoreet, ultricies consequat purus porta. Nam lacinia condimentum urna, vel imperdiet sem tincidunt eget. Mauris pulvinar mollis eros eu auctor. Curabitur lectus neque, hendrerit ut mauris ac, volutpat vestibulum lectus. Duis id mollis felis. Donec luctus ultrices egestas. Donec vitae arcu ut est sagittis rutrum tincidunt sit amet velit. Mauris lacinia neque ut ex tincidunt, ut pharetra purus ullamcorper. Praesent at gravida nisl. Proin mattis mi eu volutpat malesuada. Donec auctor est vitae est viverra, in ornare felis congue. Duis tempor efficitur lectus, vel molestie tellus efficitur eget. Ut malesuada dolor neque, in imperdiet nisl euismod quis.
-
-
+    <div *ngIf="inputData" style="background-color:black" [ngSwitch]="inputData.node.group">
+        <prm *ngSwitchCase="'prm'"  [content]="inputData.node.data"></prm>
+    </div>
 </div>

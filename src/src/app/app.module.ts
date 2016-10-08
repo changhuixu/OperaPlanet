@@ -13,7 +13,7 @@ import {WindowComponent} from "./components/window/window.component";
   declarations: [
     AppComponent,
     GraphComponent,
-    PrmComponent
+    PrmComponent,
     WindowComponent,
     GraphComponent
   ],
