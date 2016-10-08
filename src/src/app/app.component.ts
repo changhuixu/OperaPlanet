@@ -7,8 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
-  graphData = {
+    title = 'app works!';
+    windowData = null;
+    graphData = {
     nodes: [{
       "id": "node_0",
       "label": "ROOT",
@@ -45,7 +46,7 @@ export class AppComponent {
   };
 
   onNodeClicked(ev) {
-    console.log(ev);
+      this.windowData = ev;
   }
 
 }

@@ -4,7 +4,7 @@ let vis =  require('vis');
 
 @Component({
   selector: 'graph-component',
-  template: `<div #container></div>`
+  template: `<div #container></div>`,
   styles: [`
       div {
           height:750px;

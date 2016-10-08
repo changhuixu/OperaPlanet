@@ -1,12 +1,18 @@
 import { Component } from '@angular/core';
-import {DataService} from "../../services/ParseService";
+import {Input} from "@angular/core/src/metadata/directives";
 
 @Component({
-  selector: 'opera-item',
+  selector: 'window-component',
   templateUrl: './window.component.html',
   styleUrls: ['./window.component.css']
 })
-export class OperaComponent {
-  title = 'Opera Component';
+export class WindowComponent {
+
+  @Input('data') inputData:any = null;
+
+  onCloseClicked() {
+    this.inputData = null;
+  }
+
 
 }

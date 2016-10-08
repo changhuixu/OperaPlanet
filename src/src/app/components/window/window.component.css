@@ -1,0 +1,21 @@
+.main-panel {
+    position: fixed;
+    height: 100%;
+    top: 0;
+    font-size: 14px;
+    margin-left:-50px;
+    z-index:99;
+    transition-property: margin, left, right, width;
+    transition-duration: .3s;
+    color:white;
+    box-shadow: 0px 0px 10px black;
+    box-sizing: content-box;
+    width:100%;
+    overflow: hidden;
+    left:100%;
+}
+
+.main-panel.is-slid {
+    margin-left:0px;
+    left:0;
+}
