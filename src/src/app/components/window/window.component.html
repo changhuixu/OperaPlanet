@@ -2,7 +2,7 @@
 
     <button (click)="onCloseClicked()" style="position:absolute;left:0;top:0;">Close</button>
 
-    <div *ngIf="inputData" style="background-color:black" [ngSwitch]="inputData.node.group">
+    <div *ngIf="inputData" [ngSwitch]="inputData.node.group">
         <prm *ngSwitchCase="'prm'"  [content]="inputData.node.data"></prm>
     </div>
 </div>
