@@ -17,8 +17,8 @@ export class DataService {
     private data:any = {};
     private cache:any = {};
 
-    private entity_data_loading:EventEmitter;
-    private entity_data_loaded:EventEmitter;
+    //private entity_data_loading:EventEmitter;
+    //private entity_data_loaded:EventEmitter;
 
 
 
