@@ -96,6 +96,10 @@ export class GraphComponent {
         tdm: {
           shape: 'image',
           image: this.image('camera')
+        },
+        txt:{
+          shape: 'image',
+          image: this.image('book')
         }
       }
     };
