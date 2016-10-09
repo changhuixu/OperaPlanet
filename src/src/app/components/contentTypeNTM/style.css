@@ -16,7 +16,33 @@
   color: #00001d !important;
 }
 
-.itemsLable{
-  font-size:18px;
-  color: #00001d !important;
+dt label a {
+  font-size:16px;
+  color: #000076 !important;
+  word-wrap: break-word;
+  white-space: normal;
 }
+
+.uiowa{
+  background-color: gold;
+  margin: 20px 0 50px 0;
+  padding: 20px;
+  text-align: center;
+}
+.uiowa a {
+  display: inline-block;
+}
+.uiLibrary{
+  width:400px;
+  height:40px;
+  margin-bottom: 20px;
+}
+p{
+  font-size:18px;
+}
+.infoHawkPlus{
+  width:300px;
+  height:45px;
+  margin-bottom: 20px;
+}
+

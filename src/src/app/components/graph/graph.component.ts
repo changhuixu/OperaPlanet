@@ -100,6 +100,10 @@ export class GraphComponent {
         txt:{
           shape: 'image',
           image: this.image('book')
+        },
+        ntm:{
+          shape:'image',
+          image: this.image('score')
         }
       }
     };
