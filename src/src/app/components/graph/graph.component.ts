@@ -19,6 +19,8 @@ export class GraphComponent {
   @ViewChild('container') domContainer;
   @Input('data') graphData;
 
+  private clickTimeouts = [];
+
   @Output() node_clicked:EventEmitter<any> =  new EventEmitter<any>();
 
   private nodeDataset = null;
@@ -89,7 +91,7 @@ export class GraphComponent {
         prm: {
           shape: 'image',
           image: this.image('musicnote'),
-        },
+          },
         opera: {
           shape: 'image',
           image: this.image('opera'),
@@ -120,6 +122,8 @@ export class GraphComponent {
     this.graph.on('stabilized', this.onGraphReady.bind(this));
     this.graph.on('hoverNode', this.onNodeHover.bind(this));
     this.graph.on('click', this.onGraphClicked.bind(this));
+    this.graph.on('doubleClick', this.onGraphDoubleClicked.bind(this));
+
 
 
 
@@ -130,7 +134,25 @@ export class GraphComponent {
   }
 
   onNodeHover(event) {
-    let node = this.nodeDataset.get(event.node);
+
+
+  }
+
+  onGraphDoubleClicked(data) {
+
+    for(let to of this.clickTimeouts) {
+      clearTimeout(to);
+    }
+
+    let node = null;
+    if(data.nodes.length != 0) {
+      node = this.nodeDataset.get(data.nodes[0]);
+    }
+
+    if(node == null) {
+      return;
+    }
+
     if(node.group == 'opera' || node.group == 'person') {
       return;
     }
@@ -174,23 +196,28 @@ export class GraphComponent {
         //Node or edge exists, never mind
       }
     }
-
   }
 
   onGraphClicked(data) {
-    if(data.nodes.length != 0) {
-      let node = this.nodeDataset.get(data.nodes[0]);
-      let edges = [];
-      for(let e of data.edges) {
-        edges.push(this.edgeDataset.get(e));
+    let that = this;
+
+    this.clickTimeouts.push(setTimeout(function(){
+      that.clickTimeouts = [];
+
+      if(data.nodes.length != 0) {
+        let node = that.nodeDataset.get(data.nodes[0]);
+        let edges = [];
+        for(let e of data.edges) {
+          edges.push(that.edgeDataset.get(e));
+        }
+        that.onNodeClicked(node, edges);
+        return;
       }
-      this.onNodeClicked(node, edges);
-      return;
-    }
-    if(data.edges.length != 0) {
-      this.onEdgeClicked(this.edgeDataset.get(data.nodes[0]));
-      return;
-    }
+      if(data.edges.length != 0) {
+        that.onEdgeClicked(that.edgeDataset.get(data.nodes[0]));
+        return;
+      }
+    }, 300));
   }
 
   onNodeClicked(node, edges) {
