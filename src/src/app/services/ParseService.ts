@@ -16,7 +16,24 @@ export class ParseService {
     }
 
 
+    public aggregate(json) {
+        let map = {};
+        for(let section of json) {
+            if(!section['@type']) {
+                continue;
+            }
 
+            let type= section['@type'];
+            if(Array.isArray(type)) {
+                type = type[0];
+            }
+            if(!(type in map)) {
+                map[type] = []
+            }
+            map[type].push(section);
+        }
+        return map;
+    }
 
 
 }

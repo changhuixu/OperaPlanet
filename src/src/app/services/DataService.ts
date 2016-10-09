@@ -27,6 +27,14 @@ export class DataService {
     ) {
     }
 
+    public queryIMDB(id:string) {
+        let headers = new Headers();
+        headers.append('Accept', 'application/json');
+        let url = `http://www.omdbapi.com/?i=${id}&plot=short&r=json`;
+        console.log(url);
+        return this.http.get(url, { headers: headers}).map(res => res.json());
+    }
+
     public queryDBPedia(query:string|string[]) {
 
         let headers = new Headers();
