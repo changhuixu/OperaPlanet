@@ -79,8 +79,50 @@ export class AppComponent {
         },
         "bf:provisionActivityStatement": "Hong Kong : Naxos Digital Services Ltd., 2007",
         "bf:seriesStatement": "Chandos",
-        "bf:soundContent": "Sound on medium"
-
+        "bf:soundContent": "Sound on medium",
+        "relatedPersons":[
+          {
+            "@id": "http://id.loc.gov/rwo/agents/n92027115",
+            "@type": "bf:Person",
+            "rdfs:label": "Kale, Stuart"
+          },
+          {
+            "@id": "http://id.loc.gov/authorities/names/no2006019760",
+            "@type": "bf:Person",
+            "rdfs:label": "Bonner, Yvette, 1973- "
+          },
+          {
+            "@id": "http://id.loc.gov/rwo/agents/no96042093",
+            "@type": "bf:Person",
+            "rdfs:label": "Parry, David, 1949- "
+          },
+          {
+            "@id": "http://id.loc.gov/rwo/agents/n80022788",
+            "@type": "bf:Person",
+            "rdfs:label": "Mozart, Wolfgang Amadeus, 1756-1791"
+          },
+          {
+            "@id": "http://id.loc.gov/rwo/agents/n88627414",
+            "@type": "bf:Person",
+            "rdfs:label": "Montague, Diana"
+          },
+          {
+            "@id": "http://id.loc.gov/rwo/agents/no2001047614",
+            "@type": "bf:Person",
+            "rdfs:label": "McCafferty, Frances"
+          }
+        ],
+        "relatedPlaces":[
+          {
+            "@id": "_:ub42bL41C22",
+            "@type": "bf:Place",
+            "rdfs:label": "Hong Kong "
+          }
+        ],
+        "InfoHawkPlus":{
+          "@id": "http://search.lib.uiowa.edu/01IOWA:default_scope:01IOWA_ALMA51553243030002771",
+          "rdfs:comment": "Connect to the University of Iowa Libraries' Online Catalog - InfoHawk+"
+        }
       }
     }, {
       "id": "node_2",
@@ -125,8 +167,46 @@ export class AppComponent {
         },
         "bf:provisionActivityStatement": "Hong Kong : Naxos Digital Services Ltd., 2007",
         "bf:seriesStatement": "Chandos",
-        "bf:soundContent": "Sound on medium"
-
+        "bf:soundContent": "Sound on medium",
+        "relatedPersons":[
+          {
+            "@id": "http://id.loc.gov/rwo/agents/n92027115",
+            "@type": "bf:Person",
+            "rdfs:label": "Kale, Stuart"
+          },
+          {
+            "@id": "http://id.loc.gov/authorities/names/no2006019760",
+            "@type": "bf:Person",
+            "rdfs:label": "Bonner, Yvette, 1973- "
+          },
+          {
+            "@id": "http://id.loc.gov/rwo/agents/no96042093",
+            "@type": "bf:Person",
+            "rdfs:label": "Parry, David, 1949- "
+          },
+          {
+            "@id": "http://id.loc.gov/rwo/agents/n80022788",
+            "@type": "bf:Person",
+            "rdfs:label": "Mozart, Wolfgang Amadeus, 1756-1791"
+          },
+          {
+            "@id": "http://id.loc.gov/rwo/agents/n88627414",
+            "@type": "bf:Person",
+            "rdfs:label": "Montague, Diana"
+          },
+          {
+            "@id": "http://id.loc.gov/rwo/agents/no2001047614",
+            "@type": "bf:Person",
+            "rdfs:label": "McCafferty, Frances"
+          }
+        ],
+        "relatedPlaces":[
+          {
+            "@id": "_:ub42bL41C22",
+            "@type": "bf:Place",
+            "rdfs:label": "Hong Kong "
+          }
+        ]
       }
     }, {
       "id": "node_3",

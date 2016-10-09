@@ -4,250 +4,286 @@
     <h4 class="organization pull-right">{{data["Organization"]}}</h4>
   </div>
   <br><br>
+  <div>
+    <div class="col-xs-6 itemsList">
+      <div class="">
+        <dl class="dl-horizontal">
+          <dt>
+            <label>
+              <a href="http://bibfra.me/vocab/lite/creator">Creator:</a>
+            </label>
+          </dt>
+          <dd>
+            <ul class="list-unstyled">
+              <li>
+                <a href='{{data["bf:Person"][0]["@id"]}}'>
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  {{data["bf:Person"][0]["rdfs:label"]}}
+                </a>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
 
-  <div class="col-xs-6 itemsList">
-    <div class="">
-      <dl class="dl-horizontal">
-        <dt>
-          <label>
-            <a href="http://bibfra.me/vocab/lite/creator">Creator:</a>
-          </label>
-        </dt>
-        <dd>
-          <ul class="list-unstyled">
-            <li>
-              <a href='{{data["bf:Person"][0]["@id"]}}'>
-                <i class="fa bf-fa-Person fa-fw"></i>
-                {{data["bf:Person"][0]["rdfs:label"]}}
-              </a>
-            </li>
-          </ul>
-        </dd>
-      </dl>
-    </div>
+      <div class="">
+        <dl class="dl-horizontal">
+          <dt>
+            <label>
+              <a href="http://bibfra.me/vocab/lite/contributor">Contributor:</a>
+            </label>
+          </dt>
+          <dd>
+            <ul class="list-unstyled">
+              <li>
+                <a href='{{data["bf:Person"][1]["@id"]}}'>
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  {{data["bf:Person"][1]["rdfs:label"]}}
+                </a>
+              </li>
+              <li>
+                <a href='{{data["bf:Person"][2]["@id"]}}'>
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  {{data["bf:Person"][2]["rdfs:label"]}}
+                </a>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
 
-    <div class="">
-      <dl class="dl-horizontal">
-        <dt>
-          <label>
-            <a href="http://bibfra.me/vocab/lite/contributor">Contributor:</a>
-          </label>
-        </dt>
-        <dd>
-          <ul class="list-unstyled">
-            <li>
-              <a href='{{data["bf:Person"][1]["@id"]}}'>
-                <i class="fa bf-fa-Person fa-fw"></i>
-                {{data["bf:Person"][1]["rdfs:label"]}}
-              </a>
-            </li>
-            <li>
-              <a href='{{data["bf:Person"][2]["@id"]}}'>
-                <i class="fa bf-fa-Person fa-fw"></i>
-                {{data["bf:Person"][2]["rdfs:label"]}}
-              </a>
-            </li>
-          </ul>
-        </dd>
-      </dl>
-    </div>
+      <div class="">
+        <dl class="dl-horizontal">
+          <dt>
+            <label>
+              <a href="#">Content:</a>
+            </label>
+          </dt>
+          <dd>
+            <ul class="list-unstyled">
+              <li>
+                <a href='{{data["bf:Content"]["@id"]}}'>{{data["bf:Content"]["rdfs:label"]}}</a>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
 
-    <div class="">
-      <dl class="dl-horizontal">
-        <dt>
-          <label>
-            <a href="#">Content:</a>
-          </label>
-        </dt>
-        <dd>
-          <ul class="list-unstyled">
-            <li>
-              <a href='{{data["bf:Content"]["@id"]}}'>{{data["bf:Content"]["rdfs:label"]}}</a>
-            </li>
-          </ul>
-        </dd>
-      </dl>
-    </div>
+      <div class="">
+        <dl class="dl-horizontal">
+          <dt>
+            <label>
+              <a href="#">Organization:</a>
+            </label>
+          </dt>
+          <dd>
+            <ul class="list-unstyled">
+              <li>
+                <a href='{{data["bf:Organization"]["@id"]}}'>{{data["bf:Organization"]["rdfs:label"]}}</a>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
 
-    <div class="">
-      <dl class="dl-horizontal">
-        <dt>
-          <label>
-            <a href="#">Organization:</a>
-          </label>
-        </dt>
-        <dd>
-          <ul class="list-unstyled">
-            <li>
-              <a href='{{data["bf:Organization"]["@id"]}}'>{{data["bf:Organization"]["rdfs:label"]}}</a>
-            </li>
-          </ul>
-        </dd>
-      </dl>
-    </div>
+      <div class="">
+        <dl class="dl-horizontal">
+          <dt>
+            <label>
+              <a href="#">Extent:</a>
+            </label>
+          </dt>
+          <dd>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#">{{data["bf:extent"]}}</a>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
 
-    <div class="">
-      <dl class="dl-horizontal">
-        <dt>
-          <label>
-            <a href="#">Extent:</a>
-          </label>
-        </dt>
-        <dd>
-          <ul class="list-unstyled">
-            <li>
-              <a href="#">{{data["bf:extent"]}}</a>
-            </li>
-          </ul>
-        </dd>
-      </dl>
-    </div>
+      <div class="">
+        <dl class="dl-horizontal">
+          <dt>
+            <label>
+              <a href="#">Illustrative Content:</a>
+            </label>
+          </dt>
+          <dd>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#">{{data["bf:illustrativeContent"]}}</a>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
 
-    <div class="">
-      <dl class="dl-horizontal">
-        <dt>
-          <label>
-            <a href="#">Illustrative Content:</a>
-          </label>
-        </dt>
-        <dd>
-          <ul class="list-unstyled">
-            <li>
-              <a href="#">{{data["bf:illustrativeContent"]}}</a>
-            </li>
-          </ul>
-        </dd>
-      </dl>
-    </div>
+      <div class="">
+        <dl class="dl-horizontal">
+          <dt>
+            <label>
+              <a href="#">Instence of:</a>
+            </label>
+          </dt>
+          <dd>
+            <ul class="list-unstyled">
+              <li>
+                <a href='{{data["bf:instanceOf"]["@id"]}}'>{{data["bf:instanceOf"]["@id"]}}</a>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
 
-    <div class="">
-      <dl class="dl-horizontal">
-        <dt>
-          <label>
-            <a href="#">Instence of:</a>
-          </label>
-        </dt>
-        <dd>
-          <ul class="list-unstyled">
-            <li>
-              <a href='{{data["bf:instanceOf"]["@id"]}}'>{{data["bf:instanceOf"]["@id"]}}</a>
-            </li>
-          </ul>
-        </dd>
-      </dl>
-    </div>
+      <div class="">
+        <dl class="dl-horizontal">
+          <dt>
+            <label>
+              <a href="#">Note:</a>
+            </label>
+          </dt>
+          <dd>
+            <ul class="list-unstyled">
+              <li ng-repeat=''>
+                <i class="fa fa-chevron-right fa-fw"></i>
 
-    <div class="">
-      <dl class="dl-horizontal">
-        <dt>
-          <label>
-            <a href="#">Note:</a>
-          </label>
-        </dt>
-        <dd>
-          <ul class="list-unstyled">
-            <li ng-repeat='' >
-              <i class="fa fa-chevron-right fa-fw"></i>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
 
-            </li>
-          </ul>
-        </dd>
-      </dl>
-    </div>
+      <div class="">
+        <dl class="dl-horizontal">
+          <dt>
+            <label>
+              <a href="#">Provision Activity Statement:</a>
+            </label>
+          </dt>
+          <dd>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#">{{data["bf:provisionActivityStatement"]}}</a>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+      <div class="">
+        <dl class="dl-horizontal">
+          <dt>
+            <label>
+              <a href="#">Series Statement:</a>
+            </label>
+          </dt>
+          <dd>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#">{{data["bf:seriesStatement"]}}</a>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+      <div class="">
+        <dl class="dl-horizontal">
+          <dt>
+            <label>
+              <a href="#">Sound Content:</a>
+            </label>
+          </dt>
+          <dd>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#">{{data["bf:soundContent"]}}</a>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
 
-    <div class="">
-      <dl class="dl-horizontal">
-        <dt>
-          <label>
-            <a href="#">Provision Activity Statement:</a>
-          </label>
-        </dt>
-        <dd>
-          <ul class="list-unstyled">
-            <li>
-              <a href="#">{{data["bf:provisionActivityStatement"]}}</a>
-            </li>
-          </ul>
-        </dd>
-      </dl>
-    </div>
-    <div class="">
-      <dl class="dl-horizontal">
-        <dt>
-          <label>
-            <a href="#">Series Statement:</a>
-          </label>
-        </dt>
-        <dd>
-          <ul class="list-unstyled">
-            <li>
-              <a href="#">{{data["bf:seriesStatement"]}}</a>
-            </li>
-          </ul>
-        </dd>
-      </dl>
-    </div>
-    <div class="">
-      <dl class="dl-horizontal">
-        <dt>
-          <label>
-            <a href="#">Sound Content:</a>
-          </label>
-        </dt>
-        <dd>
-          <ul class="list-unstyled">
-            <li>
-              <a href="#">{{data["bf:soundContent"]}}</a>
-            </li>
-          </ul>
-        </dd>
-      </dl>
-    </div>
+      <div class="">
+        <dl class="dl-horizontal">
+          <dt>
+            <label>
+              <a href="#">Related Persons:</a>
+            </label>
+          </dt>
+          <dd>
+            <ul class="list-unstyled">
+              <li>
+                <a href='{{data["relatedPersons"][0]["@id"]}}'>
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  {{data["relatedPersons"][0]["rdfs:label"]}}
+                </a>
+              </li>
+              <li>
+                <a href='{{data["relatedPersons"][1]["@id"]}}'>
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  {{data["relatedPersons"][1]["rdfs:label"]}}
+                </a>
+              </li>
+              <li>
+                <a href='{{data["relatedPersons"][2]["@id"]}}'>
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  {{data["relatedPersons"][2]["rdfs:label"]}}
+                </a>
+              </li>
+              <li>
+                <a href='{{data["relatedPersons"][3]["@id"]}}'>
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  {{data["relatedPersons"][3]["rdfs:label"]}}
+                </a>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
 
-    <div class="">
-      <dl class="dl-horizontal">
-        <dt>
-          <label>
-            <a href="#">Related Persons:</a>
-          </label>
-        </dt>
-        <dd><span class="glyphicons glyphicons-user"></span>
-          <ul class="list-unstyled">
-            <li>
-              <a href="#">
-                <i class="fa fa-user" aria-hidden="true"></i>
-                {{data["bf:soundContent"]}}</a>
-            </li>
-            <li ng-repeat="n in [1,2]">
-              <span><i class="fa fa-user" aria-hidden="true"></i>{{n}}</span>
-            </li>
-          </ul>
-        </dd>
-      </dl>
-    </div>
+      <div class="">
+        <dl class="dl-horizontal">
+          <dt>
+            <label>
+              <a href="#">Related Places:</a>
+            </label>
+          </dt>
+          <dd>
+            <ul class="list-unstyled">
+              <li>
+                <a href='{{data.relatedPlaces[0]["@id"]}}'>
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>
+                  {{data.relatedPlaces[0]["rdfs:label"]}}</a>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
 
-    <div class="">
-      <dl class="dl-horizontal">
-        <dt>
-          <label>
-            <a href="#">Related Places:</a>
-          </label>
-        </dt>
-        <dd>
-          <ul class="list-unstyled">
-            <li>
-              <a href="#">{{data["bf:soundContent"]}}</a>
-            </li>
-          </ul>
-        </dd>
-      </dl>
-    </div>
 
+    </div>
+    <div class="col-xs-6">
+      <iframe width="100%" height="450" scrolling="no" frameborder="no"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/210387165&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true">
+      </iframe>
+
+      <div class="uiowa">
+        <a href="http://www.lib.uiowa.edu/">
+          <img src="../../../assets/imgs/uidome-uiwordmark-libraries.png" class="uiLibrary" >
+        </a>
+        <p>Connect to the University of Iowa Libraries' Online Catalog</p>
+        <a href='{{data.InfoHawkPlus["@id"]}}'>
+          <img src="../../../assets/imgs/ihp-wordmark-full_w.png" class="infoHawkPlus" >
+        </a>
+      </div>
+    </div>
   </div>
-  <div class="col-xs-6">
-    <iframe width="100%" height="450" scrolling="no" frameborder="no"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/210387165&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true">
-    </iframe>
+  <div class="col-xs-12">
+    <button type="button" class="btn btn-primary btn-lg btn-block" (click)="onBtnClicked()">Return to Opera Network</button>
+    <br><br>
   </div>
+
 </div>
+
 
