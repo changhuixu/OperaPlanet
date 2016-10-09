@@ -9,7 +9,7 @@ import {Input} from "@angular/core/src/metadata/directives";
   styleUrls: ['./style.css']
 })
 export class PrmComponent {
-  title = 'app works!';
+
   @Input('content') data:any;
 
   constructor(){
@@ -18,8 +18,9 @@ export class PrmComponent {
   ngOnInit() {
 
   }
-
-
+  onBtnClicked() {
+    this.data = null;
+  }
 }
 
 /**
