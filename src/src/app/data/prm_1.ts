@@ -1,6 +1,6 @@
 export var prm_1 = {
     "id": "node_1",
-    "label": "StreamingAudio",
+    "label": "Streaming Audio",
     "group": "prm",
     "data": {
         "@id": "_:ub42bL39C22",
