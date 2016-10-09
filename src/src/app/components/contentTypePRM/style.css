@@ -16,7 +16,9 @@
   color: #00001d !important;
 }
 
-.itemsLable{
-  font-size:18px;
-  color: #00001d !important;
+dt label a {
+  font-size:16px;
+  color: #000076 !important;
+  word-wrap: break-word;
+  white-space: normal;
 }
