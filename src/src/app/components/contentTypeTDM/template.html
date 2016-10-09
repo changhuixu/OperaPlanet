@@ -1,60 +1,74 @@
 <div class="container prmBody">
   <div class="jumbotron headTitle">
-    <h1>{{data["bf:InstanceTitle"]}}</h1>
-    <h4 class="organization pull-right">{{data["Organization"]}}</h4>
+    <h1>{{data["bf:Title"][0]["bf:mainTitle"]}}</h1>
   </div>
   <br><br>
+  <div>
+    <div class="col-xs-6 itemsList">
+      <div class="">
+        <dl class="dl-horizontal">
+          <dt>
+            <label>
+              <a href="http://bibfra.me/vocab/lite/contributor" target="_blank">Contributors:</a>
+            </label>
+          </dt>
+          <dd>
+            <ul class="list-unstyled">
+              <li *ngFor='let item of data["bf:Person"]' >
+                <a href='{{item["@id"]}}' target="_blank">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  {{item["rdfs:label"]}}
+                </a>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
 
-  <div class="col-xs-6 itemsList">
-    <div class="">
-      <dl class="dl-horizontal">
-        <dt>
-          <label>
-            <a class="itemLable" href="http://bibfra.me/vocab/lite/creator">Creator:</a>
-          </label>
-        </dt>
-        <dd>
-          <ul class="list-unstyled">
-            <li>
-              <a href='{{data["bf:Person"]["@id"]}}'>
-                <i class="fa bf-fa-Person fa-fw"></i>
-                {{data["bf:Person"]["rdfs:label"]}}
-              </a>
-            </li>
-          </ul>
-        </dd>
-      </dl>
+
+      <div class="" *ngFor="let entry of entryList">
+        <dl class="dl-horizontal">
+          <dt>
+            <label>{{entry.title}}:</label>
+          </dt>
+          <dd>
+            <ul class="list-unstyled">
+              <li *ngFor='let e of entry.data' >
+
+                <a *ngIf="e.link"  href='{{e.link}}'>
+                  <i class="fa" aria-hidden="true"></i>
+                  {{e['text']}} <br><br>
+                </a>
+                <span *ngIf="!(e.link)">
+                  <i  class="fa" aria-hidden="true"></i>{{e['text']}} <br><br>
+                </span>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+
     </div>
+    <div class="col-xs-6">
+      <imdb [content]="imdbData | async"></imdb>
 
-    <div class="">
-      <dl class="dl-horizontal">
-        <dt>
-          <label>
-            <a href="http://bibfra.me/vocab/lite/contributor">Contributor</a>
-          </label>
-        </dt>
-        <dd>
-          <ul class="list-unstyled">
-            <li>
-              <a href="http://id.loc.gov/rwo/agents/n80057191">
-                <i class="fa bf-fa-Person  catalog-resource   fa-fw"></i>
-                Da Ponte, Lorenzo, 1749-1838
-              </a>
-            </li>
-          </ul>
-        </dd>
-      </dl>
+      <div class="uiowa">
+        <a href="http://www.lib.uiowa.edu/">
+          <img src="../../../assets/imgs/uidome-uiwordmark-libraries.png" class="uiLibrary" >
+        </a>
+        <a target="_blank" [href]='uiowaLink'>
+          <img src="../../../assets/imgs/ihp-wordmark-full_w.png" class="infoHawkPlus" >
+        </a>
+        <a target="_blank" [href]='uiowaLink'>
+          <p> Connect to the University of Iowa Libraries' Online Catalog</p>
+        </a>
+      </div>
     </div>
-
-
-
   </div>
-  <div class="col-xs-6">
-    <iframe width="100%" height="450" scrolling="no" frameborder="no"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/210387165&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true">
-    </iframe>
+  <div class="col-xs-12">
+    <button type="button" class="btn btn-primary btn-lg btn-block" (click)="onBtnClicked()">Return to Opera Network</button>
+    <br><br>
   </div>
 </div>
 
 
-<pre>{{data | json }}</pre>

@@ -1,6 +1,6 @@
 export var tdm_1 = {
     "id": "node_2",
-    "label": "MUSIC",
+    "label": "Movie",
     "group": "tdm",
     "data":[{
         "@id": "_:ub57bL21C12",
