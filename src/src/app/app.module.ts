@@ -10,6 +10,9 @@ import {WindowComponent} from "./components/window/window.component";
 import {TdmComponent} from "./components/contentTypeTDM/TdmComponent";
 import {NtmComponent} from "./components/contentTypeNTM/NtmComponent";
 import {TxtComponent} from "./components/contentTypeTXT/TxtComponent";
+import {DataService} from "./services/DataService";
+import {ParseService} from "./services/ParseService";
+import {IMDBFragment} from "./components/contentTypeTDM/IMDBFragment";
 
 
 @NgModule({
@@ -21,7 +24,8 @@ import {TxtComponent} from "./components/contentTypeTXT/TxtComponent";
     NtmComponent,
     TxtComponent,
     WindowComponent,
-    GraphComponent
+    GraphComponent,
+    IMDBFragment
   ],
   imports: [
     BrowserModule,
@@ -29,7 +33,7 @@ import {TxtComponent} from "./components/contentTypeTXT/TxtComponent";
     HttpModule,
     AlertModule
   ],
-  providers: [],
+  providers: [DataService, ParseService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

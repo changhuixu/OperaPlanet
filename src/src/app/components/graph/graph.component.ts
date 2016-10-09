@@ -1,5 +1,6 @@
 import {Component, ViewChild, EventEmitter} from '@angular/core';
 import {Input, Output} from "@angular/core/src/metadata/directives";
+import {ParseService} from "../../services/ParseService";
 let vis =  require('vis');
 
 @Component({
@@ -7,8 +8,20 @@ let vis =  require('vis');
   template: `<div #container></div>`,
   styles: [`
       div {
-          height:750px;
+          position: relative;
+          background-color: azure;
+          left:0;
+          top:0;
+          bottom:0;
+          right:0;
+          width:100%;
+          height:800px;
       }
+      canvas { 
+          width:100%;
+          height:580px;
+      }
+      
   `]
 })
 export class GraphComponent {
@@ -16,13 +29,15 @@ export class GraphComponent {
   @ViewChild('container') domContainer;
   @Input('data') graphData;
 
+  private clickTimeouts = [];
+
   @Output() node_clicked:EventEmitter<any> =  new EventEmitter<any>();
 
   private nodeDataset = null;
   private edgeDataset = null;
   private graph = null;
 
-  constructor() {
+  constructor(private ps:ParseService) {
   }
 
   image(name) {
@@ -49,10 +64,10 @@ export class GraphComponent {
       nodes: {
         scaling: {
           min: 16,
-          max: 32
+          max: 320
         },
         font: {
-          size: 16,
+          size: 25,
           face: 'Droid Arabic Naskh',
           strokeWidth: 1
         }
@@ -85,15 +100,29 @@ export class GraphComponent {
       groups: {
         prm: {
           shape: 'image',
-          image: this.image('musicnote')
-        },
+          image: this.image('musicnote'),
+          },
         opera: {
           shape: 'image',
-          image: this.image('soprano')
+          image: this.image('opera'),
+          size: 250
         },
         tdm: {
           shape: 'image',
-          image: this.image('camera')
+          image: this.image('camera'),
+        },
+        txt:{
+          shape: 'image',
+          image: this.image('book')
+        },
+        ntm:{
+          shape:'image',
+          image: this.image('score')
+        },
+        person: {
+          shape: 'image',
+          image: this.image('black-user-shape'),
+          size: 10
         }
       }
     };
@@ -103,6 +132,8 @@ export class GraphComponent {
     this.graph.on('stabilized', this.onGraphReady.bind(this));
     this.graph.on('hoverNode', this.onNodeHover.bind(this));
     this.graph.on('click', this.onGraphClicked.bind(this));
+    this.graph.on('doubleClick', this.onGraphDoubleClicked.bind(this));
+
 
 
 
@@ -113,26 +144,102 @@ export class GraphComponent {
   }
 
   onNodeHover(event) {
-    //console.log(event);
+
+
+  }
+
+  onGraphDoubleClicked(data) {
+
+    for(let to of this.clickTimeouts) {
+      clearTimeout(to);
+    }
+
+    let node = null;
+    if(data.nodes.length != 0) {
+      node = this.nodeDataset.get(data.nodes[0]);
+    }
+
+    if(node == null) {
+      return;
+    }
+
+    if(node.group == 'opera' || node.group == 'person') {
+      return;
+    }
+    let persons = null;
+    if(node.data.relatedPersons) {
+      persons = node.data.relatedPersons;
+      console.log(persons);
+    } else {
+      let temp = this.ps.aggregate(node.data);
+      persons = temp['bf:Person'];
+    }
+
+    if(!persons) {
+      return;
+    }
+
+    for(let person of persons) {
+      let id = person['@id'].split('/').pop();
+      try {
+        this.nodeDataset.add({
+          "id": "node_" + id,
+          "label": person['rdfs:label'],
+          "group": "person",
+          "data": {
+            'person': person,
+            'link': person['@id']
+          }
+        });
+      } catch(e) {
+      }
+      try{
+        let edgeId = node.id + '-' + id;
+        this.edgeDataset.add({
+          "id": edgeId,
+          "type": "related",
+          "label": "Contributed to",
+          "from": "node_" + id,
+          "to": node.id,
+        });
+      } catch(e) {
+        //Node or edge exists, never mind
+      }
+    }
   }
 
   onGraphClicked(data) {
-    if(data.nodes.length != 0) {
-      let node = this.nodeDataset.get(data.nodes[0]);
-      let edges = [];
-      for(let e of data.edges) {
-        edges.push(this.edgeDataset.get(e));
+    let that = this;
+
+    this.clickTimeouts.push(setTimeout(function(){
+      that.clickTimeouts = [];
+
+      if(data.nodes.length != 0) {
+        let node = that.nodeDataset.get(data.nodes[0]);
+        let edges = [];
+        for(let e of data.edges) {
+          edges.push(that.edgeDataset.get(e));
+        }
+        that.onNodeClicked(node, edges);
+        return;
       }
-      this.onNodeClicked(node, edges);
-      return;
-    }
-    if(data.edges.length != 0) {
-      this.onEdgeClicked(this.edgeDataset.get(data.nodes[0]));
-      return;
-    }
+      if(data.edges.length != 0) {
+        that.onEdgeClicked(that.edgeDataset.get(data.nodes[0]));
+        return;
+      }
+    }, 300));
   }
 
   onNodeClicked(node, edges) {
+    if(node.group == 'opera') {
+      return;
+    }
+
+    if(node.group == 'person') {
+      window.open(node.data.link);
+      return;
+    }
+
     this.node_clicked.emit({
       "node": node,
       "edges": edges

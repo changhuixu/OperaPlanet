@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import {Input} from "@angular/core/src/metadata/directives";
+import {Component, EventEmitter} from '@angular/core';
+import {Input, Output} from "@angular/core/src/metadata/directives";
 
 
 
@@ -9,17 +9,19 @@ import {Input} from "@angular/core/src/metadata/directives";
   styleUrls: ['./style.css']
 })
 export class PrmComponent {
-  title = 'app works!';
+
   @Input('content') data:any;
 
-  constructor(){
+  @Output('closed') component_closed:EventEmitter<any> =  new EventEmitter<any>();
 
+  constructor(){
   }
   ngOnInit() {
 
   }
-
-
+  onBtnClicked() {
+    this.component_closed.emit();
+  }
 }
 
 /**
