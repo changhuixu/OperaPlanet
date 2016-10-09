@@ -1,13 +1,12 @@
-<div class="jumbotron" style="margin: 0;">
+<div class="jumbotron operaHeader imgBanner" >
   <h1 class="text-center">The Marriage of Figaro (Opera)</h1>
-  <p></p>
-  <hr>
-  <br>
+  <hr style="margin:10px 0 10px 0; ">
   <div class="container" align="center">
     <button type="button" id="do_query" class="btn btn-primary btn-lg"> Linked Open Data</button>
   </div>
 
 </div>
+
 
 <graph-component (node_clicked)="onNodeClicked($event)" [data]="graphData"></graph-component>
 <window-component [data]="windowData"></window-component>
