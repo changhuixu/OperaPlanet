@@ -1,6 +1,8 @@
 <div class="main-panel" [ngClass]="{'is-slid': !!inputData}">
 
-    <button (click)="onCloseClicked()" style="position:absolute;left:0;top:0;">Close</button>
+    <a (click)="onCloseClicked()" style="position:absolute;left:0;top:0;">
+      <i class="fa fa-times-circle fa-5x" aria-hidden="true" ></i>
+    </a>
 
     <div *ngIf="inputData" [ngSwitch]="inputData.node.group">
         <prm *ngSwitchCase="'prm'" [content]="inputData.node.data"></prm>

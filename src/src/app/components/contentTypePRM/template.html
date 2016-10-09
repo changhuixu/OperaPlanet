@@ -35,16 +35,10 @@
           </dt>
           <dd>
             <ul class="list-unstyled">
-              <li>
-                <a href='{{data["bf:Person"][1]["@id"]}}'>
+              <li *ngFor='let item of data["bf:Person"]| slice:1' >
+                <a href='{{item["@id"]}}'>
                   <i class="fa fa-user" aria-hidden="true"></i>
-                  {{data["bf:Person"][1]["rdfs:label"]}}
-                </a>
-              </li>
-              <li>
-                <a href='{{data["bf:Person"][2]["@id"]}}'>
-                  <i class="fa fa-user" aria-hidden="true"></i>
-                  {{data["bf:Person"][2]["rdfs:label"]}}
+                  {{item["rdfs:label"]}}
                 </a>
               </li>
             </ul>
@@ -146,9 +140,11 @@
           </dt>
           <dd>
             <ul class="list-unstyled">
-              <li ng-repeat=''>
+              <li *ngFor='let item of data["bf:Note"]' >
+                <a href="#">
                 <i class="fa fa-chevron-right fa-fw"></i>
-
+                {{item["rdfs:label"]}}
+                </a>
               </li>
             </ul>
           </dd>
@@ -213,28 +209,10 @@
           </dt>
           <dd>
             <ul class="list-unstyled">
-              <li>
-                <a href='{{data["relatedPersons"][0]["@id"]}}'>
+              <li *ngFor='let item of data["relatedPersons"]'>
+                <a href='{{item["@id"]}}'>
                   <i class="fa fa-user" aria-hidden="true"></i>
-                  {{data["relatedPersons"][0]["rdfs:label"]}}
-                </a>
-              </li>
-              <li>
-                <a href='{{data["relatedPersons"][1]["@id"]}}'>
-                  <i class="fa fa-user" aria-hidden="true"></i>
-                  {{data["relatedPersons"][1]["rdfs:label"]}}
-                </a>
-              </li>
-              <li>
-                <a href='{{data["relatedPersons"][2]["@id"]}}'>
-                  <i class="fa fa-user" aria-hidden="true"></i>
-                  {{data["relatedPersons"][2]["rdfs:label"]}}
-                </a>
-              </li>
-              <li>
-                <a href='{{data["relatedPersons"][3]["@id"]}}'>
-                  <i class="fa fa-user" aria-hidden="true"></i>
-                  {{data["relatedPersons"][3]["rdfs:label"]}}
+                  {{item["rdfs:label"]}}
                 </a>
               </li>
             </ul>
@@ -251,10 +229,10 @@
           </dt>
           <dd>
             <ul class="list-unstyled">
-              <li>
-                <a href='{{data.relatedPlaces[0]["@id"]}}'>
+              <li *ngFor="let item of data.relatedPlaces">
+                <a href='{{item["@id"]}}'>
                   <i class="fa fa-map-marker" aria-hidden="true"></i>
-                  {{data.relatedPlaces[0]["rdfs:label"]}}</a>
+                  {{item["rdfs:label"]}}</a>
               </li>
             </ul>
           </dd>
@@ -272,9 +250,12 @@
         <a href="http://www.lib.uiowa.edu/">
           <img src="../../../assets/imgs/uidome-uiwordmark-libraries.png" class="uiLibrary" >
         </a>
-        <p>Connect to the University of Iowa Libraries' Online Catalog</p>
+
         <a href='{{data.InfoHawkPlus["@id"]}}'>
           <img src="../../../assets/imgs/ihp-wordmark-full_w.png" class="infoHawkPlus" >
+        </a>
+        <a href='{{data.InfoHawkPlus["@id"]}}'>
+         <p> Connect to the University of Iowa Libraries' Online Catalog</p>
         </a>
       </div>
     </div>
