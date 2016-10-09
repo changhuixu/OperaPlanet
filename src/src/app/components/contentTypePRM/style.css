@@ -25,20 +25,24 @@ dt label a {
 
 .uiowa{
   background-color: gold;
-  margin: 20px 0 20px 0;
-  padding: 10px;
+  margin: 20px 0 50px 0;
+  padding: 20px;
   text-align: center;
+}
+.uiowa a {
+  display: inline-block;
 }
 .uiLibrary{
   width:400px;
   height:40px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 p{
-  font-size:16px;
+  font-size:18px;
 }
 .infoHawkPlus{
   width:300px;
   height:45px;
-  margin-top: 10px;
+  margin-bottom: 20px;
 }
+
