@@ -7,7 +7,9 @@ let vis =  require('vis');
   template: `<div #container></div>`,
   styles: [`
       div {
-          height:750px;
+          height:580px;
+          background-color: azure;
+          overflow: auto;
       }
   `]
 })
