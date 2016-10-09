@@ -67,6 +67,81 @@
         <dl class="dl-horizontal">
           <dt>
             <label>
+              <a href="#">Topic:</a>
+            </label>
+          </dt>
+          <dd>
+            <ul class="list-unstyled">
+              <li>
+                <a href='{{data["bf:Topic"]["@id"]}}'>{{data["bf:Topic"]["rdfs:label"]}}</a>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+
+      <div class="">
+        <dl class="dl-horizontal">
+          <dt>
+            <label>
+              <a href="#">Identifier:</a>
+            </label>
+          </dt>
+          <dd>
+            <ul class="list-unstyled">
+              <li *ngFor="let item of data['bf:Identifier']">
+                <a href='#'>
+                  <i class="fa fa-chevron-right fa-fw"></i>
+                  {{item}}
+                </a>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+
+      <div class="">
+        <dl class="dl-horizontal">
+          <dt>
+            <label>
+              <a href="#">WorldCat Resource:</a>
+            </label>
+          </dt>
+          <dd>
+            <ul class="list-unstyled">
+              <li>
+                <a href='{{data["genont:ContentTypeGenericResource"]["@id"]}}'>
+                  {{data["genont:ContentTypeGenericResource"]["@type"]}}
+                </a>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+
+      <div class="">
+        <dl class="dl-horizontal">
+          <dt>
+            <label>
+              <a href="#">Genre Form:</a>
+            </label>
+          </dt>
+          <dd>
+            <ul class="list-unstyled">
+              <li>
+                <a href='{{data["bf:GenreForm"]["@id"]}}'>
+                  {{data["bf:GenreForm"]["rdfs:label"]}}
+                </a>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+
+      <div class="">
+        <dl class="dl-horizontal">
+          <dt>
+            <label>
               <a href="#">Organization:</a>
             </label>
           </dt>
@@ -126,6 +201,9 @@
               <li>
                 <a href='{{data["bf:instanceOf"]["@id"]}}'>{{data["bf:instanceOf"]["@id"]}}</a>
               </li>
+              <li>
+                <a href="#">Barcode: {{data["bf:Barcode"]["rdf:value"]}}</a>
+              </li>
             </ul>
           </dd>
         </dl>
@@ -171,13 +249,16 @@
         <dl class="dl-horizontal">
           <dt>
             <label>
-              <a href="#">Series Statement:</a>
+              <a href="#">Relators:</a>
             </label>
           </dt>
           <dd>
             <ul class="list-unstyled">
-              <li>
-                <a href="#">{{data["bf:seriesStatement"]}}</a>
+              <li *ngFor="let item of data['relators']">
+                <a href="item['@id']">
+                  <i class="fa fa-chevron-right fa-fw"></i>
+                  {{item["skos:prefLabel"]}}
+                </a>
               </li>
             </ul>
           </dd>
@@ -187,13 +268,15 @@
         <dl class="dl-horizontal">
           <dt>
             <label>
-              <a href="#">Sound Content:</a>
+              <a href="#">Related Works:</a>
             </label>
           </dt>
           <dd>
             <ul class="list-unstyled">
-              <li>
-                <a href="#">{{data["bf:soundContent"]}}</a>
+              <li *ngFor="let item of data['bf:relatedTo']; let i = index">
+                <a href="item['@id']"><i class="fa fa-book" aria-hidden="true"></i>
+                  work {{i+1}}
+                </a>
               </li>
             </ul>
           </dd>
@@ -220,32 +303,12 @@
         </dl>
       </div>
 
-      <div class="">
-        <dl class="dl-horizontal">
-          <dt>
-            <label>
-              <a href="#">Related Places:</a>
-            </label>
-          </dt>
-          <dd>
-            <ul class="list-unstyled">
-              <li *ngFor="let item of data.relatedPlaces">
-                <a href='{{item["@id"]}}'>
-                  <i class="fa fa-map-marker" aria-hidden="true"></i>
-                  {{item["rdfs:label"]}}</a>
-              </li>
-            </ul>
-          </dd>
-        </dl>
-      </div>
-
 
     </div>
     <div class="col-xs-6">
-      <iframe width="100%" height="450" scrolling="no" frameborder="no"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/210387165&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true">
-      </iframe>
-
+      <div class="row" style="padding-right: 20px;">
+        <img src="../../../assets/imgs/Ramberg_figaro.jpg" align="right">
+      </div>
       <div class="uiowa">
         <a href="http://www.lib.uiowa.edu/">
           <img src="../../../assets/imgs/uidome-uiwordmark-libraries.png" class="uiLibrary" >

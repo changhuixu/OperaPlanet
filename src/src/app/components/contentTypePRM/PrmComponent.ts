@@ -20,7 +20,6 @@ export class PrmComponent {
 
   }
   onBtnClicked() {
-    debugger;
     this.component_closed.emit();
   }
 }
