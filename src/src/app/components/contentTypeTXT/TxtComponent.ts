@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {Input} from "@angular/core/src/metadata/directives";
+import {Input, Output} from "@angular/core/src/metadata/directives";
+import {EventEmitter} from "@angular/forms/src/facade/async";
 
 
 
@@ -11,7 +12,7 @@ import {Input} from "@angular/core/src/metadata/directives";
 export class TxtComponent {
   title = 'app works!';
   @Input('content') data:any;
-
+  @Output('closed') component_closed:EventEmitter<any> =  new EventEmitter<any>();
   constructor(){
 
   }
@@ -19,7 +20,9 @@ export class TxtComponent {
 
   }
 
-
+  onBtnClicked() {
+    this.component_closed.emit();
+  }
 }
 
 /**
