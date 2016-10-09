@@ -1,4 +1,3 @@
-<h2>TDM</h2>
 <div class="container prmBody">
   <div class="jumbotron headTitle">
     <h1>{{data["bf:InstanceTitle"]}}</h1>
@@ -7,47 +6,47 @@
   <br><br>
 
   <div class="col-xs-6 itemsList">
-      <div class="">
-        <dl class="dl-horizontal">
-          <dt>
-            <label>
-              <a class="itemLable" href="http://bibfra.me/vocab/lite/creator">Creator:</a>
-            </label>
-          </dt>
-          <dd>
-            <ul class="list-unstyled">
-              <li>
-                <a href='{{data["bf:Person"]["@id"]}}'>
-                  <i class="fa bf-fa-Person fa-fw"></i>
-                  {{data["bf:Person"]["rdfs:label"]}}
-                </a>
-              </li>
-            </ul>
-          </dd>
-        </dl>
-      </div>
+    <div class="">
+      <dl class="dl-horizontal">
+        <dt>
+          <label>
+            <a class="itemLable" href="http://bibfra.me/vocab/lite/creator">Creator:</a>
+          </label>
+        </dt>
+        <dd>
+          <ul class="list-unstyled">
+            <li>
+              <a href='{{data["bf:Person"]["@id"]}}'>
+                <i class="fa bf-fa-Person fa-fw"></i>
+                {{data["bf:Person"]["rdfs:label"]}}
+              </a>
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
 
-      <div class="">
-        <dl class="dl-horizontal">
-          <dt>
-            <label>
-              <a href="http://bibfra.me/vocab/lite/contributor">Contributor</a>
-            </label>
-          </dt>
-          <dd>
-            <ul class="list-unstyled">
-              <li>
-                <a href="http://id.loc.gov/rwo/agents/n80057191">
-                    <i class="fa bf-fa-Person  catalog-resource   fa-fw"></i>
-                    Da Ponte, Lorenzo, 1749-1838
-                </a>
-              </li>
-            </ul>
-          </dd>
-        </dl>
-      </div>
+    <div class="">
+      <dl class="dl-horizontal">
+        <dt>
+          <label>
+            <a href="http://bibfra.me/vocab/lite/contributor">Contributor</a>
+          </label>
+        </dt>
+        <dd>
+          <ul class="list-unstyled">
+            <li>
+              <a href="http://id.loc.gov/rwo/agents/n80057191">
+                <i class="fa bf-fa-Person  catalog-resource   fa-fw"></i>
+                Da Ponte, Lorenzo, 1749-1838
+              </a>
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
 
-      
+
 
   </div>
   <div class="col-xs-6">

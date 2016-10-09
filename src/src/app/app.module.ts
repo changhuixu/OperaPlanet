@@ -10,6 +10,7 @@ import {WindowComponent} from "./components/window/window.component";
 import {TdmComponent} from "./components/contentTypeTDM/TdmComponent";
 import {NtmComponent} from "./components/contentTypeNTM/NtmComponent";
 import {TxtComponent} from "./components/contentTypeTXT/TxtComponent";
+import {DataService} from "./services/DataService";
 
 
 @NgModule({
@@ -29,7 +30,7 @@ import {TxtComponent} from "./components/contentTypeTXT/TxtComponent";
     HttpModule,
     AlertModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

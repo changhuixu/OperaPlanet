@@ -27,6 +27,28 @@ export class DataService {
     ) {
     }
 
+    public queryDBPedia(query:string|string[]) {
+
+        let headers = new Headers();
+        headers.append('Accept', 'application/json');
+
+        let qs = [];
+        if(!Array.isArray(query)) {
+            qs.push(query);
+        } else {
+            qs = query;
+        }
+        let requests = [];
+
+        for(let q of qs) {
+            let encoded_q = encodeURI(q);
+            let url = `http://lookup.dbpedia.org/api/search/KeywordSearch?QueryString=${encoded_q}`;
+            requests.push(this.http.get(url, { headers: headers}).map(res => res.json()));
+        }
+        console.log(requests);
+        return Observable.forkJoin.apply(null, requests);
+    }
+
     public getData() {
         //TODO: Add all data loading rouitnes here
     }
