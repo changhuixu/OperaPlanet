@@ -18,7 +18,9 @@ export class PrmComponent {
   ngOnInit() {
 
   }
-
+  onBtnClicked() {
+    this.data = null;
+  }
 }
 
 /**

@@ -22,3 +22,23 @@ dt label a {
   word-wrap: break-word;
   white-space: normal;
 }
+
+.uiowa{
+  background-color: gold;
+  margin: 20px 0 20px 0;
+  padding: 10px;
+  text-align: center;
+}
+.uiLibrary{
+  width:400px;
+  height:40px;
+  margin-bottom: 10px;
+}
+p{
+  font-size:16px;
+}
+.infoHawkPlus{
+  width:300px;
+  height:45px;
+  margin-top: 10px;
+}
