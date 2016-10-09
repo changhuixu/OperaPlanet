@@ -131,6 +131,23 @@
         </dl>
       </div>
 
+      <div class="" *ngIf="data['OtherInstances']">
+        <dl class="dl-horizontal">
+          <dt>
+            <label>
+              <a href="#">Other Instences:</a>
+            </label>
+          </dt>
+          <dd>
+            <ul class="list-unstyled">
+              <li *ngFor="let item of data['OtherInstances']; let i=index">
+                <a href='{{item}}'>Instance {{i+1}}</a>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+
       <div class="">
         <dl class="dl-horizontal">
           <dt>
