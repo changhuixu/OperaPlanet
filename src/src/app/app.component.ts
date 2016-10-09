@@ -18,7 +18,7 @@ export class AppComponent {
   graphData = {
     nodes: [{
       "id": "node_0",
-      "label": "ROOT",
+      "label": "The Marriage of Figaro (Opera)",
       "group": "opera",
       "data": {}
     },prm_1, prm_2, tdm_1, ntm_1, txt_1],

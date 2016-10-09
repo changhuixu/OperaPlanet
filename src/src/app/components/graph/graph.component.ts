@@ -51,7 +51,7 @@ export class GraphComponent {
       nodes: {
         scaling: {
           min: 16,
-          max: 32
+          max: 320
         },
         font: {
           size: 16,
@@ -91,7 +91,7 @@ export class GraphComponent {
         },
         opera: {
           shape: 'image',
-          image: this.image('soprano')
+          image: this.image('opera')
         },
         tdm: {
           shape: 'image',
