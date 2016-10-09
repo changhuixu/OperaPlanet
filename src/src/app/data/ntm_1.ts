@@ -3,19 +3,17 @@ export var ntm_1 = {
   "label": "Score",
   "group": "ntm",
   "data": {
-    "@id": "_:ub2bL24C20",
+    "@id": "_:ub4bL31C25",
     "Organization": "Rita Benton Music Library",
-    "bf:InstanceTitle": "The marriage of Figaro",
+    "bf:InstanceTitle": "The marriage of Figaro/ W.A. Mozart ; arranged by Wendt",
     "bf:instanceOf": {
       "@id": "http://bibframe.org/resources/amt1460042406/990024552960202771"
     },
-    "bf:dimensions": "19 cm.",
-    "bf:extent": "95 p.",
     "bf:hasItem": {
       "@id": "http://bibframe.org/resources/amt1460042406/990024552960202771helditem34"
     },
-    "bf:provisionActivityStatement": "Seattle : Seattle Printing & Pub. Co., c1952",
-    "bf:WorkTitle": "Nozze di Figaro. Libretto. English",
+    "bf:provisionActivityStatement": "London : Musica Rara, c1975.",
+    "bf:WorkTitle": "Nozze di Figaro. Selections; arranged",
     "bf:Person": [
       {
         "@id": "http://id.loc.gov/rwo/agents/n80022788",
@@ -23,58 +21,52 @@ export var ntm_1 = {
         "rdfs:label": "Mozart, Wolfgang Amadeus, 1756-1791."
       },
       {
-        "@id": "http://id.loc.gov/rwo/agents/n80125207",
+        "@id": "http://id.loc.gov/rwo/agents/n81075578",
         "@type": "bf:Person",
-        "rdfs:label": "Beaumarchais, Pierre Augustin Caron de, 1732-1799 "
-      },
-      {
-        "@id": "http://id.loc.gov/rwo/agents/n80057191",
-        "@type": "bf:Person",
-        "rdfs:label": "Da Ponte, Lorenzo, 1749-1838"
+        "rdfs:label": "Wenth, Johann, 1745-1801"
       }
     ],
     "bf:Topic": {
-      "@id": "http://id.loc.gov/authorities/subjects/sh85094942",
-      "rdfs:label": "Operas--Librettos"
+      "@id": "http://id.loc.gov/authorities/subjects/sh2008108658",
+      "rdfs:label": "Operas--Excerpts, Arranged--Scores and parts"
     },
     "bf:Identifier": [
-      "(IaU)002455296IOW01",
-      "(OCoLC)36618337"
+      "(v.1 score)31858058361217",
+      "(v.2 score)31858058739388",
+      "(v.1 pt.1-8)31858058361225",
+      "(v.2 pt.1-8)31858058739396"
     ],
     "InfoHawkPlus": {
-      "@id": "http://search.lib.uiowa.edu/01IOWA:default_scope:01IOWA_ALMA21413448500002771",
+      "@id": "http://search.lib.uiowa.edu/01IOWA:default_scope:01IOWA_ALMA21469905000002771",
       "rdfs:comment": "Connect to the University of Iowa Libraries' Online Catalog - InfoHawk+"
     },
 
     "bf:Item": {
-      "@id": "http://bibframe.org/resources/amt1460042406/990024552960202771helditem34",
-      "bf:barcode": "_:ub2bL20C13"
+      "@id": "http://bibframe.org/resources/amt1460042406/990024552960202771helditem39",
+      "bf:barcode": "_:ub2bL20C17"
     },
-    "bf:itemOf": "http://bibframe.org/resources/amt1460042406/990024552960202771instance18",
+    "bf:itemOf": "http://bibframe.org/resources/amt1460042406/990024552960202771instance19",
 
     "bf:Content": {
-      "@id": "http://id.loc.gov/vocabulary/contentTypes/txt",
-      "rdfs:label": "text"
+      "@id": "http://id.loc.gov/vocabulary/contentTypes/ntm",
+      "rdfs:label": "notated music"
     },
-    "bf:illustrativeContent": "book",
+    "bf:illustrativeContent": "Volume",
 
     "genont:ContentTypeGenericResource": {
-      "@id": "http://www.worldcat.org/title/-/oclc/36618337",
+      "@id": "http://www.worldcat.org/title/-/oclc/156931255",
       "@type": "genont:InformationResource"
     },
 
-    "schema:dateModified": "2016-08-25",
-
     "bf:GenreForm": {
-      "@id": "http://id.loc.gov/authorities/genreForms/gf2014026909",
-      "rdfs:label": "Librettos"
+      "@id": "http://id.loc.gov/authorities/genreForms/gf2014027077",
+      "rdfs:label": "Scores"
     },
     "bf:Work": {
-      "@id": "http://bibframe.org/resources/amt1460042406/990024552960202771work8",
+      "@id": "http://bibframe.org/resources/PSu1460061273/990052012520202771",
       "skos:prefLabel": "Mozart, Wolfgang Amadeus, 1756-1791.Nozze di Figaro."
     },
 
-    "rdf:value": "ML50.M939 N62 1952",
     "bf:Note": [{
       "bf:noteType": "AccessPolicy",
       "rdfs:label": "regular loan"
@@ -94,25 +86,24 @@ export var ntm_1 = {
 
     "bf:Organization": {
       "@id": "_:ub2bL41C22",
-      "rdfs:label": "Seattle Printing & Pub. Co"
+      "rdfs:label": "Musica Rara"
     },
 
     "relators": [
       {
-        "@id": "http://id.loc.gov/rwo/agents/n80125207",
-        "skos:prefLabel": "Beaumarchais, Pierre Augustin Caron de, 1732-1799 Mariage de Figaro.",
-      },
-      {
-        "@id": "http://id.loc.gov/rwo/agents/n80057191",
-        "skos:prefLabel": "Da Ponte, Lorenzo, 1749-1838 Nozze di Figaro."
+        "@id": "http://id.loc.gov/rwo/agents/n80022788",
+        "skos:prefLabel": "Mozart, Wolfgang Amadeus, 1756-1791 Nozze di Figaro. Selections; arranged"
       }
     ],
     "bf:content": {
       "@id": "http://id.loc.gov/vocabulary/contentTypes/txt"
     },
-    "bf:Barcode": {
-      "rdf:value": "31858046994335"
-    },
+    "bf:Barcodes": [
+      "(v.1 score)31858058361217",
+      "(v.2 score)31858058739388",
+      "(v.1 pt.1-8)31858058361225",
+      "(v.2 pt.1-8)31858058739396"
+    ],
 
     "bf:relatedTo": [
       {
@@ -124,19 +115,14 @@ export var ntm_1 = {
     ],
     "relatedPersons": [
       {
-        "@id": "http://id.loc.gov/rwo/agents/n80057191",
+        "@id": "http://id.loc.gov/rwo/agents/n81075578",
         "@type": "bf:Person",
-        "rdfs:label": "Da Ponte, Lorenzo,  1749-1838"
+        "rdfs:label": "Wenth, Johann, 1745-1801"
       },
       {
         "@id": "http://id.loc.gov/rwo/agents/n80022788",
         "@type": "bf:Person",
         "rdfs:label": "Mozart, Wolfgang Amadeus, 1756-1791"
-      },
-      {
-        "@id": "http://id.loc.gov/rwo/agents/n80125207",
-        "@type": "bf:Person",
-        "rdfs:label": "Beaumarchais, Pierre Augustin Caron de,   1732-1799 "
       }
     ]
   }
