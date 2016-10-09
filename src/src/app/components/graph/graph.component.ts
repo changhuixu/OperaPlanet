@@ -1,5 +1,6 @@
 import {Component, ViewChild, EventEmitter} from '@angular/core';
 import {Input, Output} from "@angular/core/src/metadata/directives";
+import {ParseService} from "../../services/ParseService";
 let vis =  require('vis');
 
 @Component({
@@ -24,7 +25,7 @@ export class GraphComponent {
   private edgeDataset = null;
   private graph = null;
 
-  constructor() {
+  constructor(private ps:ParseService) {
   }
 
   image(name) {
@@ -54,7 +55,7 @@ export class GraphComponent {
           max: 320
         },
         font: {
-          size: 16,
+          size: 25,
           face: 'Droid Arabic Naskh',
           strokeWidth: 1
         }
@@ -87,15 +88,16 @@ export class GraphComponent {
       groups: {
         prm: {
           shape: 'image',
-          image: this.image('musicnote')
+          image: this.image('musicnote'),
         },
         opera: {
           shape: 'image',
-          image: this.image('opera')
+          image: this.image('opera'),
+          size: 250
         },
         tdm: {
           shape: 'image',
-          image: this.image('camera')
+          image: this.image('camera'),
         },
         txt:{
           shape: 'image',
@@ -104,6 +106,11 @@ export class GraphComponent {
         ntm:{
           shape:'image',
           image: this.image('score')
+        },
+        person: {
+          shape: 'image',
+          image: this.image('black-user-shape'),
+          size: 10
         }
       }
     };
@@ -123,7 +130,51 @@ export class GraphComponent {
   }
 
   onNodeHover(event) {
-    //console.log(event);
+    let node = this.nodeDataset.get(event.node);
+    if(node.group == 'opera' || node.group == 'person') {
+      return;
+    }
+    let persons = null;
+    if(node.data.relatedPersons) {
+      persons = node.data.relatedPersons;
+      console.log(persons);
+    } else {
+      let temp = this.ps.aggregate(node.data);
+      persons = temp['bf:Person'];
+    }
+
+    if(!persons) {
+      return;
+    }
+
+    for(let person of persons) {
+      let id = person['@id'].split('/').pop();
+      try {
+        this.nodeDataset.add({
+          "id": "node_" + id,
+          "label": person['rdfs:label'],
+          "group": "person",
+          "data": {
+            'person': person,
+            'link': person['@id']
+          }
+        });
+      } catch(e) {
+      }
+      try{
+        let edgeId = node.id + '-' + id;
+        this.edgeDataset.add({
+          "id": edgeId,
+          "type": "related",
+          "label": "Contributed to",
+          "from": "node_" + id,
+          "to": node.id,
+        });
+      } catch(e) {
+        //Node or edge exists, never mind
+      }
+    }
+
   }
 
   onGraphClicked(data) {
@@ -143,6 +194,15 @@ export class GraphComponent {
   }
 
   onNodeClicked(node, edges) {
+    if(node.group == 'opera') {
+      return;
+    }
+
+    if(node.group == 'person') {
+      window.open(node.data.link);
+      return;
+    }
+
     this.node_clicked.emit({
       "node": node,
       "edges": edges
