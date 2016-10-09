@@ -1,12 +1,11 @@
-<div class="jumbotron operaHeader imgBanner" >
-  <h1 class="text-center">The Marriage of Figaro (Opera)</h1>
-  <hr style="margin:10px 0 10px 0; ">
-  <div class="container" align="center">
-    <button type="button" id="do_query" class="btn btn-primary btn-lg"> Linked Open Data</button>
+<div class="container">
+  <div class="jumbotron operaHeader imgBanner" >
+    <h1 class="text-center">The Marriage of Figaro (Opera)</h1>
+    <hr style="margin:10px 0 10px 0; ">
+    <div class="container" align="center">
+      <button type="button" (click)="onQueryClicked()" id="do_query" class="btn btn-primary btn-lg"> Linked Open Data</button>
+    </div>
   </div>
-
+  <graph-component  *ngIf="active" (node_clicked)="onNodeClicked($event)" [data]="graphData"></graph-component>
 </div>
-
-
-<graph-component (node_clicked)="onNodeClicked($event)" [data]="graphData"></graph-component>
-<window-component [data]="windowData"></window-component>
+<window-component *ngIf="active" [data]="windowData"></window-component>

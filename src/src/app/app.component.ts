@@ -14,6 +14,7 @@ import {tdm_1} from "./data/tdm_1";
 })
 export class AppComponent {
   title = 'app works!';
+  active = false;
   windowData = null;
   graphData = {
     nodes: [{
@@ -68,6 +69,9 @@ export class AppComponent {
     }]
   };
 
+  onQueryClicked() {
+    this.active = true;
+  }
   onNodeClicked(ev) {
     this.windowData = ev;
   }

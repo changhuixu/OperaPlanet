@@ -8,10 +8,20 @@ let vis =  require('vis');
   template: `<div #container></div>`,
   styles: [`
       div {
-          height:580px;
+          position: relative;
           background-color: azure;
-          overflow: auto;
+          left:0;
+          top:0;
+          bottom:0;
+          right:0;
+          width:100%;
+          height:800px;
       }
+      canvas { 
+          width:100%;
+          height:580px;
+      }
+      
   `]
 })
 export class GraphComponent {
