@@ -302,7 +302,7 @@ export class AppComponent {
       }
     }, {
       "id": "node_5",
-      "label": "Liberato",
+      "label": "Libretto",
       "group": "txt",
       "data": {
         "@id": "_:ub42bL39C22",
