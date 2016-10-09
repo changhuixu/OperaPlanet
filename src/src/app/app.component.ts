@@ -302,12 +302,12 @@ export class AppComponent {
       }
     }, {
       "id": "node_5",
-      "label": "MUSIC",
+      "label": "Libretto",
       "group": "txt",
       "data": {
         "@id": "_:ub42bL39C22",
         "Organization": "Naxos Digital Services Ltd",
-        "bf:InstanceTitle": "(TXT_5) MOZART : Marriage of Figaro",
+        "bf:InstanceTitle": "MOZART : Marriage of Figaro",
         "bf:Note": [
           {
             "bf:noteType": "Access condition",
@@ -319,11 +319,31 @@ export class AppComponent {
           }
         ],
         "bf:WorkTitle": "Naxos Music Library.",
-        "bf:Person": {
-          "@id": "http://id.loc.gov/rwo/agents/n80022788",
-          "@type": "bf:Person",
-          "rdfs:label": "Mozart, Wolfgang Amadeus, 1756-1791."
+        "bf:Content": {
+          "@id": "http://id.loc.gov/vocabulary/contentTypes/prm",
+          "rdfs:label": "performed music"
         },
+        "bf:Organization": {
+          "@id": "http://id.loc.gov/authorities/names/n78094508",
+          "rdfs:label": "Geoffrey Mitchell Choir"
+        },
+        "bf:Person": [
+          {
+            "@id": "http://id.loc.gov/rwo/agents/n80022788",
+            "@type": "bf:Person",
+            "rdfs:label": "Mozart, Wolfgang Amadeus, 1756-1791."
+          },
+          {
+            "@id": "http://id.loc.gov/rwo/agents/n80125207",
+            "@type": "bf:Person",
+            "rdfs:label": "Beaumarchais, Pierre Augustin Caron de, 1732-1799 "
+          },
+          {
+            "@id": "http://id.loc.gov/rwo/agents/n80057191",
+            "@type": "bf:Person",
+            "rdfs:label": "Da Ponte, Lorenzo, 1749-1838"
+          }
+        ],
         "bf:carrier": {
           "@id": "http://id.loc.gov/vocabulary/carriers/cr"
         },
@@ -343,8 +363,50 @@ export class AppComponent {
         },
         "bf:provisionActivityStatement": "Hong Kong : Naxos Digital Services Ltd., 2007",
         "bf:seriesStatement": "Chandos",
-        "bf:soundContent": "Sound on medium"
-
+        "bf:soundContent": "Sound on medium",
+        "relatedPersons":[
+          {
+            "@id": "http://id.loc.gov/rwo/agents/n92027115",
+            "@type": "bf:Person",
+            "rdfs:label": "Kale, Stuart"
+          },
+          {
+            "@id": "http://id.loc.gov/authorities/names/no2006019760",
+            "@type": "bf:Person",
+            "rdfs:label": "Bonner, Yvette, 1973- "
+          },
+          {
+            "@id": "http://id.loc.gov/rwo/agents/no96042093",
+            "@type": "bf:Person",
+            "rdfs:label": "Parry, David, 1949- "
+          },
+          {
+            "@id": "http://id.loc.gov/rwo/agents/n80022788",
+            "@type": "bf:Person",
+            "rdfs:label": "Mozart, Wolfgang Amadeus, 1756-1791"
+          },
+          {
+            "@id": "http://id.loc.gov/rwo/agents/n88627414",
+            "@type": "bf:Person",
+            "rdfs:label": "Montague, Diana"
+          },
+          {
+            "@id": "http://id.loc.gov/rwo/agents/no2001047614",
+            "@type": "bf:Person",
+            "rdfs:label": "McCafferty, Frances"
+          }
+        ],
+        "relatedPlaces":[
+          {
+            "@id": "_:ub42bL41C22",
+            "@type": "bf:Place",
+            "rdfs:label": "Hong Kong "
+          }
+        ],
+        "InfoHawkPlus":{
+          "@id": "http://search.lib.uiowa.edu/01IOWA:default_scope:01IOWA_ALMA51553243030002771",
+          "rdfs:comment": "Connect to the University of Iowa Libraries' Online Catalog - InfoHawk+"
+        }
       }
     }, {
       "id": "node_6",
