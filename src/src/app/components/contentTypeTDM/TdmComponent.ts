@@ -78,7 +78,7 @@ export class TdmComponent {
           label = l['rdf:value']
         }
         if( l['@id'].indexOf('http') == -1) {
-          label += " (" + l['@id'] + ")";
+          //label += " (" + l['@id'] + ")";
           link = null;
         }
 
