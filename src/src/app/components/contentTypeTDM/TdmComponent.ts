@@ -49,7 +49,7 @@ export class TdmComponent {
         this.uiowaLink = id;
       }
     }
-
+    console.log(this.data);
     let targets = [
       "bf:Title",
       "bf:Organization",
@@ -89,6 +89,17 @@ export class TdmComponent {
       }
       this.entryList.push(entry);
     }
+
+    let worldcatEntry = {
+      "title": "WorldCat Resource",
+      "data": [{
+        "link":     this.data['genont:InformationResource'][0]['@id'],
+        "text":     this.data['genont:InformationResource'][0]['@id']
+
+      }]
+    };
+
+    this.entryList.splice(3, 0, worldcatEntry);
 
   }
 

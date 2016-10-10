@@ -43,7 +43,7 @@ export var prm_1 = {
             }
         ],
       "OtherInstances": [
-        "<http://proxy.lib.uiowa.edu/login?url=http://uiowa.naxosmusiclibrary.com/streamcat.asp?s=38521%2fuiowanmlpaid06&item%5fcode=CHAN3113-15>"
+        "http://proxy.lib.uiowa.edu/login?url=http://uiowa.naxosmusiclibrary.com/streamcat.asp?s=38521%2fuiowanmlpaid06&item%5fcode=CHAN3113-15"
       ],
         "bf:carrier": {
             "@id": "http://id.loc.gov/vocabulary/carriers/cr"
@@ -137,6 +137,10 @@ export var prm_1 = {
             "rdfs:label": "Kale, Stuart."
           }
         ],
+        "genont:ContentTypeGenericResource": {
+            "@id": "http://www.worldcat.org/oclc/259587568",
+            "@type": "genont:InformationResource"
+        },
         "relatedPlaces":[
             {
                 "@id": "_:ub42bL41C22",

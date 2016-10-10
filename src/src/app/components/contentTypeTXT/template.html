@@ -245,25 +245,8 @@
           </dd>
         </dl>
       </div>
-      <div class="">
-        <dl class="dl-horizontal">
-          <dt>
-            <label>
-              <a href="#">Relators:</a>
-            </label>
-          </dt>
-          <dd>
-            <ul class="list-unstyled">
-              <li *ngFor="let item of data['relators']">
-                <a href="{{item['@id']}}">
-                  <i class="fa fa-chevron-right fa-fw"></i>
-                  {{item["skos:prefLabel"]}}
-                </a>
-              </li>
-            </ul>
-          </dd>
-        </dl>
-      </div>
+
+
       <div class="">
         <dl class="dl-horizontal">
           <dt>
@@ -275,7 +258,7 @@
             <ul class="list-unstyled">
               <li *ngFor="let item of data['bf:relatedTo']; let i = index">
                 <a href="{{item['@id']}}"><i class="fa fa-book" aria-hidden="true"></i>
-                  work {{i+1}}
+                  {{item['skos:prefLabel']}}
                 </a>
               </li>
             </ul>

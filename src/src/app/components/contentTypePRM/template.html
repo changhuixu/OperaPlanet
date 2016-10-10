@@ -10,13 +10,13 @@
         <dl class="dl-horizontal">
           <dt>
             <label>
-              <a href="http://bibfra.me/vocab/lite/creator">Creator:</a>
+              <a target="_blank" href="http://bibfra.me/vocab/lite/creator">Creator:</a>
             </label>
           </dt>
           <dd>
             <ul class="list-unstyled">
               <li>
-                <a href='{{data["bf:Person"][0]["@id"]}}'>
+                <a target="_blank" href='{{data["bf:Person"][0]["@id"]}}'>
                   <i class="fa fa-user" aria-hidden="true"></i>
                   {{data["bf:Person"][0]["rdfs:label"]}}
                 </a>
@@ -30,13 +30,13 @@
         <dl class="dl-horizontal">
           <dt>
             <label>
-              <a href="http://bibfra.me/vocab/lite/contributor">Contributor:</a>
+              <a target="_blank" href="http://bibfra.me/vocab/lite/contributor">Contributor:</a>
             </label>
           </dt>
           <dd>
             <ul class="list-unstyled">
               <li *ngFor='let item of data["bf:Person"]| slice:1' >
-                <a href='{{item["@id"]}}'>
+                <a target="_blank" href='{{item["@id"]}}'>
                   <i class="fa fa-user" aria-hidden="true"></i>
                   {{item["rdfs:label"]}}
                 </a>
@@ -56,7 +56,7 @@
           <dd>
             <ul class="list-unstyled">
               <li>
-                <a href='{{data["bf:Content"]["@id"]}}'>{{data["bf:Content"]["rdfs:label"]}}</a>
+                <a target="_blank" href='{{data["bf:Content"]["@id"]}}'>{{data["bf:Content"]["rdfs:label"]}}</a>
               </li>
             </ul>
           </dd>
@@ -73,7 +73,7 @@
           <dd>
             <ul class="list-unstyled">
               <li>
-                <a href='{{data["bf:Organization"]["@id"]}}'>{{data["bf:Organization"]["rdfs:label"]}}</a>
+                <a target="_blank" href='{{data["bf:Organization"]["@id"]}}'>{{data["bf:Organization"]["rdfs:label"]}}</a>
               </li>
             </ul>
           </dd>
@@ -118,13 +118,32 @@
         <dl class="dl-horizontal">
           <dt>
             <label>
+              <a href="#">WorldCat Resource:</a>
+            </label>
+          </dt>
+          <dd>
+            <ul class="list-unstyled">
+              <li>
+                <a target="_blank" href='{{data["genont:ContentTypeGenericResource"]["@id"]}}'>
+                  {{data["genont:ContentTypeGenericResource"]["@id"]}}
+                </a>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+
+      <div class="">
+        <dl class="dl-horizontal">
+          <dt>
+            <label>
               <a href="#">Instance of:</a>
             </label>
           </dt>
           <dd>
             <ul class="list-unstyled">
               <li>
-                <a href='{{data["bf:instanceOf"]["@id"]}}'>{{data["bf:instanceOf"]["@id"]}}</a>
+                <a target="_blank" href='{{data["bf:instanceOf"]["@id"]}}'>{{data["bf:instanceOf"]["@id"]}}</a>
               </li>
             </ul>
           </dd>
@@ -141,7 +160,7 @@
           <dd>
             <ul class="list-unstyled">
               <li *ngFor="let item of data['OtherInstances']; let i=index">
-                <a href='{{item}}'>Instance {{i+1}}</a>
+                <a target="_blank" href='{{item}}'>{{item}}</a>
               </li>
             </ul>
           </dd>
@@ -227,7 +246,7 @@
           <dd>
             <ul class="list-unstyled">
               <li *ngFor='let item of data["relatedPersons"]'>
-                <a href='{{item["@id"]}}'>
+                <a target="_blank" href='{{item["@id"]}}'>
                   <i class="fa fa-user" aria-hidden="true"></i>
                   {{item["rdfs:label"]}}
                 </a>
@@ -247,7 +266,7 @@
           <dd>
             <ul class="list-unstyled">
               <li *ngFor="let item of data.relatedPlaces">
-                <a href='{{item["@id"]}}'>
+                <a target="_blank" href='{{item["@id"]}}'>
                   <i class="fa fa-map-marker" aria-hidden="true"></i>
                   {{item["rdfs:label"]}}</a>
               </li>
@@ -264,14 +283,14 @@
       </iframe>
 
       <div class="uiowa">
-        <a href="http://www.lib.uiowa.edu/">
+        <a target="_blank" href="http://www.lib.uiowa.edu/">
           <img src="../../../assets/imgs/uidome-uiwordmark-libraries.png" class="uiLibrary" >
         </a>
 
-        <a href='{{data.InfoHawkPlus["@id"]}}'>
+        <a target="_blank" href='{{data.InfoHawkPlus["@id"]}}'>
           <img src="../../../assets/imgs/ihp-wordmark-full_w.png" class="infoHawkPlus" >
         </a>
-        <a href='{{data.InfoHawkPlus["@id"]}}'>
+        <a target="_blank" href='{{data.InfoHawkPlus["@id"]}}'>
          <p> Connect to the University of Iowa Libraries' Online Catalog</p>
         </a>
       </div>

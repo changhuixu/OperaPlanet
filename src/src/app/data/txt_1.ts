@@ -116,10 +116,13 @@ export var txt_1 = {
 
     "bf:relatedTo": [
       {
-        "@id": "http://bibframe.org/resources/amt1460042406/990024552960202771work14"
+        "@id": "http://bibframe.org/resources/amt1460042406/990024552960202771work14",
+        "skos:prefLabel": "Da Ponte, Lorenzo, 1749-1838 Nozze di Figaro."
       },
       {
-        "@id": "http://bibframe.org/resources/amt1460042406/990024552960202771work15"
+        "@id": "http://bibframe.org/resources/amt1460042406/990024552960202771work15",
+        "skos:prefLabel": "Beaumarchais, Pierre Augustin Caron de, 1732-1799 Mariage de Figaro."
+
       }
     ],
     "relatedPersons":[
