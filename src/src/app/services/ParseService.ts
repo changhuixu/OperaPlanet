@@ -43,7 +43,7 @@ class Parser {
         let data = {};
 
         json = JSON.parse(JSON.stringify(json));
-        let ignoreList = ['@id', '@type', 'bf:hasItem', 'bf:instanceOf', 'items', 'bf:itemOf', 'bf:hasInstance'];
+        let ignoreList = ['bf:provisionActivity', '@id', '@type', 'bf:hasItem', 'bf:instanceOf', 'items', 'bf:itemOf', 'bf:hasInstance'];
         let nsRawList = ['sko', 'wdsr', 'owl', 'skos', 'schema'];
         let keys = Object.keys(json);
 
