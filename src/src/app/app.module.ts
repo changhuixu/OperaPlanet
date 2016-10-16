@@ -14,6 +14,7 @@ import {RelatorFragment} from "./components/fragments/RelatorFragment";
 import {GeneralPageComponent} from "./components/pages/GEN.component";
 import {MusicBrainzFragment} from "./components/fragments/MusicBrainzFragment";
 import {LookupPipe} from "./pipes/lookup.pipe";
+import {SafePipe} from "./pipes/safe.pipe";
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import {LookupPipe} from "./pipes/lookup.pipe";
     BFFragment,
     RelatorFragment,
     GeneralPageComponent,
-    LookupPipe
+    LookupPipe,
+    SafePipe
   ],
   imports: [
     BrowserModule,

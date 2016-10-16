@@ -2,6 +2,7 @@ export var prm_1 = {
     "id": "node_1",
     "label": "Streaming Audio",
     "group": "prm",
+    "embed": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/210387165&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true",
     "work_id": "http://bibframe.org/resources/SEj1470609719/990057789670202771",
     "data": [
         {
@@ -125,7 +126,6 @@ export var prm_1 = {
             "bf:note": {
                 "@id": "_:ub42bL57C13"
             }
-<<<<<<< HEAD
         },
         {
             "@id": "http://bibframe.org/resources/SEj1470609719/990057789670202771organization24",
@@ -385,109 +385,6 @@ export var prm_1 = {
             "bf:date": "[2007]",
             "bf:place": {
                 "@id": "_:ub42bL41C22"
-=======
-        ],
-      "OtherInstances": [
-        "<http://proxy.lib.uiowa.edu/login?url=http://uiowa.naxosmusiclibrary.com/streamcat.asp?s=38521%2fuiowanmlpaid06&item%5fcode=CHAN3113-15>"
-      ],
-        "bf:carrier": {
-            "@id": "http://id.loc.gov/vocabulary/carriers/cr"
-        },
-        "bf:extent": "1 online resource (82 streaming audio files)",
-        "bf:genreForm": {
-            "@id": "_:ub42bL31C15"
-        },
-        "bf:illustrativeContent": "digital",
-        "bf:instanceOf": {
-            "@id": "http://bibframe.org/resources/SEj1470609719/990057789670202771"
-        },
-        "bf:media": {
-            "@id": "http://id.loc.gov/vocabulary/mediaTypes/c"
-        },
-        "bf:provisionActivity": {
-            "@id": "_:ub42bL37C26"
-        },
-        "bf:provisionActivityStatement": "Hong Kong : Naxos Digital Services Ltd., 2007",
-        "bf:seriesStatement": "Chandos",
-        "bf:soundContent": "Sound on medium",
-        "relatedPersons":[
-          {
-            "@id": "http://id.loc.gov/rwo/agents/no99028477",
-            "@type": "bf:Person",
-            "rdfs:label": "Purves, Christopher."
-          },
-          {
-            "@id": "http://id.loc.gov/rwo/agents/n82149743",
-            "@type": "bf:Person",
-            "rdfs:label": "Kenny, Yvonne."
-          },
-          {
-            "@id": "http://id.loc.gov/rwo/agents/n89669854",
-            "@type": "bf:Person",
-            "rdfs:label": "Graham-Hall, John."
-          },
-          {
-            "@id": "http://id.loc.gov/rwo/agents/no97003032",
-            "@type": "bf:Person",
-            "rdfs:label": "Dazeley, William, 1966-"
-          },
-          {
-            "@id": "http://id.loc.gov/rwo/agents/no96042093",
-            "@type": "bf:Person",
-            "rdfs:label": "Parry, David, 1949-"
-          },
-          {
-            "@id": "http://id.loc.gov/rwo/agents/no2008034055",
-            "@type": "bf:Person",
-            "rdfs:label": "Tynan, Sarah."
-          },
-          {
-            "@id": "http://id.loc.gov/rwo/agents/n80022788",
-            "@type": "bf:Person",
-            "rdfs:label": "Mozart, Wolfgang Amadeus, 1756-1791."
-          },
-          {
-            "@id": "http://id.loc.gov/rwo/agents/n88627414",
-            "@type": "bf:Person",
-            "rdfs:label": "Montague, Diana."
-          },
-          {
-            "@id": "http://id.loc.gov/rwo/agents/n80057191",
-            "@type": "bf:Person",
-            "rdfs:label": "Da Ponte, Lorenzo, 1749-1838."
-          },
-          {
-            "@id": "http://id.loc.gov/rwo/agents/no2004108484",
-            "@type": "bf:Person",
-            "rdfs:label": "Danby, Graeme."
-          },
-          {
-            "@id": "http://id.loc.gov/rwo/agents/no95025917",
-            "@type": "bf:Person",
-            "rdfs:label": "Evans, Rebecca."
-          },
-          {
-            "@id": "http://id.loc.gov/rwo/agents/no2004023095",
-            "@type": "bf:Person",
-            "rdfs:label": "Veira, Jonathan."
-          },
-          {
-            "@id": "http://id.loc.gov/rwo/agents/no2001047614",
-            "@type": "bf:Person",
-            "rdfs:label": "McCafferty, Frances."
-          },
-          {
-            "@id": "http://id.loc.gov/rwo/agents/n92027115",
-            "@type": "bf:Person",
-            "rdfs:label": "Kale, Stuart."
-          }
-        ],
-        "relatedPlaces":[
-            {
-                "@id": "_:ub42bL41C22",
-                "@type": "bf:Place",
-                "rdfs:label": "Hong Kong "
->>>>>>> 751513f... hot fixes
             }
         },
         {
@@ -545,4 +442,5 @@ export var prm_1 = {
             "schema:name": "The Marriage of Figaro (Philharmonia Orchestra featuring conductor David Parry)"
         }
     ]
+
 };
