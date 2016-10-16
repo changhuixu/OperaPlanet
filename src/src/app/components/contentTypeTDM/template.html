@@ -1,52 +1,33 @@
 <div class="container prmBody">
   <div class="jumbotron headTitle">
-    <h1>{{data["bf:Title"][0]["bf:mainTitle"]}}</h1>
+    <h1>{{work['skos:prefLabel']}}</h1>
   </div>
   <br><br>
   <div>
     <div class="col-xs-6 itemsList">
+
+      <bf *ngFor='let item of work["bf"]' [content]="item"></bf>
+
+
       <div class="">
         <dl class="dl-horizontal">
           <dt>
             <label>
-              <a href="http://bibfra.me/vocab/lite/contributor" target="_blank">Contributors:</a>
+              WorldCat Resource:
             </label>
           </dt>
           <dd>
-            <ul class="list-unstyled">
-              <li *ngFor='let item of data["bf:Person"]' >
-                <a href='{{item["@id"]}}' target="_blank">
-                  <i class="fa fa-user" aria-hidden="true"></i>
-                  {{item["rdfs:label"]}}
-                </a>
-              </li>
-            </ul>
+              <a href="{{this.worldCatLink}}" target="_blank">{{worldCatLink}}</a>
           </dd>
         </dl>
       </div>
 
+      <relator *ngFor='let item of work["relators"]' [content]="item"></relator>
 
-      <div class="" *ngFor="let entry of entryList">
-        <dl class="dl-horizontal">
-          <dt>
-            <label>{{entry.title}}:</label>
-          </dt>
-          <dd>
-            <ul class="list-unstyled">
-              <li *ngFor='let e of entry.data' >
-
-                <a *ngIf="e.link"  href='{{e.link}}'>
-                  <i class="fa" aria-hidden="true"></i>
-                  {{e['text']}} <br>
-                </a>
-                <span *ngIf="!(e.link)">
-                  <i  class="fa" aria-hidden="true"></i>{{e['text']}} <br>
-                </span>
-              </li>
-            </ul>
-          </dd>
-        </dl>
-      </div>
+      <h3>Instance</h3>
+      <bf *ngFor='let item of work.instances[0]["bf"]' [content]="item"></bf>
+      <h3>Item</h3>
+      <bf *ngFor='let item of work.instances[0]["items"][0]["bf"]' [content]="item"></bf>
 
     </div>
     <div class="col-xs-6">

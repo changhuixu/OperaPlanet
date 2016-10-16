@@ -20,10 +20,12 @@ export class TdmComponent {
   @Input('content') data:any;
   @Output('closed') component_closed:EventEmitter<any> =  new EventEmitter<any>();
 
+  private work:any = null;
   private entryList:any[] = [];
 
   private imdbData:Observable<any>;
   private uiowaLink;
+  private worldCatLink;
 
   constructor(private ds:DataService, private ps:ParseService) {
 
@@ -34,74 +36,37 @@ export class TdmComponent {
   }
 
   ngOnInit() {
-    this.data = this.ps.aggregate(this.data);
-    if(this.data['schema:Movie']) {
-      let d = this.data['schema:Movie'][0];
-      let id = d['@id'].split('/').pop();
+
+    this.work = this.ps.getWork(this.data.work_id, this.data.data);
+    console.log(this.work);
+
+    if(this.work['owl:sameAs']) {
+      let id = this.work['owl:sameAs']['@id'].split('/').pop();
       this.imdbData = this.ds.queryIMDB(id);
     }
 
-    let d = this.data['bf:ThreeDimensionalObject'][0]['wdsr:describedby'];
+    let d = this.work['wdsr:describedby'];
     for(let x of d) {
       let id = x['@id'];
-
       if(id.indexOf('uiowa') != -1) {
         this.uiowaLink = id;
       }
-    }
-    console.log(this.data);
-    let targets = [
-      "bf:Title",
-      "bf:Organization",
-      "bf:Topic",
-      "bf:GenreForm",
-      "bf:VideorecordingNumber",
-      "bf:Content",
-      "bf:language",
-      "bf:Carrier",
-      "bf:ShelfMark",
-      "bf:AccessPolicy",
-    ];
-
-    for(let i of targets) {
-
-      let title = i.replace('bf:', '');
-      let entry = {
-        "title": title,
-        "data": []
-      };
-      let list = this.data[i];
-      for(let l of list)  {
-        let link = l['@id'];
-        let label = l['rdfs:label'];
-        if(!label) {
-          label = l['rdf:value']
-        }
-        if( l['@id'].indexOf('http') == -1) {
-          //label += " (" + l['@id'] + ")";
-          link = null;
-        }
-
-        entry.data.push({
-          "link": link,
-          "text": label
-        });
+      if(id.indexOf('worldcat') != -1) {
+        this.worldCatLink = id;
       }
-      this.entryList.push(entry);
     }
 
+    /*
     let worldcatEntry = {
       "title": "WorldCat Resource",
       "data": [{
-        "link":     this.data['genont:InformationResource'][0]['@id'],
-        "text":     this.data['genont:InformationResource'][0]['@id']
+        "link":     this.data['genont:ContentTypeGenericResource'][0]['@id'],
+        "text":     this.data['genont:ContentTypeGenericResource'][0]['@id']
 
       }]
     };
-
-    this.entryList.splice(3, 0, worldcatEntry);
-
-  }
+    */
+   }
 
 
   onBtnClicked() {

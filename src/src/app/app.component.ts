@@ -5,6 +5,7 @@ import {ntm_1} from "./data/ntm_1";
 import {prm_2} from "./data/prm_2";
 import {prm_1} from "./data/prm_1";
 import {tdm_1} from "./data/tdm_1";
+import {ParseService} from "./services/ParseService";
 
 
 @Component({
@@ -72,8 +73,10 @@ export class AppComponent {
   onQueryClicked() {
     this.active = true;
   }
+
   onNodeClicked(ev) {
     this.windowData = ev;
   }
+
 
 }

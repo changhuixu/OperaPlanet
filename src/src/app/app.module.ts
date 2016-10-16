@@ -13,6 +13,8 @@ import {TxtComponent} from "./components/contentTypeTXT/TxtComponent";
 import {DataService} from "./services/DataService";
 import {ParseService} from "./services/ParseService";
 import {IMDBFragment} from "./components/contentTypeTDM/IMDBFragment";
+import {BFFragment} from "./components/BFFragment";
+import {RelatorFragment} from "./components/RelatorFragment";
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import {IMDBFragment} from "./components/contentTypeTDM/IMDBFragment";
     TxtComponent,
     WindowComponent,
     GraphComponent,
-    IMDBFragment
+    IMDBFragment,
+    BFFragment,
+    RelatorFragment
   ],
   imports: [
     BrowserModule,
