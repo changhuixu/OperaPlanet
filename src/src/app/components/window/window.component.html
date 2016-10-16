@@ -3,11 +3,9 @@
     <a (click)="onCloseClicked()" style="position:absolute;left:0;top:0;">
       <i class="fa fa-times-circle fa-5x" aria-hidden="true" ></i>
     </a>
-
-    <div *ngIf="inputData" [ngSwitch]="inputData.node.group">
-        <prm *ngSwitchCase="'prm'" [content]="inputData.node" (closed)="onCloseClicked()"></prm>
-        <tdm *ngSwitchCase="'tdm'" [content]="inputData.node" (closed)="onCloseClicked()"></tdm>
-        <ntm *ngSwitchCase="'ntm'" [content]="inputData.node" (closed)="onCloseClicked()"></ntm>
-        <txt *ngSwitchCase="'txt'" [content]="inputData.node" (closed)="onCloseClicked()"></txt>
+    <div *ngIf="inputData">
+        <general-page *ngIf="inputData.node.group!='tdi'" [content]="inputData.node" (closed)="onCloseClicked()"></general-page>
+        <tdi-page *ngIf="inputData.node.group=='tdi'" [content]="inputData.node" (closed)="onCloseClicked()"></tdi-page>
     </div>
+
 </div>

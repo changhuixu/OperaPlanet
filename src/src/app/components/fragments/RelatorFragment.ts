@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import {Input} from "@angular/core/src/metadata/directives";
-import {Observable} from "rxjs";
-import {relator_lookup} from "../loc_lookup/relators";
+import {relator_lookup} from "../../loc_lookup/relators";
 
 
 
@@ -39,10 +38,6 @@ export class RelatorFragment{
 
   @Input('content') content;
 
-
-  constructor() {
-
-  }
 
   private toRegularForm(camelCase:string) {
     return camelCase.replace(/([A-Z])/g, ' $1').replace(/^./, function(str){ return str.toUpperCase(); });
@@ -82,15 +77,8 @@ export class RelatorFragment{
         }
       }
 
-
-
-
     }
-
   }
-
-
-
 }
 
 /**

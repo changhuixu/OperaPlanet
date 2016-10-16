@@ -5,31 +5,27 @@ import { HttpModule } from '@angular/http';
 import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
 import { AppComponent } from './app.component';
 import {GraphComponent} from "./components/graph/graph.component";
-import {PrmComponent} from "./components/contentTypePRM/PrmComponent";
 import {WindowComponent} from "./components/window/window.component";
-import {TdmComponent} from "./components/contentTypeTDM/TdmComponent";
-import {NtmComponent} from "./components/contentTypeNTM/NtmComponent";
-import {TxtComponent} from "./components/contentTypeTXT/TxtComponent";
 import {DataService} from "./services/DataService";
 import {ParseService} from "./services/ParseService";
-import {IMDBFragment} from "./components/contentTypeTDM/IMDBFragment";
-import {BFFragment} from "./components/BFFragment";
-import {RelatorFragment} from "./components/RelatorFragment";
+import {IMDBFragment} from "./components/fragments/IMDBFragment";
+import {BFFragment} from "./components/fragments/BFFragment";
+import {RelatorFragment} from "./components/fragments/RelatorFragment";
+import {GeneralPageComponent} from "./components/pages/GEN.component";
+import {TDIPageComponent} from "./components/pages/TDI.component";
 
 
 @NgModule({
   declarations: [
     AppComponent,
     GraphComponent,
-    PrmComponent,
-    TdmComponent,
-    NtmComponent,
-    TxtComponent,
     WindowComponent,
     GraphComponent,
     IMDBFragment,
     BFFragment,
-    RelatorFragment
+    RelatorFragment,
+    GeneralPageComponent,
+    TDIPageComponent
   ],
   imports: [
     BrowserModule,

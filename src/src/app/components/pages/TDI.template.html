@@ -1,0 +1,52 @@
+<div class="container prmBody">
+  <div class="jumbotron headTitle">
+    <h1>{{work['skos:prefLabel']}}</h1>
+  </div>
+  <br><br>
+  <div>
+    <div class="col-xs-6 itemsList">
+      <bf *ngFor='let item of work["bf"]' [content]="item"></bf>
+      <div class="">
+        <dl class="dl-horizontal">
+          <dt>
+            <label>
+              WorldCat Resource:
+            </label>
+          </dt>
+          <dd>
+              <a href="{{this.worldCatLink}}" target="_blank">{{worldCatLink}}</a>
+          </dd>
+        </dl>
+      </div>
+      <relator *ngFor='let item of work["relators"]' [content]="item"></relator>
+
+      <h3>Instance</h3>
+      <bf *ngFor='let item of work.instances[0]["bf"]' [content]="item"></bf>
+
+      <h3>Item</h3>
+      <bf *ngFor='let item of work.instances[0]["items"][0]["bf"]' [content]="item"></bf>
+
+    </div>
+    <div class="col-xs-6">
+      <imdb [content]="imdbData | async"></imdb>
+
+      <div class="uiowa">
+        <a href="http://www.lib.uiowa.edu/">
+          <img src="../../../assets/imgs/uidome-uiwordmark-libraries.png" class="uiLibrary" >
+        </a>
+        <a target="_blank" [href]='uiowaLink'>
+          <img src="../../../assets/imgs/ihp-wordmark-full_w.png" class="infoHawkPlus" >
+        </a>
+        <a target="_blank" [href]='uiowaLink'>
+          <p> Connect to the University of Iowa Libraries' Online Catalog</p>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12">
+    <button type="button" class="btn btn-primary btn-lg btn-block" (click)="onBtnClicked()">Return to Opera Network</button>
+    <br><br>
+  </div>
+</div>
+
+

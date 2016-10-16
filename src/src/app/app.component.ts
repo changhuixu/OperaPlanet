@@ -4,7 +4,7 @@ import {txt_1} from "./data/txt_1";
 import {ntm_1} from "./data/ntm_1";
 import {prm_2} from "./data/prm_2";
 import {prm_1} from "./data/prm_1";
-import {tdm_1} from "./data/tdm_1";
+import {tdi_1} from "./data/tdi_1";
 import {ParseService} from "./services/ParseService";
 
 
@@ -14,7 +14,6 @@ import {ParseService} from "./services/ParseService";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
   active = false;
   windowData = null;
   graphData = {
@@ -24,7 +23,7 @@ export class AppComponent {
       "group": "opera",
       size : 50,
       "data": {}
-    },prm_1, prm_2, tdm_1, ntm_1, txt_1],
+    },prm_1, prm_2, tdi_1, ntm_1, txt_1],
     edges: [{
       "id": "edge_0",
       "type": "related",
@@ -76,6 +75,7 @@ export class AppComponent {
 
   onNodeClicked(ev) {
     this.windowData = ev;
+    console.log(ev);
   }
 
 

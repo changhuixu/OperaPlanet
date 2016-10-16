@@ -1,44 +1,32 @@
 import {Component, EventEmitter} from '@angular/core';
 import {Input, Output} from "@angular/core/src/metadata/directives";
-import {TDM, Person} from "../../models/tdm";
+import {Observable} from "rxjs";
 import {DataService} from "../../services/DataService";
 import {ParseService} from "../../services/ParseService";
-import {Observable} from "rxjs";
 
 
 
 @Component({
-  selector: 'tdm',
-  templateUrl: './template.html',
+  selector: 'tdi-page',
+  templateUrl: './TDI.template.html',
   styleUrls: ['./style.css']
 })
-export class TdmComponent {
-  title = 'app works!';
-
-  model:TDM = null;
+export class TDIPageComponent {
 
   @Input('content') data:any;
   @Output('closed') component_closed:EventEmitter<any> =  new EventEmitter<any>();
 
   private work:any = null;
-  private entryList:any[] = [];
 
   private imdbData:Observable<any>;
   private uiowaLink;
   private worldCatLink;
 
-  constructor(private ds:DataService, private ps:ParseService) {
-
-  }
-
-  onQueryComplete(x) {
-    console.log(arguments);
-  }
+  constructor(private ds:DataService, private ps:ParseService) {}
 
   ngOnInit() {
 
     this.work = this.ps.getWork(this.data.work_id, this.data.data);
-    console.log(this.work);
 
     if(this.work['owl:sameAs']) {
       let id = this.work['owl:sameAs']['@id'].split('/').pop();
@@ -55,17 +43,6 @@ export class TdmComponent {
         this.worldCatLink = id;
       }
     }
-
-    /*
-    let worldcatEntry = {
-      "title": "WorldCat Resource",
-      "data": [{
-        "link":     this.data['genont:ContentTypeGenericResource'][0]['@id'],
-        "text":     this.data['genont:ContentTypeGenericResource'][0]['@id']
-
-      }]
-    };
-    */
    }
 
 

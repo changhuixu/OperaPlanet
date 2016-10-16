@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
 import {Input} from "@angular/core/src/metadata/directives";
-import {Observable} from "rxjs";
-
-
 
 @Component({
   selector: 'bf',
@@ -71,8 +68,18 @@ export class BFFragment {
         i['@id'] = null;
       }
 
-      if(i['rdfs:label'] instanceof Object) {
-        i['rdfs:label'] = i['rdfs:label']['@value'] + " (" + i['rdfs:label']['@language'] + ")";
+      if(i['@type'] == 'bf:Work') {
+        i['rdfs:label'] = i['skos:prefLabel'];
+      }
+
+      let labelKeys = ['rdfs:label', 'rdf:label'];
+
+      for(let labelKey of labelKeys) {
+        if(i[labelKey]) {
+          if(i[labelKey] instanceof Object) {
+            i['rdfs:label'] = i[labelKey]['@value'] + " (" + i[labelKey]['@language'] + ")";
+          }
+        }
       }
 
       if(i['rdf:value']) {
@@ -82,16 +89,9 @@ export class BFFragment {
           i['rdfs:label'] = i['rdf:value'];
         }
       }
-
-
-
-
     }
 
   }
-
-
-
 }
 
 /**

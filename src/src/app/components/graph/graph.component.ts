@@ -1,6 +1,7 @@
 import {Component, ViewChild, EventEmitter} from '@angular/core';
 import {Input, Output} from "@angular/core/src/metadata/directives";
 import {ParseService} from "../../services/ParseService";
+import {relator_lookup} from "../../loc_lookup/relators";
 let vis =  require('vis');
 
 @Component({
@@ -107,7 +108,7 @@ export class GraphComponent {
           image: this.image('opera'),
           size: 250
         },
-        tdm: {
+        tdi: {
           shape: 'image',
           image: this.image('camera'),
         },
@@ -166,45 +167,44 @@ export class GraphComponent {
     if(node.group == 'opera' || node.group == 'person') {
       return;
     }
-    let persons = null;
-    if(node.data.relatedPersons) {
-      persons = node.data.relatedPersons;
-      console.log(persons);
-    } else {
-      let temp = this.ps.aggregate(node.data);
-      persons = temp['bf:Person'];
-    }
 
-    if(!persons) {
-      return;
-    }
+    let work = this.ps.getWork(node.work_id, node.data);
 
-    for(let person of persons) {
-      let id = person['@id'].split('/').pop();
-      try {
-        this.nodeDataset.add({
-          "id": "node_" + id,
-          "label": person['rdfs:label'],
-          "group": "person",
-          "data": {
-            'person': person,
-            'link': person['@id']
-          }
-        });
-      } catch(e) {
+    for(let rel of work.relators) {
+      let relationship_text, relationship_url;
+      [relationship_text, relationship_url] = relator_lookup(rel.title.replace("relators:", ""));
+      if(!Array.isArray(rel.data)) {
+        rel.data = [rel.data];
       }
-      try{
-        let edgeId = node.id + '-' + id;
-        this.edgeDataset.add({
-          "id": edgeId,
-          "type": "related",
-          "label": "Contributed to",
-          "from": "node_" + id,
-          "to": node.id,
-        });
-      } catch(e) {
-        //Node or edge exists, never mind
+      for(let person of rel.data) {
+        let person_url = person['@id'];
+        let person_name = person['rdfs:label'];
+        try {
+          this.nodeDataset.add({
+            "id": person_url,
+            "label": person_name,
+            "group": "person",
+            "data": {
+              'link': person_url
+            }
+          });
+        } catch(e) {}
+
+        try{
+          let edgeId = node.id + '-' + person_url;
+          this.edgeDataset.add({
+            "id": edgeId,
+            "type": relationship_text,
+            "label": relationship_text,
+            "from": person_url,
+            "to": node.id,
+          });
+        } catch(e) {
+          //Node or edge exists, never mind
+        }
+
       }
+
     }
   }
 

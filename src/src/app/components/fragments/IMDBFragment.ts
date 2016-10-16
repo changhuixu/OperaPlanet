@@ -1,11 +1,5 @@
 import { Component } from '@angular/core';
 import {Input} from "@angular/core/src/metadata/directives";
-import {TDM, Person} from "../../models/tdm";
-import {DataService} from "../../services/DataService";
-import {ParseService} from "../../services/ParseService";
-import {Observable} from "rxjs";
-
-
 
 @Component({
   selector: 'imdb',
@@ -31,17 +25,7 @@ import {Observable} from "rxjs";
     `,
 })
 export class IMDBFragment {
-
-  model:TDM = null;
-  @Input('content') imdbData;
-
-
-  constructor() {
-
-  }
-
-
-
+ @Input('content') imdbData;
 }
 
 /**

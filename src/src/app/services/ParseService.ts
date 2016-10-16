@@ -31,7 +31,7 @@ class Parser {
     private read(json) {
         for(let section of json) {
             if('@id' in section) {
-                this.lookupTable[section['@id']] = section;
+                this.lookupTable[section['@id']] = JSON.parse(JSON.stringify(section));
             }
         }
     }
