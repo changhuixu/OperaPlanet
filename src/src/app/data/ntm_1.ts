@@ -2,6 +2,7 @@ export var ntm_1 = {
   "id": "node_4",
   "label": "Score",
   "group": "ntm",
+  "embed": "https://www.youtube.com/embed/FUXl8AAJBlE",
   "work_id": "http://bibframe.org/resources/PSu1460061273/990052012520202771",
   "data": [
     {

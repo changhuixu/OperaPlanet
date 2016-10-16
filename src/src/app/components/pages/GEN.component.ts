@@ -26,6 +26,7 @@ export class GeneralPageComponent {
 
   ngOnInit() {
 
+
     this.work = this.ps.getWork(this.data.work_id, this.data.data);
 
     let d = this.work['wdsr:describedby'];

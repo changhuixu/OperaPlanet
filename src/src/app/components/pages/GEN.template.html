@@ -43,6 +43,11 @@
         <musicbrainz *ngSwitchCase="'musicbrainz'" [content]="apiData.content | async" ></musicbrainz>
       </div>
 
+      <div *ngIf="data.embed">
+        <iframe allowfullscreen="" frameborder="0" height="315" [src]="data.embed" width="560"></iframe>
+      </div>
+
+
       <div class="uiowa">
         <a href="http://www.lib.uiowa.edu/">
           <img src="../../../assets/imgs/uidome-uiwordmark-libraries.png" class="uiLibrary" >
