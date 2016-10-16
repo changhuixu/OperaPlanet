@@ -12,7 +12,8 @@ import {IMDBFragment} from "./components/fragments/IMDBFragment";
 import {BFFragment} from "./components/fragments/BFFragment";
 import {RelatorFragment} from "./components/fragments/RelatorFragment";
 import {GeneralPageComponent} from "./components/pages/GEN.component";
-import {TDIPageComponent} from "./components/pages/TDI.component";
+import {MusicBrainzFragment} from "./components/fragments/MusicBrainzFragment";
+import {LookupPipe} from "./pipes/lookup.pipe";
 
 
 @NgModule({
@@ -22,10 +23,11 @@ import {TDIPageComponent} from "./components/pages/TDI.component";
     WindowComponent,
     GraphComponent,
     IMDBFragment,
+    MusicBrainzFragment,
     BFFragment,
     RelatorFragment,
     GeneralPageComponent,
-    TDIPageComponent
+    LookupPipe
   ],
   imports: [
     BrowserModule,

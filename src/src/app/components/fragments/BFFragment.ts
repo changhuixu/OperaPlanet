@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {Input} from "@angular/core/src/metadata/directives";
+import {language_lookup} from "../../loc_lookup/language";
 
 @Component({
   selector: 'bf',
@@ -31,6 +32,16 @@ import {Input} from "@angular/core/src/metadata/directives";
         </dl>
       </div>
 `,
+  styles: [`
+
+ .dl-horizontal dt {
+    white-space: normal !important;
+  }
+
+.fa-language:before {
+    content: "" !important;
+}
+`]
 })
 export class BFFragment {
 
@@ -78,23 +89,43 @@ export class BFFragment {
         i['rdfs:label'] = i['skos:prefLabel'];
       }
 
-      let labelKeys = ['rdfs:label', 'rdf:label'];
 
-      for(let labelKey of labelKeys) {
-        if(i[labelKey]) {
-          if(i[labelKey] instanceof Object) {
-            i['rdfs:label'] = i[labelKey]['@value'] + " (" + i[labelKey]['@language'] + ")";
+      if(i['@type'] == "bf:Identifier") {
+        if(!Array.isArray(i['rdf:value'])) {
+          i['rdf:value'] = [i['rdf:value']];
+        }
+        for(let v of i['rdf:value']) {
+          if(v.indexOf('http') == 0) {
+            i['@id'] = v;
           }
         }
       }
 
-      if(i['rdf:value']) {
-        if(Array.isArray(i['rdf:value'])) {
-          i['rdfs:label'] = i['rdf:value'].join(' ');
-        } else {
-          i['rdfs:label'] = i['rdf:value'];
+      let labelKeys = ['rdfs:label', 'rdf:label'];
+      if(i['@type'] == 'bf:Note') {
+        i['rdfs:label'] = `(${i["bf:noteType"]}) - ${i["rdfs:label"]}`;
+        continue;
+      }
+
+      for(let labelKey of labelKeys) {
+        if(i[labelKey]) {
+          if(i[labelKey] instanceof Object) {
+            i['rdfs:label'] = i[labelKey]['@value'] + " (" + language_lookup(i[labelKey]['@language']) + ")";
+          }
         }
       }
+
+      let valueKeys = ['rdfs:value', 'rdf:value'];
+      for(let valueKey of valueKeys) {
+        if(i[valueKey]) {
+          if(Array.isArray(i[valueKey])) {
+            i['rdfs:label'] = i[valueKey].join(' ');
+          } else {
+            i['rdfs:label'] = i[valueKey];
+          }
+        }
+      }
+
     }
 
   }

@@ -3,9 +3,13 @@
     <a (click)="onCloseClicked()" style="position:absolute;left:0;top:0;">
       <i class="fa fa-times-circle fa-5x" aria-hidden="true" ></i>
     </a>
+
+    <general-page *ngIf="inputData" [content]="inputData.node" (closed)="onCloseClicked()"></general-page>
+
+    <!--
     <div *ngIf="inputData">
         <general-page *ngIf="inputData.node.group!='tdi'" [content]="inputData.node" (closed)="onCloseClicked()"></general-page>
         <tdi-page *ngIf="inputData.node.group=='tdi'" [content]="inputData.node" (closed)="onCloseClicked()"></tdi-page>
     </div>
-
+    -->
 </div>

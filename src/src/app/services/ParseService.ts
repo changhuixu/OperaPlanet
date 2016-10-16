@@ -43,6 +43,7 @@ class Parser {
         let data = {};
 
         json = JSON.parse(JSON.stringify(json));
+
         let ignoreList = ['bf:provisionActivity', '@id', '@type', 'bf:hasItem', 'bf:instanceOf', 'items', 'bf:itemOf', 'bf:hasInstance'];
         let nsRawList = ['sko', 'wdsr', 'owl', 'skos', 'schema'];
         let keys = Object.keys(json);
@@ -121,6 +122,57 @@ class Parser {
         return results;
     }
 
+    private rearrangeFormFields(fields) {
+        fields.sort((a, b) => {
+            let last = [];
+
+
+            let first= [
+                'bf:title',
+                'bf:Title',
+                'bf:WorkTitle',
+                'bf:heldBy',
+                'bf:subLocation',
+                'bf:physicalLocation',
+                'bf:shelfMarkLcc',
+                'bf:barcode',
+                'bf:usageAndAccessPolicy',
+                'bf:status',
+                'bf:instanceTitle',
+                'bf:provisionActivityStatement',
+                'bf:extent',
+                'bf:dimensions',
+                'bf:genreForm',
+                'bf:media',
+                'bf:carrier',
+                'bf:note',
+                'bf:identifiedBy',
+                'bf:content',
+                'bf:translationOf',
+                'bf:relatedTo',
+                'bf:subject',
+                'bf:language',
+            ];
+
+            //debugger;
+            a = a['title'];
+            b = b['title'];
+
+            for(let key of last) {
+                if(a == key) { return 1; }
+                if(b == key) { return -1 }
+            }
+
+            for(let key of first) {
+                if(a == key) { return -1; }
+                if(b == key) { return 1 }
+            }
+
+            return 0;
+        });
+        return fields;
+    }
+
     constructor(workId:string, json:any) {
 
         this.workId = workId;
@@ -135,11 +187,16 @@ class Parser {
             this.work.instances[idx].items = this.resolve('bf:hasItem', this.work.instances[idx]);
             for(let idx2 in this.work.instances[idx].items ) {
                 this.work.instances[idx].items[idx2] = this.unfold(this.work.instances[idx].items[idx2]);
+                this.work.instances[idx].items[idx2]['bf'] =
+                    this.rearrangeFormFields(this.work.instances[idx].items[idx2]['bf']);
             }
+
             this.work.instances[idx] = this.unfold(i);
+            this.work.instances[idx]['bf'] = this.rearrangeFormFields(this.work.instances[idx]['bf']);
         }
 
         this.work = this.unfold(this.work);
+        this.work['bf'] = this.rearrangeFormFields(this.work['bf']);
     }
 
 

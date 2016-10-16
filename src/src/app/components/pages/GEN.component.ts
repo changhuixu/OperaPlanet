@@ -16,9 +16,10 @@ export class GeneralPageComponent {
 
   private work:any = null;
 
+  private apiData:any = null;
   private uiowaLink;
   private worldCatLink;
-  private
+
   constructor(private ds:DataService, private ps:ParseService) {
 
   }
@@ -26,7 +27,7 @@ export class GeneralPageComponent {
   ngOnInit() {
 
     this.work = this.ps.getWork(this.data.work_id, this.data.data);
-    console.log(this.work);
+
     let d = this.work['wdsr:describedby'];
     for(let x of d) {
       let id = x['@id'];
@@ -36,6 +37,32 @@ export class GeneralPageComponent {
       if(id.indexOf('worldcat') != -1) {
         this.worldCatLink = id;
       }
+    }
+
+
+    if(this.work['owl:sameAs']) {
+      let id = this.work['owl:sameAs']['@id'].split('/').pop();
+      this.apiData = {
+        'type': 'imdb',
+        'content': this.ds.queryIMDB(id)
+      }
+    }
+    console.log(this.work);
+    if(this.work['owl:sameAs']) {
+      let id = this.work['owl:sameAs']['@id'].split('/').pop();
+      this.apiData = {
+        'type': 'imdb',
+        'content': this.ds.queryIMDB(id)
+      }
+    }
+
+    if(this.work['schema:albumRelease']) {
+      let id = this.work['schema:albumRelease']['@id'].split('/').pop();
+      this.apiData = {
+        'type': 'musicbrainz',
+        'content': this.ds.queryMusicBrainz(id)
+      }
+
     }
 
   }

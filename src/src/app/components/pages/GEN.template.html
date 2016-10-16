@@ -38,6 +38,11 @@
     </div>
     <div class="col-xs-6">
 
+      <div *ngIf="apiData" class="parent" [ngSwitch]="apiData.type" style="display:table">
+        <imdb *ngSwitchCase="'imdb'" [content]="apiData.content | async" ></imdb>
+        <musicbrainz *ngSwitchCase="'musicbrainz'" [content]="apiData.content | async" ></musicbrainz>
+      </div>
+
       <div class="uiowa">
         <a href="http://www.lib.uiowa.edu/">
           <img src="../../../assets/imgs/uidome-uiwordmark-libraries.png" class="uiLibrary" >
