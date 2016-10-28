@@ -14,5 +14,4 @@ export class WindowComponent {
     this.inputData = null;
   }
 
-
 }

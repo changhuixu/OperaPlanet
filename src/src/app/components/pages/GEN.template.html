@@ -1,0 +1,70 @@
+<div class="container prmBody">
+  <div class="jumbotron headTitle">
+    <h1>{{work['skos:prefLabel']}}</h1>
+  </div>
+  <br><br>
+  <div>
+    <div class="col-xs-6 itemsList">
+      <bf *ngFor='let item of work["bf"]' [content]="item"></bf>
+      <div class="">
+        <dl class="dl-horizontal">
+          <dt>
+            <label>
+              WorldCat Resource:
+            </label>
+          </dt>
+          <dd>
+            <a href="{{this.worldCatLink}}" target="_blank">{{worldCatLink}}</a>
+          </dd>
+        </dl>
+      </div>
+      <!--
+      <relator *ngFor='let item of work["relators"]' [content]="item"></relator>
+      -->
+      <div *ngFor='let instance of work.instances'>
+        <h3>Instance</h3>
+        <div *ngFor='let bf_record of instance["bf"]'>
+          <bf [content]="bf_record"></bf>
+        </div>
+        <div *ngFor='let item of instance["items"]'>
+          <h4>Item</h4>
+          <div *ngFor='let bf_record of item["bf"]'>
+            <bf [content]="bf_record"></bf>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="col-xs-6">
+
+      <div *ngIf="apiData" class="parent" [ngSwitch]="apiData.type" style="display:table">
+        <imdb *ngSwitchCase="'imdb'" [content]="apiData.content | async" ></imdb>
+        <musicbrainz *ngSwitchCase="'musicbrainz'" [content]="apiData.content | async" ></musicbrainz>
+      </div>
+      <br><br>
+      <div *ngIf="data.embed">
+        <iframe allowfullscreen="" frameborder="0" height="315" [src]="data.embed | safe" width="560"></iframe>
+      </div>
+
+
+      <div class="uiowa">
+        <a href="http://www.lib.uiowa.edu/">
+          <img src="../../../assets/imgs/uidome-uiwordmark-libraries.png" class="uiLibrary" >
+        </a>
+        <a target="_blank" [href]='uiowaLink'>
+          <img src="../../../assets/imgs/ihp-wordmark-full_w.png" class="infoHawkPlus" >
+        </a>
+        <a target="_blank" [href]='uiowaLink'>
+          <p> Connect to the University of Iowa Libraries' Online Catalog</p>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12">
+    <button type="button" class="btn btn-primary btn-lg btn-block" (click)="onBtnClicked()">Return to Opera Network</button>
+    <br><br>
+  </div>
+</div>
+
+
