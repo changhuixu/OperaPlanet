@@ -30,7 +30,7 @@ export var prm_1 = {
             }
         },
         {
-            "@id": "http://id.loc.gov/rwo/agents/no97003032",
+            "@id": "http://id.loc.gov/authorities/names/no97003032",
             "@type": "bf:Person",
             "rdfs:label": "Dazeley, William, 1966-"
         },
@@ -111,17 +111,17 @@ export var prm_1 = {
             }
         },
         {
-            "@id": "http://id.loc.gov/rwo/agents/n89669854",
+            "@id": "http://id.loc.gov/authorities/names/n89669854",
             "@type": "bf:Person",
             "rdfs:label": "Graham-Hall, John"
         },
         {
-            "@id": "http://id.loc.gov/rwo/agents/no99028477",
+            "@id": "http://id.loc.gov/authorities/names/no99028477",
             "@type": "bf:Person",
             "rdfs:label": "Purves, Christopher"
         },
         {
-            "@id": "http://id.loc.gov/rwo/agents/no2001047614",
+            "@id": "http://id.loc.gov/authorities/names/no2001047614",
             "@type": "bf:Person",
             "rdfs:label": "McCafferty, Frances"
         },
@@ -146,7 +146,7 @@ export var prm_1 = {
             "rdfs:label": "Naxos Digital Services."
         },
         {
-            "@id": "http://id.loc.gov/rwo/agents/no2009055178",
+            "@id": "http://id.loc.gov/authorities/names/no2009055178",
             "@type": "bf:Person",
             "rdfs:label": "Joyce, Victoria Moon, 1954-"
         },
@@ -199,12 +199,12 @@ export var prm_1 = {
             "rdfs:label": "World Wide Web browser."
         },
         {
-            "@id": "http://id.loc.gov/rwo/agents/n82149743",
+            "@id": "http://id.loc.gov/authorities/names/n82149743",
             "@type": "bf:Person",
             "rdfs:label": "Kenny, Yvonne"
         },
         {
-            "@id": "http://id.loc.gov/rwo/agents/no2004108484",
+            "@id": "http://id.loc.gov/authorities/names/no2004108484",
             "@type": "bf:Person",
             "rdfs:label": "Danby, Graeme"
         },
@@ -236,22 +236,22 @@ export var prm_1 = {
             "rdfs:label": "online resource "
         },
         {
-            "@id": "http://id.loc.gov/rwo/agents/n80057191",
+            "@id": "http://id.loc.gov/authorities/names/n80057191",
             "@type": "bf:Person",
             "rdfs:label": "Da Ponte, Lorenzo, 1749-1838"
         },
         {
-            "@id": "http://id.loc.gov/rwo/agents/no2008034055",
+            "@id": "http://id.loc.gov/authorities/names/no2008034055",
             "@type": "bf:Person",
             "rdfs:label": "Tynan, Sarah"
         },
         {
-            "@id": "http://id.loc.gov/rwo/agents/no95025917",
+            "@id": "http://id.loc.gov/authorities/names/no95025917",
             "@type": "bf:Person",
             "rdfs:label": "Evans, Rebecca"
         },
         {
-            "@id": "http://id.loc.gov/rwo/agents/no2004023095",
+            "@id": "http://id.loc.gov/authorities/names/no2004023095",
             "@type": "bf:Person",
             "rdfs:label": "Veira, Jonathan"
         },
@@ -265,7 +265,7 @@ export var prm_1 = {
             "rdfs:comment": "Connect to the University of Iowa Libraries' Online Catalog - InfoHawk+"
         },
         {
-            "@id": "http://id.loc.gov/rwo/agents/n92027115",
+            "@id": "http://id.loc.gov/authorities/names/n92027115",
             "@type": "bf:Person",
             "rdfs:label": "Kale, Stuart"
         },
@@ -275,7 +275,7 @@ export var prm_1 = {
             "rdfs:label": "Figaro (Fictitious character)"
         },
         {
-            "@id": "http://id.loc.gov/rwo/agents/n80125207",
+            "@id": "http://id.loc.gov/authorities/names/n80125207",
             "@type": "bf:Person",
             "rdfs:label": "Beaumarchais, Pierre Augustin Caron de, 1732-1799 "
         },
@@ -321,62 +321,62 @@ export var prm_1 = {
                 "@id": "_:ub121bL199C14"
             },
             "relators:aut": {
-                "@id": "http://id.loc.gov/rwo/agents/n80125207"
+                "@id": "http://id.loc.gov/authorities/names/n80125207"
             },
             "relators:cmp": {
-                "@id": "http://id.loc.gov/rwo/agents/n80022788"
+                "@id": "http://id.loc.gov/authorities/names/n80022788"
             },
             "relators:cnd": {
-                "@id": "http://id.loc.gov/rwo/agents/no96042093"
+                "@id": "http://id.loc.gov/authorities/names/no96042093"
             },
             "relators:lbt": {
-                "@id": "http://id.loc.gov/rwo/agents/n80057191"
+                "@id": "http://id.loc.gov/authorities/names/n80057191"
             },
             "relators:prf": [
                 {
-                    "@id": "http://id.loc.gov/rwo/agents/no2009055178"
+                    "@id": "http://id.loc.gov/authorities/names/no2009055178"
                 },
                 {
-                    "@id": "http://id.loc.gov/rwo/agents/no95025917"
+                    "@id": "http://id.loc.gov/authorities/names/no95025917"
                 },
                 {
-                    "@id": "http://id.loc.gov/rwo/agents/n89669854"
+                    "@id": "http://id.loc.gov/authorities/names/n89669854"
                 },
                 {
                     "@id": "http://id.loc.gov/authorities/names/no2005059895"
                 },
                 {
-                    "@id": "http://id.loc.gov/rwo/agents/no2004023095"
+                    "@id": "http://id.loc.gov/authorities/names/no2004023095"
                 },
                 {
-                    "@id": "http://id.loc.gov/rwo/agents/no2006019760"
+                    "@id": "http://id.loc.gov/authorities/names/no2006019760"
                 },
                 {
-                    "@id": "http://id.loc.gov/rwo/agents/no2001047614"
+                    "@id": "http://id.loc.gov/authorities/names/no2001047614"
                 },
                 {
-                    "@id": "http://id.loc.gov/rwo/agents/no99028477"
+                    "@id": "http://id.loc.gov/authorities/names/no99028477"
                 },
                 {
                     "@id": "http://id.loc.gov/authorities/names/n78094508"
                 },
                 {
-                    "@id": "http://id.loc.gov/rwo/agents/no2004108484"
+                    "@id": "http://id.loc.gov/authorities/names/no2004108484"
                 },
                 {
-                    "@id": "http://id.loc.gov/rwo/agents/n82149743"
+                    "@id": "http://id.loc.gov/authorities/names/n82149743"
                 },
                 {
-                    "@id": "http://id.loc.gov/rwo/agents/no2008034055"
+                    "@id": "http://id.loc.gov/authorities/names/no2008034055"
                 },
                 {
-                    "@id": "http://id.loc.gov/rwo/agents/n92027115"
+                    "@id": "http://id.loc.gov/authorities/names/n92027115"
                 },
                 {
-                    "@id": "http://id.loc.gov/rwo/agents/n88627414"
+                    "@id": "http://id.loc.gov/authorities/names/n88627414"
                 },
                 {
-                    "@id": "http://id.loc.gov/rwo/agents/no97003032"
+                    "@id": "http://id.loc.gov/authorities/names/no97003032"
                 }
             ],
             "schema:albumRelease": {
@@ -414,7 +414,7 @@ export var prm_1 = {
             "rdfs:label": "Naxos Music Library."
         },
         {
-            "@id": "http://id.loc.gov/rwo/agents/no96042093",
+            "@id": "http://id.loc.gov/authorities/names/no96042093",
             "@type": "bf:Person",
             "rdfs:label": "Parry, David, 1949- "
         },
@@ -459,12 +459,12 @@ export var prm_1 = {
             "rdfs:label": "David Parry (conductor) ; Geoffrey Mitchell Choir (chorus) ; Philharmonia Orchestra ; Yvette Bonner (soprano) ; Graeme Danby (bass) ; William Dazeley (baritone) ; Rebecca Evans (soprano) ; John Graham Hall (tenor) ; Victoria Joyce (soprano) ; Stuart Kale (tenor) ; Yvonne Kenny (soprano) ; Frances McCafferty (mezzo-soprano) ; Diana Montague (mezzo-soprano) ; Christopher Purves (baritone) ; Sarah Tynan (soprano) ; Jonathan Veira (bass-baritone)"
         },
         {
-            "@id": "http://id.loc.gov/rwo/agents/n80022788",
+            "@id": "http://id.loc.gov/authorities/names/n80022788",
             "@type": "bf:Person",
             "rdfs:label": "Mozart, Wolfgang Amadeus, 1756-1791"
         },
         {
-            "@id": "http://id.loc.gov/rwo/agents/n88627414",
+            "@id": "http://id.loc.gov/authorities/names/n88627414",
             "@type": "bf:Person",
             "rdfs:label": "Montague, Diana"
         }

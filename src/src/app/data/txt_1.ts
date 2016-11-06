@@ -50,7 +50,7 @@ export var txt_1 = {
         "@id": "_:ub103bL74C14"
       },
       "relators:lbt": {
-        "@id": "http://id.loc.gov/rwo/agents/n80057191"
+        "@id": "http://id.loc.gov/authorities/names/n80057191"
       },
       "skos:prefLabel": "Da Ponte, Lorenzo, 1749-1838 Nozze di Figaro."
     },
@@ -61,7 +61,7 @@ export var txt_1 = {
         "@id": "_:ub103bL81C14"
       },
       "relators:aut": {
-        "@id": "http://id.loc.gov/rwo/agents/n80125207"
+        "@id": "http://id.loc.gov/authorities/names/n80125207"
       },
       "skos:prefLabel": "Beaumarchais, Pierre Augustin Caron de, 1732-1799 Mariage de Figaro."
     },
@@ -101,13 +101,13 @@ export var txt_1 = {
         "@id": "http://bibframe.org/resources/amt1460042406/990024552960202771work8"
       },
       "relators:aut": {
-        "@id": "http://id.loc.gov/rwo/agents/n80125207"
+        "@id": "http://id.loc.gov/authorities/names/n80125207"
       },
       "relators:cmp": {
-        "@id": "http://id.loc.gov/rwo/agents/n80022788"
+        "@id": "http://id.loc.gov/authorities/names/n80022788"
       },
       "relators:lbt": {
-        "@id": "http://id.loc.gov/rwo/agents/n80057191"
+        "@id": "http://id.loc.gov/authorities/names/n80057191"
       },
       "schema:isParOf": {
         "@id": "http://schema.org/CreativeWork/opera123"
@@ -129,7 +129,7 @@ export var txt_1 = {
         "@id": "_:ub103bL88C14"
       },
       "relators:cmp": {
-        "@id": "http://id.loc.gov/rwo/agents/n80022788"
+        "@id": "http://id.loc.gov/authorities/names/n80022788"
       },
       "skos:prefLabel": "Mozart, Wolfgang Amadeus, 1756-1791.Nozze di Figaro."
     },
@@ -139,7 +139,7 @@ export var txt_1 = {
       "rdfs:label": "Librettos"
     },
     {
-      "@id": "http://id.loc.gov/rwo/agents/n80057191",
+      "@id": "http://id.loc.gov/authorities/names/n80057191",
       "@type": "bf:Person",
       "rdfs:label": "Da Ponte, Lorenzo,  1749-1838"
     },
@@ -173,7 +173,7 @@ export var txt_1 = {
       "rdfs:comment": "Connect to the University of Iowa Libraries' Online Catalog - InfoHawk+"
     },
     {
-      "@id": "http://id.loc.gov/rwo/agents/n80125207",
+      "@id": "http://id.loc.gov/authorities/names/n80125207",
       "@type": "bf:Person",
       "rdfs:label": "Beaumarchais, Pierre Augustin Caron de,   1732-1799 "
     },
@@ -324,7 +324,7 @@ export var txt_1 = {
       "rdfs:label": "Nozze di Figaro."
     },
     {
-      "@id": "http://id.loc.gov/rwo/agents/n80022788",
+      "@id": "http://id.loc.gov/authorities/names/n80022788",
       "@type": "bf:Person",
       "rdfs:label": "Mozart, Wolfgang Amadeus, 1756-1791."
     },

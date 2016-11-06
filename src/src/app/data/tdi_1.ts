@@ -6,7 +6,7 @@ export var tdi_1 = {
 
     "data": [
         {
-            "@id": "http://id.loc.gov/rwo/agents/n95077285",
+            "@id": "http://id.loc.gov/authorities/names/n95077285",
             "@type": "bf:Person",
             "rdfs:label": "Larsson, Birgitta."
         },
@@ -41,7 +41,7 @@ export var tdi_1 = {
             "rdfs:label": "Opera in four acts."
         },
         {
-            "@id": "http://id.loc.gov/rwo/agents/n79035958",
+            "@id": "http://id.loc.gov/authorities/names/n79035958",
             "@type": "bf:Person",
             "rdfs:label": "Lillieqvist, Torbjörn, 1945-"
         },
@@ -50,12 +50,12 @@ export var tdi_1 = {
             "rdfs:label": "available"
         },
         {
-            "@id": "http://id.loc.gov/rwo/agents/n87145894",
+            "@id": "http://id.loc.gov/authorities/names/n87145894",
             "@type": "bf:Person",
             "rdfs:label": "Wahlgren, Per Arne."
         },
         {
-            "@id": "http://id.loc.gov/rwo/agents/n85078639",
+            "@id": "http://id.loc.gov/authorities/names/n85078639",
             "@type": "bf:Person",
             "rdfs:label": "Östman, Arnold, 1939- "
         },
@@ -74,7 +74,7 @@ export var tdi_1 = {
             "rdfs:label": "video"
         },
         {
-            "@id": "http://id.loc.gov/rwo/agents/n78048867",
+            "@id": "http://id.loc.gov/authorities/names/n78048867",
             "@type": "bf:Person",
             "rdfs:label": "Resick, Georgine."
         },
@@ -110,7 +110,7 @@ export var tdi_1 = {
             "bf:generationProcess": "DLC transform-tool:2015-10-28-T11:01:00"
         },
         {
-            "@id": "http://id.loc.gov/rwo/agents/n80057191",
+            "@id": "http://id.loc.gov/authorities/names/n80057191",
             "@type": "bf:Person",
             "rdfs:label": "Da Ponte, Lorenzo, 1749-1838."
         },
@@ -192,53 +192,53 @@ export var tdi_1 = {
                 "@id": "http://www.imdb.com/title/tt0253259"
             },
             "relators:cmp": {
-                "@id": "http://id.loc.gov/rwo/agents/n80022788"
+                "@id": "http://id.loc.gov/authorities/names/n80022788"
             },
             "relators:prf": [
                 {
-                    "@id": "http://id.loc.gov/rwo/agents/n2015062407"
+                    "@id": "http://id.loc.gov/authorities/names/n2015062407"
                 },
                 {
-                    "@id": "http://id.loc.gov/rwo/agents/n95077285"
+                    "@id": "http://id.loc.gov/authorities/names/n95077285"
                 },
                 {
-                    "@id": "http://id.loc.gov/rwo/agents/no2004084374"
+                    "@id": "http://id.loc.gov/authorities/names/no2004084374"
                 },
                 {
-                    "@id": "http://id.loc.gov/rwo/agents/n85180091"
+                    "@id": "http://id.loc.gov/authorities/names/n85180091"
                 },
                 {
-                    "@id": "http://id.loc.gov/rwo/agents/n79035958"
+                    "@id": "http://id.loc.gov/authorities/names/n79035958"
                 },
                 {
-                    "@id": "http://id.loc.gov/rwo/agents/n80057191"
+                    "@id": "http://id.loc.gov/authorities/names/n80057191"
                 },
                 {
-                    "@id": "http://id.loc.gov/rwo/agents/n85019893"
+                    "@id": "http://id.loc.gov/authorities/names/n85019893"
                 },
                 {
-                    "@id": "http://id.loc.gov/rwo/agents/n81080888"
+                    "@id": "http://id.loc.gov/authorities/names/n81080888"
                 },
                 {
-                    "@id": "http://id.loc.gov/rwo/agents/n87145894"
+                    "@id": "http://id.loc.gov/authorities/names/n87145894"
                 },
                 {
-                    "@id": "http://id.loc.gov/rwo/agents/n91096954"
+                    "@id": "http://id.loc.gov/authorities/names/n91096954"
                 },
                 {
-                    "@id": "http://id.loc.gov/rwo/agents/no2004084376"
+                    "@id": "http://id.loc.gov/authorities/names/no2004084376"
                 },
                 {
-                    "@id": "http://id.loc.gov/rwo/agents/no96028860"
+                    "@id": "http://id.loc.gov/authorities/names/no96028860"
                 },
                 {
-                    "@id": "http://id.loc.gov/rwo/agents/n78048867"
+                    "@id": "http://id.loc.gov/authorities/names/n78048867"
                 },
                 {
-                    "@id": "http://id.loc.gov/rwo/agents/n85078639"
+                    "@id": "http://id.loc.gov/authorities/names/n85078639"
                 },
                 {
-                    "@id": "http://id.loc.gov/rwo/agents/no2003100283"
+                    "@id": "http://id.loc.gov/authorities/names/no2003100283"
                 }
             ],
             "schema:isPartOf": {
@@ -263,12 +263,12 @@ export var tdi_1 = {
             }
         },
         {
-            "@id": "http://id.loc.gov/rwo/agents/n85180091",
+            "@id": "http://id.loc.gov/authorities/names/n85180091",
             "@type": "bf:Person",
             "rdfs:label": "Samuelson, Mikael, 1951-"
         },
         {
-            "@id": "http://id.loc.gov/rwo/agents/no2003100283",
+            "@id": "http://id.loc.gov/authorities/names/no2003100283",
             "@type": "bf:Person",
             "rdfs:label": "Mang-Habashi, Karin."
         },
@@ -282,7 +282,7 @@ export var tdi_1 = {
             "rdfs:label": "Drottningholmsteatern. Orkester."
         },
         {
-            "@id": "http://id.loc.gov/rwo/agents/n81080888",
+            "@id": "http://id.loc.gov/authorities/names/n81080888",
             "@type": "bf:Person",
             "rdfs:label": "Sædén, Erik."
         },
@@ -297,17 +297,17 @@ export var tdi_1 = {
             "rdfs:label": "two-dimensional moving image"
         },
         {
-            "@id": "http://id.loc.gov/rwo/agents/n2015062407",
+            "@id": "http://id.loc.gov/authorities/names/n2015062407",
             "@type": "bf:Person",
             "rdfs:label": "Olofsson, Thomas."
         },
         {
-            "@id": "http://id.loc.gov/rwo/agents/no2004084374",
+            "@id": "http://id.loc.gov/authorities/names/no2004084374",
             "@type": "bf:Person",
             "rdfs:label": "Leinmark, Bo."
         },
         {
-            "@id": "http://id.loc.gov/rwo/agents/no2004084376",
+            "@id": "http://id.loc.gov/authorities/names/no2004084376",
             "@type": "bf:Person",
             "rdfs:label": "Lindgren, Karl-Robert."
         },
@@ -326,7 +326,7 @@ export var tdi_1 = {
             "rdfs:label": "Nozze di Figaro."
         },
         {
-            "@id": "http://id.loc.gov/rwo/agents/no96028860",
+            "@id": "http://id.loc.gov/authorities/names/no96028860",
             "@type": "bf:Person",
             "rdfs:label": "Biel, Ann Christine, 1958-"
         },
@@ -368,7 +368,7 @@ export var tdi_1 = {
             "rdfs:label": "Per-Arne Wahlgren (Count Almaviva) ; Sylvia Lindenstrand (Countess Almaviva) ; Georgine Resick (Susanna) ; Mikael Samuelsson (Figaro) ; Ann-Christine Biel (Cherubino) ; Karin Mang-Habashi (Marcellina) ; Erik Saeden (Dr. Bartolo) ; Torbörn Lilliequist (Don Basillo) ; Bo Leinmark (Don Curzio) ; Karl-Robert Lindgren (Antonio) ; Birgitta Larsson (Barbarina) ; The Chorus and Orchestra of the Drottningholm Theatre ; conducted by Arnold Ö–stman."
         },
         {
-            "@id": "http://id.loc.gov/rwo/agents/n91096954",
+            "@id": "http://id.loc.gov/authorities/names/n91096954",
             "@type": "bf:Person",
             "rdfs:label": "Järvefelt, Göran, 1947-1989."
         },
@@ -399,7 +399,7 @@ export var tdi_1 = {
             "rdf:value": "(IaU)002848370IOW01"
         },
         {
-            "@id": "http://id.loc.gov/rwo/agents/n85019893",
+            "@id": "http://id.loc.gov/authorities/names/n85019893",
             "@type": "bf:Person",
             "rdfs:label": "Lindenstrand, Sylvia."
         },
@@ -410,7 +410,7 @@ export var tdi_1 = {
             "rdfs:label": "DVD; stereo., Dolby digital; region code 1."
         },
         {
-            "@id": "http://id.loc.gov/rwo/agents/n80022788",
+            "@id": "http://id.loc.gov/authorities/names/n80022788",
             "@type": "bf:Person",
             "rdfs:label": "Mozart, Wolfgang Amadeus, 1756-1791."
         },

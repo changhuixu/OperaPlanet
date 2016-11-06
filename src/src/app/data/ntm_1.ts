@@ -246,10 +246,10 @@ export var ntm_1 = {
         "@id": "_:ub115bL126C14"
       },
       "relators:arr": {
-        "@id": "http://id.loc.gov/rwo/agents/n81075578"
+        "@id": "http://id.loc.gov/authorities/names/n81075578"
       },
       "relators:cmp": {
-        "@id": "http://id.loc.gov/rwo/agents/n80022788"
+        "@id": "http://id.loc.gov/authorities/names/n80022788"
       },
       "schema:isPartOf": {
         "@id": "http://schema.org/CreativeWork/opera123"
@@ -276,7 +276,7 @@ export var ntm_1 = {
       "rdf:value": "M.R. 1825"
     },
     {
-      "@id": "http://id.loc.gov/rwo/agents/n81075578",
+      "@id": "http://id.loc.gov/authorities/names/n81075578",
       "@type": "bf:Person",
       "rdfs:label": "Wenth, Johann, 1745-1801"
     },
@@ -373,7 +373,7 @@ export var ntm_1 = {
       "bf:generationProcess": "DLC transform-tool:2015-10-28-T11:01:00"
     },
     {
-      "@id": "http://id.loc.gov/rwo/agents/n80022788",
+      "@id": "http://id.loc.gov/authorities/names/n80022788",
       "@type": "bf:Person",
       "rdfs:label": "Mozart, Wolfgang Amadeus, 1756-1791"
     },

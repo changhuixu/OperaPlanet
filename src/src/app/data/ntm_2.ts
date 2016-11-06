@@ -31,7 +31,7 @@ export var ntm_2 = {
         "@id": "http://bibframe.org/resources/jrE1459898640/990070525060202771work19",
         "@type": "bf:Work",
         "bf:contributor": {
-          "@id": "http://id.loc.gov/rwo/agents/n80022788"
+          "@id": "http://id.loc.gov/authorities/names/n80022788"
         },
         "bf:title": {
           "@id": "_:ub147bL124C14"
@@ -129,20 +129,20 @@ export var ntm_2 = {
         },
         "relators:aut": [
           {
-            "@id": "http://id.loc.gov/rwo/agents/n78090495"
+            "@id": "http://id.loc.gov/authorities/names/n78090495"
           },
           {
-            "@id": "http://id.loc.gov/rwo/agents/n80145401"
+            "@id": "http://id.loc.gov/authorities/names/n80145401"
           },
           {
-            "@id": "http://id.loc.gov/rwo/agents/n80125207"
+            "@id": "http://id.loc.gov/authorities/names/n80125207"
           }
         ],
         "relators:cmp": {
-          "@id": "http://id.loc.gov/rwo/agents/n80022788"
+          "@id": "http://id.loc.gov/authorities/names/n80022788"
         },
         "relators:edt": {
-          "@id": "http://id.loc.gov/rwo/agents/no2012046909"
+          "@id": "http://id.loc.gov/authorities/names/no2012046909"
         },
         "schema:isPartOf": {
           "@id": "http://schema.org/CreativeWork/opera123"
@@ -168,7 +168,7 @@ export var ntm_2 = {
         "rdfs:label": "Marriage of Figaro"
       },
       {
-        "@id": "http://id.loc.gov/rwo/agents/n80145401",
+        "@id": "http://id.loc.gov/authorities/names/n80145401",
         "@type": "bf:Person",
         "rdfs:label": "Bishop, Henry R. (Henry Rowley), 1786-1855."
       },
@@ -220,12 +220,12 @@ export var ntm_2 = {
         }
       },
       {
-        "@id": "http://id.loc.gov/rwo/agents/n78090495",
+        "@id": "http://id.loc.gov/authorities/names/n78090495",
         "@type": "bf:Person",
         "rdfs:label": "Holcroft, Thomas, 1745-1809."
       },
       {
-        "@id": "http://id.loc.gov/rwo/agents/no2012046909",
+        "@id": "http://id.loc.gov/authorities/names/no2012046909",
         "@type": "bf:Person",
         "rdfs:label": "Fuhrmann, Christina."
       },
@@ -235,7 +235,7 @@ export var ntm_2 = {
         "rdfs:label": "English"
       },
       {
-        "@id": "http://id.loc.gov/rwo/agents/n80125207",
+        "@id": "http://id.loc.gov/authorities/names/n80125207",
         "@type": "bf:Person",
         "rdfs:label": "Beaumarchais, Pierre Augustin Caron de, 1732-1799."
       },
@@ -248,7 +248,7 @@ export var ntm_2 = {
         "@id": "http://bibframe.org/resources/jrE1459898640/990070525060202771work21",
         "@type": "bf:Work",
         "bf:contributor": {
-          "@id": "http://id.loc.gov/rwo/agents/n80125207"
+          "@id": "http://id.loc.gov/authorities/names/n80125207"
         },
         "bf:title": {
           "@id": "_:ub147bL138C14"
@@ -259,7 +259,7 @@ export var ntm_2 = {
         "@id": "http://bibframe.org/resources/jrE1459898640/990070525060202771work20",
         "@type": "bf:Work",
         "bf:contributor": {
-          "@id": "http://id.loc.gov/rwo/agents/n78090495"
+          "@id": "http://id.loc.gov/authorities/names/n78090495"
         },
         "bf:title": {
           "@id": "_:ub147bL131C14"
@@ -456,7 +456,7 @@ export var ntm_2 = {
         "rdf:value": "(IaU)007052506IOW01"
       },
       {
-        "@id": "http://id.loc.gov/rwo/agents/n80022788",
+        "@id": "http://id.loc.gov/authorities/names/n80022788",
         "@type": "bf:Person",
         "rdfs:label": "Mozart, Wolfgang Amadeus, 1756-1791."
       },

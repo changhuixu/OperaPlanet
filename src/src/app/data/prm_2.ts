@@ -61,56 +61,56 @@ export var prm_2 = {
         "@id": "http://bibframe.org/resources/cXH1460036074/990030662920202771work8"
       },
       "relators:aut": {
-        "@id": "http://id.loc.gov/rwo/agents/n80125207"
+        "@id": "http://id.loc.gov/authorities/names/n80125207"
       },
       "relators:cmp": {
-        "@id": "http://id.loc.gov/rwo/agents/n80022788"
+        "@id": "http://id.loc.gov/authorities/names/n80022788"
       },
       "relators:cnd": {
-        "@id": "http://id.loc.gov/rwo/agents/no96042093"
+        "@id": "http://id.loc.gov/authorities/names/no96042093"
       },
       "relators:lbt": {
-        "@id": "http://id.loc.gov/rwo/agents/n80057191"
+        "@id": "http://id.loc.gov/authorities/names/n80057191"
       },
       "relators:prf": [
         {
           "@id": "http://id.loc.gov/authorities/names/n82011030"
         },
         {
-          "@id": "http://id.loc.gov/rwo/agents/no95025917"
+          "@id": "http://id.loc.gov/authorities/names/no95025917"
         },
         {
-          "@id": "http://id.loc.gov/rwo/agents/no97003032"
+          "@id": "http://id.loc.gov/authorities/names/no97003032"
         },
         {
-          "@id": "http://id.loc.gov/rwo/agents/n92027115"
+          "@id": "http://id.loc.gov/authorities/names/n92027115"
         },
         {
-          "@id": "http://id.loc.gov/rwo/agents/no2008034055"
+          "@id": "http://id.loc.gov/authorities/names/no2008034055"
         },
         {
           "@id": "http://id.loc.gov/authorities/names/n78094508"
         },
         {
-          "@id": "http://id.loc.gov/rwo/agents/no2004108484"
+          "@id": "http://id.loc.gov/authorities/names/no2004108484"
         },
         {
-          "@id": "http://id.loc.gov/rwo/agents/n89669854"
+          "@id": "http://id.loc.gov/authorities/names/n89669854"
         },
         {
-          "@id": "http://id.loc.gov/rwo/agents/n88627414"
+          "@id": "http://id.loc.gov/authorities/names/n88627414"
         },
         {
-          "@id": "http://id.loc.gov/rwo/agents/no2001047614"
+          "@id": "http://id.loc.gov/authorities/names/no2001047614"
         },
         {
-          "@id": "http://id.loc.gov/rwo/agents/no99028477"
+          "@id": "http://id.loc.gov/authorities/names/no99028477"
         },
         {
-          "@id": "http://id.loc.gov/rwo/agents/no2004023095"
+          "@id": "http://id.loc.gov/authorities/names/no2004023095"
         },
         {
-          "@id": "http://id.loc.gov/rwo/agents/n82149743"
+          "@id": "http://id.loc.gov/authorities/names/n82149743"
         }
       ],
       "schema:albumRelease": {
@@ -159,7 +159,7 @@ export var prm_2 = {
       "rdfs:label": "Philharmonia Orchestra (London, England)"
     },
     {
-      "@id": "http://id.loc.gov/rwo/agents/no97003032",
+      "@id": "http://id.loc.gov/authorities/names/no97003032",
       "@type": "bf:Person",
       "rdfs:label": "Dazeley, William, 1966-"
     },
@@ -168,7 +168,7 @@ export var prm_2 = {
       "rdfs:label": "University of Iowa"
     },
     {
-      "@id": "http://id.loc.gov/rwo/agents/n89669854",
+      "@id": "http://id.loc.gov/authorities/names/n89669854",
       "@type": "bf:Person",
       "rdfs:label": "Graham-Hall, John."
     },
@@ -183,7 +183,7 @@ export var prm_2 = {
       "rdf:value": "095115311325"
     },
     {
-      "@id": "http://id.loc.gov/rwo/agents/no99028477",
+      "@id": "http://id.loc.gov/authorities/names/no99028477",
       "@type": "bf:Person",
       "rdfs:label": "Purves, Christopher."
     },
@@ -193,7 +193,7 @@ export var prm_2 = {
       "rdfs:label": "audio disc"
     },
     {
-      "@id": "http://id.loc.gov/rwo/agents/n80125207",
+      "@id": "http://id.loc.gov/authorities/names/n80125207",
       "@type": "bf:Person",
       "rdfs:label": "Beaumarchais, Pierre Augustin Caron de,   1732-1799 "
     },
@@ -284,7 +284,7 @@ export var prm_2 = {
         "@id": "_:ub109bL151C14"
       },
       "relators:cmp": {
-        "@id": "http://id.loc.gov/rwo/agents/n80022788"
+        "@id": "http://id.loc.gov/authorities/names/n80022788"
       },
       "skos:prefLabel": "Mozart, Wolfgang Amadeus, 1756-1791.Nozze di Figaro."
     },
@@ -312,12 +312,12 @@ export var prm_2 = {
       "rdf:value": "Audio record 19471 CD"
     },
     {
-      "@id": "http://id.loc.gov/rwo/agents/n82149743",
+      "@id": "http://id.loc.gov/authorities/names/n82149743",
       "@type": "bf:Person",
       "rdfs:label": "Kenny, Yvonne."
     },
     {
-      "@id": "http://id.loc.gov/rwo/agents/no2004108484",
+      "@id": "http://id.loc.gov/authorities/names/no2004108484",
       "@type": "bf:Person",
       "rdfs:label": "Danby, Graeme."
     },
@@ -337,12 +337,12 @@ export var prm_2 = {
       "rdfs:label": "Compact discs"
     },
     {
-      "@id": "http://id.loc.gov/rwo/agents/no2001047614",
+      "@id": "http://id.loc.gov/authorities/names/no2001047614",
       "@type": "bf:Person",
       "rdfs:label": "McCafferty, Frances."
     },
     {
-      "@id": "http://id.loc.gov/rwo/agents/n80057191",
+      "@id": "http://id.loc.gov/authorities/names/n80057191",
       "@type": "bf:Person",
       "rdfs:label": "Da Ponte, Lorenzo, 1749-1838."
     },
@@ -353,7 +353,7 @@ export var prm_2 = {
       "rdf:value": "(OCoLC)56762257"
     },
     {
-      "@id": "http://id.loc.gov/rwo/agents/no2008034055",
+      "@id": "http://id.loc.gov/authorities/names/no2008034055",
       "@type": "bf:Person",
       "rdfs:label": "Tynan, Sarah."
     },
@@ -362,12 +362,12 @@ export var prm_2 = {
       "rdfs:label": "Audio Collection"
     },
     {
-      "@id": "http://id.loc.gov/rwo/agents/no95025917",
+      "@id": "http://id.loc.gov/authorities/names/no95025917",
       "@type": "bf:Person",
       "rdfs:label": "Evans, Rebecca."
     },
     {
-      "@id": "http://id.loc.gov/rwo/agents/no2004023095",
+      "@id": "http://id.loc.gov/authorities/names/no2004023095",
       "@type": "bf:Person",
       "rdfs:label": "Veira, Jonathan."
     },
@@ -383,7 +383,7 @@ export var prm_2 = {
       "rdf:value": "(IaU)003066292IOW01"
     },
     {
-      "@id": "http://id.loc.gov/rwo/agents/n92027115",
+      "@id": "http://id.loc.gov/authorities/names/n92027115",
       "@type": "bf:Person",
       "rdfs:label": "Kale, Stuart."
     },
@@ -423,7 +423,7 @@ export var prm_2 = {
       "rdfs:comment": "Connect to the University of Iowa Libraries' Online Catalog - InfoHawk+"
     },
     {
-      "@id": "http://id.loc.gov/rwo/agents/no96042093",
+      "@id": "http://id.loc.gov/authorities/names/no96042093",
       "@type": "bf:Person",
       "rdfs:label": "Parry, David, 1949-"
     },
@@ -538,12 +538,12 @@ export var prm_2 = {
       }
     },
     {
-      "@id": "http://id.loc.gov/rwo/agents/n80022788",
+      "@id": "http://id.loc.gov/authorities/names/n80022788",
       "@type": "bf:Person",
       "rdfs:label": "Mozart, Wolfgang Amadeus, 1756-1791."
     },
     {
-      "@id": "http://id.loc.gov/rwo/agents/n88627414",
+      "@id": "http://id.loc.gov/authorities/names/n88627414",
       "@type": "bf:Person",
       "rdfs:label": "Montague, Diana."
     },
