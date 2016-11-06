@@ -71,6 +71,7 @@ export class BFFragment {
     }
 
     for(let i of this.content.data) {
+      i = i || {};
       i.css = "literal";
       if(i['@type']) {
         if(Array.isArray(i['@type'])) {
@@ -101,6 +102,7 @@ export class BFFragment {
         }
       }
 
+
       let labelKeys = ['rdfs:label', 'rdf:label'];
       if(i['@type'] == 'bf:Note') {
         i['rdfs:label'] = `(${i["bf:noteType"]}) - ${i["rdfs:label"]}`;
@@ -125,6 +127,13 @@ export class BFFragment {
           }
         }
       }
+
+      if(this.content.title == 'bf:identifiedBy') {
+        if('bf:source' in i) {
+          i['rdfs:label'] += ' (' + i['bf:source'] + ')';
+        }
+      }
+
 
     }
 

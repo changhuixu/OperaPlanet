@@ -6,30 +6,28 @@ export var prm_1 = {
     "work_id": "http://bibframe.org/resources/SEj1470609719/990057789670202771",
     "data": [
         {
-            "@id": "_:ub42bL39C22",
-            "@type": "bf:Organization",
-            "rdfs:label": "Naxos Digital Services Ltd"
-        },
-        {
-            "@id": "http://id.loc.gov/vocabulary/mediaTypes/c",
-            "@type": "bf:Media",
-            "rdfs:label": "computer "
-        },
-        {
-            "@id": "_:ub42bL47C11",
+            "@id": "_:ub121bL199C14",
             "@type": [
-                "bf:Title",
-                "bf:InstanceTitle"
+                "bf:WorkTitle",
+                "bf:Title"
             ],
-            "bf:mainTitle": "MOZART",
-            "bf:subtitle": "Marriage of Figaro (The) (Sung in English)",
             "rdfs:label": "MOZART : Marriage of Figaro (The) (Sung in English)"
         },
         {
-            "@id": "_:ub42bL57C13",
-            "@type": "bf:Note",
-            "bf:noteType": "Electronic Resource",
-            "rdfs:label": "Electronic Resource"
+            "@id": "http://bibframe.org/resources/SEj1470609719/990057789670202771topic28",
+            "@type": "bf:Topic",
+            "rdfs:label": "Music--Computer network resources"
+        },
+        {
+            "@id": "_:ub121bL37C26",
+            "@type": "bf:ProvisionActivity",
+            "bf:agent": {
+                "@id": "_:ub121bL39C22"
+            },
+            "bf:date": "[2007]",
+            "bf:place": {
+                "@id": "_:ub121bL41C22"
+            }
         },
         {
             "@id": "http://id.loc.gov/rwo/agents/no97003032",
@@ -37,46 +35,37 @@ export var prm_1 = {
             "rdfs:label": "Dazeley, William, 1966-"
         },
         {
-            "@id": "_:ub42bL20C13",
+            "@id": "http://id.loc.gov/vocabulary/mediaTypes/c",
+            "@type": "bf:Media",
+            "rdfs:label": "computer "
+        },
+        {
+            "@id": "_:ub121bL60C13",
             "@type": "bf:Note",
-            "bf:noteType": "Access condition",
-            "rdfs:label": "Access restricted to subscribers."
-        },
-        {
-            "@id": "_:ub42bL138C14",
-            "@type": [
-                "bf:Title",
-                "bf:WorkTitle"
-            ],
-            "rdfs:label": "Naxos Music Library."
-        },
-        {
-            "@id": "_:ub42bL28C13",
-            "@type": "bf:Note",
-            "bf:noteType": "Mode of Access",
-            "rdfs:label": "Mode of Access: World Wide Web browser."
-        },
-        {
-            "@id": "http://id.loc.gov/rwo/agents/n89669854",
-            "@type": "bf:Person",
-            "rdfs:label": "Graham-Hall, John"
+            "bf:noteType": "Type",
+            "rdfs:label": "Electronic Resource"
         },
         {
             "@id": "http://bibframe.org/resources/SEj1470609719/990057789670202771instance35",
             "@type": [
-                "bf:Electronic",
-                "bf:Instance"
+                "bf:Instance",
+                "bf:Electronic"
             ],
             "bf:carrier": {
                 "@id": "http://id.loc.gov/vocabulary/carriers/cr"
             },
             "bf:extent": "1 online resource (82 streaming audio files)",
             "bf:genreForm": {
-                "@id": "_:ub42bL31C15"
+                "@id": "_:ub121bL31C15"
             },
-            "bf:identifiedBy": {
-                "@id": "_:ub42bL44C21"
-            },
+            "bf:identifiedBy": [
+                {
+                    "@id": "_:ub121bL44C21"
+                },
+                {
+                    "@id": "_:ub121bL47C18"
+                }
+            ],
             "bf:illustrativeContent": "digital",
             "bf:instanceOf": {
                 "@id": "http://bibframe.org/resources/SEj1470609719/990057789670202771"
@@ -86,56 +75,45 @@ export var prm_1 = {
             },
             "bf:note": [
                 {
-                    "@id": "_:ub42bL28C13"
+                    "@id": "_:ub121bL33C10"
                 },
                 {
-                    "@id": "_:ub42bL33C10"
+                    "@id": "_:ub121bL20C13"
                 },
                 {
-                    "@id": "_:ub42bL20C13"
+                    "@id": "_:ub121bL28C13"
                 }
             ],
             "bf:provisionActivity": {
-                "@id": "_:ub42bL37C26"
+                "@id": "_:ub121bL37C26"
             },
             "bf:provisionActivityStatement": "Hong Kong : Naxos Digital Services Ltd., 2007",
             "bf:seriesStatement": "Chandos",
             "bf:soundContent": "Sound on medium",
             "bf:title": {
-                "@id": "_:ub42bL47C11"
+                "@id": "_:ub121bL50C11"
             }
-        },
-        {
-            "@id": "_:ub42bL60C21",
-            "@type": "bf:Identifier",
-            "bf:source": "URL",
-            "rdf:value": "http://proxy.lib.uiowa.edu/login?url=http://uiowa.naxosmusiclibrary.com/streamcat.asp?s=38521%2fuiowanmlpaid06&item%5fcode=CHAN3113-15"
         },
         {
             "@id": "http://bibframe.org/resources/SEj1470609719/990057789670202771instance36",
             "@type": [
-                "bf:Electronic",
-                "bf:Instance"
+                "bf:Instance",
+                "bf:Electronic"
             ],
             "bf:identifiedBy": {
-                "@id": "_:ub42bL60C21"
+                "@id": "_:ub121bL63C21"
             },
             "bf:instanceOf": {
                 "@id": "http://bibframe.org/resources/SEj1470609719/990057789670202771"
             },
             "bf:note": {
-                "@id": "_:ub42bL57C13"
+                "@id": "_:ub121bL60C13"
             }
         },
         {
-            "@id": "http://bibframe.org/resources/SEj1470609719/990057789670202771organization24",
-            "@type": "bf:Organization",
-            "rdfs:label": "Naxos Digital Services."
-        },
-        {
-            "@id": "http://id.loc.gov/authorities/subjects/sh85094914",
-            "@type": "bf:Topic",
-            "rdfs:label": "Operas"
+            "@id": "http://id.loc.gov/rwo/agents/n89669854",
+            "@type": "bf:Person",
+            "rdfs:label": "Graham-Hall, John"
         },
         {
             "@id": "http://id.loc.gov/rwo/agents/no99028477",
@@ -143,30 +121,62 @@ export var prm_1 = {
             "rdfs:label": "Purves, Christopher"
         },
         {
-            "@id": "_:ub42bL187C14",
-            "@type": [
-                "bf:Title",
-                "bf:WorkTitle"
-            ],
-            "rdfs:label": "MOZART : Marriage of Figaro (The) (Sung in English)"
-        },
-        {
-            "@id": "http://bibframe.org/resources/SEj1470609719/990057789670202771work32",
-            "@type": "bf:Work",
-            "bf:title": {
-                "@id": "_:ub42bL138C14"
-            },
-            "skos:prefLabel": "Naxos Music Library."
-        },
-        {
-            "@id": "_:ub42bL31C15",
-            "@type": "bf:GenreForm",
-            "rdfs:label": "Streaming audio"
-        },
-        {
-            "@id": "http://id.loc.gov/rwo/agents/n82149743",
+            "@id": "http://id.loc.gov/rwo/agents/no2001047614",
             "@type": "bf:Person",
-            "rdfs:label": "Kenny, Yvonne"
+            "rdfs:label": "McCafferty, Frances"
+        },
+        {
+            "@id": "http://id.loc.gov/authorities/names/no2005059895",
+            "@type": "bf:Organization",
+            "rdfs:label": "Philharmonia Orchestra"
+        },
+        {
+            "@id": "_:ub121bL41C22",
+            "@type": "bf:Place",
+            "rdfs:label": "Hong Kong "
+        },
+        {
+            "@id": "http://id.loc.gov/authorities/subjects/sh85094914",
+            "@type": "bf:Topic",
+            "rdfs:label": "Operas"
+        },
+        {
+            "@id": "http://bibframe.org/resources/SEj1470609719/990057789670202771organization24",
+            "@type": "bf:Organization",
+            "rdfs:label": "Naxos Digital Services."
+        },
+        {
+            "@id": "http://id.loc.gov/rwo/agents/no2009055178",
+            "@type": "bf:Person",
+            "rdfs:label": "Joyce, Victoria Moon, 1954-"
+        },
+        {
+            "@id": "_:ub121bL39C22",
+            "@type": "bf:Organization",
+            "rdfs:label": "Naxos Digital Services Ltd"
+        },
+        {
+            "@id": "_:ub121bL20C13",
+            "@type": "bf:Note",
+            "bf:noteType": "Access condition",
+            "rdfs:label": "Access restricted to subscribers."
+        },
+        {
+            "@id": "http://id.loc.gov/vocabulary/languages/eng",
+            "@type": "bf:Language",
+            "rdfs:label": "English"
+        },
+        {
+            "@id": "_:ub121bL63C21",
+            "@type": "bf:Identifier",
+            "bf:source": "URL",
+            "rdf:value": "<http://proxy.lib.uiowa.edu/login?url=http://uiowa.naxosmusiclibrary.com/streamcat.asp?s=38521%2fuiowanmlpaid06&item%5fcode=CHAN3113-15>"
+        },
+        {
+            "@id": "_:ub121bL47C18",
+            "@type": "bf:Identifier",
+            "bf:source": "system number",
+            "rdf:value": "(OCoLC)259587568"
         },
         {
             "@id": "http://www.worldcat.org/title/-/oclc/259587568",
@@ -183,54 +193,15 @@ export var prm_1 = {
             }
         },
         {
-            "@id": "http://id.loc.gov/vocabulary/languages/eng",
-            "@type": "bf:Language",
-            "rdfs:label": "English"
-        },
-        {
-            "@id": "http://id.loc.gov/rwo/agents/no2009055178",
-            "@type": "bf:Person",
-            "rdfs:label": "Joyce, Victoria Moon, 1954-"
-        },
-        {
-            "@id": "_:ub42bL44C21",
-            "@type": "bf:Identifier",
-            "bf:source": "system number",
-            "rdf:value": [
-                "(IaU)005778967IOW01",
-                "(OCoLC)259587568"
-            ]
-        },
-        {
-            "@id": "http://id.loc.gov/rwo/agents/no95025917",
-            "@type": "bf:Person",
-            "rdfs:label": "Evans, Rebecca"
-        },
-        {
-            "@id": "http://id.loc.gov/rwo/agents/no2004023095",
-            "@type": "bf:Person",
-            "rdfs:label": "Veira, Jonathan"
-        },
-        {
-            "@id": "_:ub42bL33C10",
+            "@id": "_:ub121bL28C13",
             "@type": "bf:Note",
-            "bf:noteType": "Performer note",
-            "rdfs:label": "PERFORMERS: David Parry (conductor) ; Geoffrey Mitchell Choir (chorus) ; Philharmonia Orchestra ; Yvette Bonner (soprano) ; Graeme Danby (bass) ; William Dazeley (baritone) ; Rebecca Evans (soprano) ; John Graham Hall (tenor) ; Victoria Joyce (soprano) ; Stuart Kale (tenor) ; Yvonne Kenny (soprano) ; Frances McCafferty (mezzo-soprano) ; Diana Montague (mezzo-soprano) ; Christopher Purves (baritone) ; Sarah Tynan (soprano) ; Jonathan Veira (bass-baritone)"
+            "bf:noteType": "Mode of Access",
+            "rdfs:label": "World Wide Web browser."
         },
         {
-            "@id": "http://id.loc.gov/rwo/agents/no2008034055",
+            "@id": "http://id.loc.gov/rwo/agents/n82149743",
             "@type": "bf:Person",
-            "rdfs:label": "Tynan, Sarah"
-        },
-        {
-            "@id": "http://id.loc.gov/vocabulary/carriers/cr",
-            "@type": "bf:Carrier",
-            "rdfs:label": "online resource "
-        },
-        {
-            "@id": "http://id.loc.gov/authorities/names/no2005059895",
-            "@type": "bf:Organization",
-            "rdfs:label": "Philharmonia Orchestra"
+            "rdfs:label": "Kenny, Yvonne"
         },
         {
             "@id": "http://id.loc.gov/rwo/agents/no2004108484",
@@ -258,6 +229,55 @@ export var prm_1 = {
                 "@id": "http://id.loc.gov/vocabulary/organizations/hkln"
             },
             "bf:generationProcess": "DLC transform-tool:2015-10-28-T11:01:00"
+        },
+        {
+            "@id": "http://id.loc.gov/vocabulary/carriers/cr",
+            "@type": "bf:Carrier",
+            "rdfs:label": "online resource "
+        },
+        {
+            "@id": "http://id.loc.gov/rwo/agents/n80057191",
+            "@type": "bf:Person",
+            "rdfs:label": "Da Ponte, Lorenzo, 1749-1838"
+        },
+        {
+            "@id": "http://id.loc.gov/rwo/agents/no2008034055",
+            "@type": "bf:Person",
+            "rdfs:label": "Tynan, Sarah"
+        },
+        {
+            "@id": "http://id.loc.gov/rwo/agents/no95025917",
+            "@type": "bf:Person",
+            "rdfs:label": "Evans, Rebecca"
+        },
+        {
+            "@id": "http://id.loc.gov/rwo/agents/no2004023095",
+            "@type": "bf:Person",
+            "rdfs:label": "Veira, Jonathan"
+        },
+        {
+            "@id": "http://id.loc.gov/authorities/names/no2006019760",
+            "@type": "bf:Person",
+            "rdfs:label": "Bonner, Yvette, 1973- "
+        },
+        {
+            "@id": "http://search.lib.uiowa.edu/01IOWA:default_scope:01IOWA_ALMA51553243030002771",
+            "rdfs:comment": "Connect to the University of Iowa Libraries' Online Catalog - InfoHawk+"
+        },
+        {
+            "@id": "http://id.loc.gov/rwo/agents/n92027115",
+            "@type": "bf:Person",
+            "rdfs:label": "Kale, Stuart"
+        },
+        {
+            "@id": "http://id.loc.gov/authorities/subjects/sh2008002240",
+            "@type": "bf:Topic",
+            "rdfs:label": "Figaro (Fictitious character)"
+        },
+        {
+            "@id": "http://id.loc.gov/rwo/agents/n80125207",
+            "@type": "bf:Person",
+            "rdfs:label": "Beaumarchais, Pierre Augustin Caron de, 1732-1799 "
         },
         {
             "@id": "http://bibframe.org/resources/SEj1470609719/990057789670202771",
@@ -288,17 +308,20 @@ export var prm_1 = {
             },
             "bf:subject": [
                 {
-                    "@id": "http://id.loc.gov/authorities/subjects/sh2008002240"
-                },
-                {
                     "@id": "http://bibframe.org/resources/SEj1470609719/990057789670202771topic28"
                 },
                 {
                     "@id": "http://id.loc.gov/authorities/subjects/sh85094914"
+                },
+                {
+                    "@id": "http://id.loc.gov/authorities/subjects/sh2008002240"
                 }
             ],
             "bf:title": {
-                "@id": "_:ub42bL187C14"
+                "@id": "_:ub121bL199C14"
+            },
+            "relators:aut": {
+                "@id": "http://id.loc.gov/rwo/agents/n80125207"
             },
             "relators:cmp": {
                 "@id": "http://id.loc.gov/rwo/agents/n80022788"
@@ -306,21 +329,15 @@ export var prm_1 = {
             "relators:cnd": {
                 "@id": "http://id.loc.gov/rwo/agents/no96042093"
             },
+            "relators:lbt": {
+                "@id": "http://id.loc.gov/rwo/agents/n80057191"
+            },
             "relators:prf": [
                 {
-                    "@id": "http://id.loc.gov/rwo/agents/no2004108484"
-                },
-                {
-                    "@id": "http://id.loc.gov/rwo/agents/n82149743"
+                    "@id": "http://id.loc.gov/rwo/agents/no2009055178"
                 },
                 {
                     "@id": "http://id.loc.gov/rwo/agents/no95025917"
-                },
-                {
-                    "@id": "http://id.loc.gov/rwo/agents/no2006019760"
-                },
-                {
-                    "@id": "http://id.loc.gov/rwo/agents/no97003032"
                 },
                 {
                     "@id": "http://id.loc.gov/rwo/agents/n89669854"
@@ -329,16 +346,13 @@ export var prm_1 = {
                     "@id": "http://id.loc.gov/authorities/names/no2005059895"
                 },
                 {
-                    "@id": "http://id.loc.gov/rwo/agents/no2009055178"
-                },
-                {
-                    "@id": "http://id.loc.gov/rwo/agents/n92027115"
-                },
-                {
                     "@id": "http://id.loc.gov/rwo/agents/no2004023095"
                 },
                 {
-                    "@id": "http://id.loc.gov/rwo/agents/n88627414"
+                    "@id": "http://id.loc.gov/rwo/agents/no2006019760"
+                },
+                {
+                    "@id": "http://id.loc.gov/rwo/agents/no2001047614"
                 },
                 {
                     "@id": "http://id.loc.gov/rwo/agents/no99028477"
@@ -347,14 +361,29 @@ export var prm_1 = {
                     "@id": "http://id.loc.gov/authorities/names/n78094508"
                 },
                 {
+                    "@id": "http://id.loc.gov/rwo/agents/no2004108484"
+                },
+                {
+                    "@id": "http://id.loc.gov/rwo/agents/n82149743"
+                },
+                {
                     "@id": "http://id.loc.gov/rwo/agents/no2008034055"
                 },
                 {
-                    "@id": "http://id.loc.gov/rwo/agents/no2001047614"
+                    "@id": "http://id.loc.gov/rwo/agents/n92027115"
+                },
+                {
+                    "@id": "http://id.loc.gov/rwo/agents/n88627414"
+                },
+                {
+                    "@id": "http://id.loc.gov/rwo/agents/no97003032"
                 }
             ],
             "schema:albumRelease": {
                 "@id": "https://musicbrainz.org/release/356bcf92-7260-4a95-b5b8-334df0872593"
+            },
+            "schema:isPartOf": {
+                "@id": "http://schema.org/CreativeWork/opera123"
             },
             "skos:prefLabel": "Mozart, Wolfgang Amadeus, 1756-1791. MOZART : The Marriage of Figaro (Sung in English)",
             "wdsr:describedby": [
@@ -367,34 +396,22 @@ export var prm_1 = {
             ]
         },
         {
-            "@id": "http://id.loc.gov/rwo/agents/n92027115",
-            "@type": "bf:Person",
-            "rdfs:label": "Kale, Stuart"
+            "@id": "http://id.loc.gov/authorities/names/n78094508",
+            "@type": "bf:Organization",
+            "rdfs:label": "Geoffrey Mitchell Choir"
         },
         {
-            "@id": "http://id.loc.gov/authorities/subjects/sh2008002240",
-            "@type": "bf:Topic",
-            "rdfs:label": "Figaro (Fictitious character)"
+            "@id": "_:ub121bL31C15",
+            "@type": "bf:GenreForm",
+            "rdfs:label": "Streaming audio"
         },
         {
-            "@id": "_:ub42bL37C26",
-            "@type": "bf:ProvisionActivity",
-            "bf:agent": {
-                "@id": "_:ub42bL39C22"
-            },
-            "bf:date": "[2007]",
-            "bf:place": {
-                "@id": "_:ub42bL41C22"
-            }
-        },
-        {
-            "@id": "http://search.lib.uiowa.edu/01IOWA:default_scope:01IOWA_ALMA51553243030002771",
-            "rdfs:comment": "Connect to the University of Iowa Libraries' Online Catalog - InfoHawk+"
-        },
-        {
-            "@id": "http://id.loc.gov/authorities/names/no2006019760",
-            "@type": "bf:Person",
-            "rdfs:label": "Bonner, Yvette, 1973- "
+            "@id": "_:ub121bL147C14",
+            "@type": [
+                "bf:WorkTitle",
+                "bf:Title"
+            ],
+            "rdfs:label": "Naxos Music Library."
         },
         {
             "@id": "http://id.loc.gov/rwo/agents/no96042093",
@@ -402,19 +419,44 @@ export var prm_1 = {
             "rdfs:label": "Parry, David, 1949- "
         },
         {
-            "@id": "http://bibframe.org/resources/SEj1470609719/990057789670202771topic28",
-            "@type": "bf:Topic",
-            "rdfs:label": "Music--Computer network resources"
-        },
-        {
             "@id": "http://id.loc.gov/vocabulary/contentTypes/prm",
             "@type": "bf:Content",
             "rdfs:label": "performed music"
         },
         {
-            "@id": "http://id.loc.gov/authorities/names/n78094508",
-            "@type": "bf:Organization",
-            "rdfs:label": "Geoffrey Mitchell Choir"
+            "@id": "_:ub121bL44C21",
+            "@type": "bf:Identifier",
+            "bf:source": "system number",
+            "rdf:value": "(IaU)005778967IOW01"
+        },
+        {
+            "@id": "http://bibframe.org/resources/SEj1470609719/990057789670202771work32",
+            "@type": "bf:Work",
+            "bf:title": {
+                "@id": "_:ub121bL147C14"
+            },
+            "skos:prefLabel": "Naxos Music Library."
+        },
+        {
+            "@id": "_:ub121bL50C11",
+            "@type": [
+                "bf:InstanceTitle",
+                "bf:Title"
+            ],
+            "bf:mainTitle": "MOZART",
+            "bf:subtitle": "Marriage of Figaro (The) (Sung in English)",
+            "rdfs:label": "MOZART : Marriage of Figaro (The) (Sung in English)"
+        },
+        {
+            "@id": "https://musicbrainz.org/release/356bcf92-7260-4a95-b5b8-334df0872593",
+            "@type": "schema:MusicAlbum",
+            "schema:name": "The Marriage of Figaro (Philharmonia Orchestra featuring conductor David Parry)"
+        },
+        {
+            "@id": "_:ub121bL33C10",
+            "@type": "bf:Note",
+            "bf:noteType": "Performers",
+            "rdfs:label": "David Parry (conductor) ; Geoffrey Mitchell Choir (chorus) ; Philharmonia Orchestra ; Yvette Bonner (soprano) ; Graeme Danby (bass) ; William Dazeley (baritone) ; Rebecca Evans (soprano) ; John Graham Hall (tenor) ; Victoria Joyce (soprano) ; Stuart Kale (tenor) ; Yvonne Kenny (soprano) ; Frances McCafferty (mezzo-soprano) ; Diana Montague (mezzo-soprano) ; Christopher Purves (baritone) ; Sarah Tynan (soprano) ; Jonathan Veira (bass-baritone)"
         },
         {
             "@id": "http://id.loc.gov/rwo/agents/n80022788",
@@ -425,22 +467,6 @@ export var prm_1 = {
             "@id": "http://id.loc.gov/rwo/agents/n88627414",
             "@type": "bf:Person",
             "rdfs:label": "Montague, Diana"
-        },
-        {
-            "@id": "http://id.loc.gov/rwo/agents/no2001047614",
-            "@type": "bf:Person",
-            "rdfs:label": "McCafferty, Frances"
-        },
-        {
-            "@id": "_:ub42bL41C22",
-            "@type": "bf:Place",
-            "rdfs:label": "Hong Kong "
-        },
-        {
-            "@id": "https://musicbrainz.org/release/356bcf92-7260-4a95-b5b8-334df0872593",
-            "@type": "schema:MusicAlbum",
-            "schema:name": "The Marriage of Figaro (Philharmonia Orchestra featuring conductor David Parry)"
         }
     ]
-
 };

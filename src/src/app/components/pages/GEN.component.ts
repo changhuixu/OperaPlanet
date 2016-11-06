@@ -48,7 +48,7 @@ export class GeneralPageComponent {
         'content': this.ds.queryIMDB(id)
       }
     }
-    console.log(this.work);
+
     if(this.work['owl:sameAs']) {
       let id = this.work['owl:sameAs']['@id'].split('/').pop();
       this.apiData = {
