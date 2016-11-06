@@ -130,7 +130,12 @@ export class BFFragment {
 
       if(this.content.title == 'bf:identifiedBy') {
         if('bf:source' in i) {
-          i['rdfs:label'] += ' (' + i['bf:source'] + ')';
+          if(i['bf:source'] == 'URL') {
+            i['rdfs:label'] = i['rdfs:label'].replace('<', '').replace('>', '');
+            i['@id'] = i['rdfs:label'];
+          } else {
+            i['rdfs:label'] += ' (' + i['bf:source'] + ')';
+          }
         }
       }
 
