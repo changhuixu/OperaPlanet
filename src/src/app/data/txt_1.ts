@@ -9,6 +9,11 @@ export var txt_1 = {
       "rdfs:label": "University of Iowa"
     },
     {
+      "@id": "http://id.loc.gov/vocabulary/languages/eng",
+      "@type": "bf:Language",
+      "rdfs:label": "English"
+    },
+    {
       "@id": "_:ub103bL25C25",
       "rdfs:label": "General Collection"
     },

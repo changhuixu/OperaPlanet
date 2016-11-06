@@ -170,7 +170,7 @@ export var prm_1 = {
             "@id": "_:ub121bL63C21",
             "@type": "bf:Identifier",
             "bf:source": "URL",
-            "rdf:value": "<http://proxy.lib.uiowa.edu/login?url=http://uiowa.naxosmusiclibrary.com/streamcat.asp?s=38521%2fuiowanmlpaid06&item%5fcode=CHAN3113-15>"
+            "rdf:value": "http://proxy.lib.uiowa.edu/login?url=http://uiowa.naxosmusiclibrary.com/streamcat.asp?s=38521%2fuiowanmlpaid06&item%5fcode=CHAN3113-15"
         },
         {
             "@id": "_:ub121bL47C18",

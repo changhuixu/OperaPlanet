@@ -12,6 +12,11 @@ export var prm_2 = {
       "rdfs:label": "Opera buffa in 4 acts; Libretto by Lorenzo Da Ponte; English translation by Jeremy Sams."
     },
     {
+      "@id": "http://id.loc.gov/vocabulary/languages/eng",
+      "@type": "bf:Language",
+      "rdfs:label": "English"
+    },
+    {
       "@id": "http://bibframe.org/resources/cXH1460036074/990030662920202771",
       "@type": [
         "bf:Work",
