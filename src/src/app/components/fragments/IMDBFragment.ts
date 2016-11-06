@@ -21,7 +21,7 @@ import {Input} from "@angular/core/src/metadata/directives";
        
       </table>
     </div>
-    <div *ngIf="!imdbData">Contacting IMDB</div>
+    <div *ngIf="!imdbData">Connecting to IMDB, please wait...</div>
     `,
 })
 export class IMDBFragment {

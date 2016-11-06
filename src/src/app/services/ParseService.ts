@@ -180,6 +180,7 @@ class Parser {
                 'bf:relatedTo',
                 'bf:subject',
                 'bf:language',
+                'bf:contributor'
             ];
 
             //debugger;

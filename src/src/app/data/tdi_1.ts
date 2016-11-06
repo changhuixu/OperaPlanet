@@ -194,6 +194,9 @@ export var tdi_1 = {
             "relators:cmp": {
                 "@id": "http://id.loc.gov/authorities/names/n80022788"
             },
+            "relators:lbt": {
+                "@id": "http://id.loc.gov/authorities/names/n80057191"
+            },
             "relators:prf": [
                 {
                     "@id": "http://id.loc.gov/authorities/names/n2015062407"
@@ -209,9 +212,6 @@ export var tdi_1 = {
                 },
                 {
                     "@id": "http://id.loc.gov/authorities/names/n79035958"
-                },
-                {
-                    "@id": "http://id.loc.gov/authorities/names/n80057191"
                 },
                 {
                     "@id": "http://id.loc.gov/authorities/names/n85019893"

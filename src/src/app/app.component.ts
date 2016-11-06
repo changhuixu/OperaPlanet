@@ -76,7 +76,6 @@ export class AppComponent {
 
   onNodeClicked(ev) {
     this.windowData = ev;
-    console.log(ev);
   }
 
 

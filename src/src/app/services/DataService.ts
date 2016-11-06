@@ -38,7 +38,6 @@ export class DataService {
         let headers = new Headers();
         headers.append('Accept', 'application/json');
         let url = `http://www.omdbapi.com/?i=${id}&plot=short&r=json`;
-        console.log(url);
         return this.http.get(url, { headers: headers}).map(res => res.json());
     }
 
@@ -47,7 +46,6 @@ export class DataService {
         headers.append('Accept', 'application/json');
         headers.append('User-Agent', 'OperaPlanet.org/1.0 ( amanda-xu@uiowa.edu )');
         let url = `http://musicbrainz.org/ws/2/release/${id}/`;
-        console.log(url);
         return this.http.get(url, { headers: headers}).map(res => res.json());
     }
 
@@ -69,7 +67,6 @@ export class DataService {
             let url = `http://lookup.dbpedia.org/api/search/KeywordSearch?QueryString=${encoded_q}`;
             requests.push(this.http.get(url, { headers: headers}).map(res => res.json()));
         }
-        console.log(requests);
         return Observable.forkJoin.apply(null, requests);
     }
 

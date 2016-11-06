@@ -66,6 +66,10 @@ export class BFFragment {
     this.content.text = this.toRegularForm(loc);
     this.content.url = 'http://id.loc.gov/ontologies/bibframe.html#p_' + loc;
 
+    if(this.content.title == 'bf:contributor') {
+      this.content.text = "Organization";
+    }
+
     if(!Array.isArray(this.content.data)) {
       this.content.data = [this.content.data];
     }
@@ -85,6 +89,7 @@ export class BFFragment {
       if(i['@id'].indexOf('http') != 0) {
         i['@id'] = null;
       }
+
 
       if(i['@type'] == 'bf:Work') {
         i['rdfs:label'] = i['skos:prefLabel'];
