@@ -2,15 +2,19 @@
   <div class="jumbotron headTitle">
     <h1>{{work['skos:prefLabel']}}</h1>
   </div>
-  <br><br>
+  <h3><a href="http://id.loc.gov/ontologies/bibframe.html#c_Work" target="_blank">Work</a></h3>
+
   <div>
     <div class="col-xs-6 itemsList">
       <bf *ngFor='let item of work["bf"]' [content]="item"></bf>
+
+      <relator *ngFor='let item of work["relators"]' [content]="item"></relator>
+
       <div class="">
         <dl class="dl-horizontal">
           <dt>
             <label>
-              WorldCat Resource:
+              Item in WorldCat&reg;:
             </label>
           </dt>
           <dd>
@@ -18,16 +22,14 @@
           </dd>
         </dl>
       </div>
-      <!--
-      <relator *ngFor='let item of work["relators"]' [content]="item"></relator>
-      -->
+
       <div *ngFor='let instance of work.instances'>
-        <h3>Instance</h3>
+        <h3><a href="http://id.loc.gov/ontologies/bibframe.html#c_Instance" target="_blank">Instance</a></h3>
         <div *ngFor='let bf_record of instance["bf"]'>
           <bf [content]="bf_record"></bf>
         </div>
         <div *ngFor='let item of instance["items"]'>
-          <h4>Item</h4>
+          <h3><a href="http://id.loc.gov/ontologies/bibframe.html#c_Item" target="_blank">Item</a></h3>
           <div *ngFor='let bf_record of item["bf"]'>
             <bf [content]="bf_record"></bf>
           </div>
@@ -44,7 +46,7 @@
       </div>
       <br><br>
       <div *ngIf="data.embed">
-        <iframe allowfullscreen="" frameborder="0" height="315" [src]="data.embed | safe" width="560"></iframe>
+        <iframe allowfullscreen="" frameborder="0" height="315" [src]="data.embed | safe" width="100%"></iframe>
       </div>
 
 

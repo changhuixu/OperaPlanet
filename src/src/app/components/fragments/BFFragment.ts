@@ -66,11 +66,16 @@ export class BFFragment {
     this.content.text = this.toRegularForm(loc);
     this.content.url = 'http://id.loc.gov/ontologies/bibframe.html#p_' + loc;
 
+    if(this.content.title == 'bf:contributor') {
+      this.content.text = "Organization";
+    }
+
     if(!Array.isArray(this.content.data)) {
       this.content.data = [this.content.data];
     }
 
     for(let i of this.content.data) {
+      i = i || {};
       i.css = "literal";
       if(i['@type']) {
         if(Array.isArray(i['@type'])) {
@@ -84,6 +89,7 @@ export class BFFragment {
       if(i['@id'].indexOf('http') != 0) {
         i['@id'] = null;
       }
+
 
       if(i['@type'] == 'bf:Work') {
         i['rdfs:label'] = i['skos:prefLabel'];
@@ -100,6 +106,7 @@ export class BFFragment {
           }
         }
       }
+
 
       let labelKeys = ['rdfs:label', 'rdf:label'];
       if(i['@type'] == 'bf:Note') {
@@ -125,6 +132,18 @@ export class BFFragment {
           }
         }
       }
+
+      if(this.content.title == 'bf:identifiedBy') {
+        if('bf:source' in i) {
+          if(i['bf:source'] == 'URL') {
+            i['rdfs:label'] = i['rdfs:label'].replace('<', '').replace('>', '');
+            i['@id'] = i['rdfs:label'];
+          } else {
+            i['rdfs:label'] += ' (' + i['bf:source'] + ')';
+          }
+        }
+      }
+
 
     }
 

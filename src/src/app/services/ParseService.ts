@@ -35,7 +35,17 @@ class Parser {
             }
         }
     }
-
+    
+    private lookup(id) {
+        if(id in this.lookupTable) {
+           return this.lookupTable[id];
+        }
+        
+        return {
+            '@id' : id,
+            'rdfs:label' : id
+        }
+    }
 
 
     private unfold(json) {
@@ -74,7 +84,7 @@ class Parser {
                 for (let x in json[k]) {
                     let id = json[k][x]['@id'];
                     if(id) {
-                        p.data.push(this.lookupTable[id]);
+                        p.data.push(this.lookup(id));
                     } else {
                         p.data.push({
                             "@id": "",
@@ -82,14 +92,32 @@ class Parser {
                             "rdfs:label": json[k][x]
                         });
                     }
-                    //json[k][x] = this.lookupTable[json[k][x]['@id']];
+                    //json[k][x] = this.lookup(json[k][x]['@id']];
                 }
                 data[ns].push(p);
             } else if(json[k] instanceof Object) {
                 let p = {
                     "title": k,
-                    "data": this.lookupTable[json[k]['@id']]
+                    "data": this.lookup(json[k]['@id'])
                 };
+
+                if(k == 'bf:classification') {
+                    let e = this.lookup(json[k]['@id']);
+                    let l = null;
+                    if( 'bf:classificationNumber' in e ) {
+                         l = e['bf:classificationNumber'];
+                    } else {
+                        l = e['rdfs:label'];
+                    }
+                    p = {
+                        "title": k,
+                        "data": {
+                            "@id": e['@id'],
+                            "rdfs:label": l
+                        }
+                    };
+                }
+
                 data[ns].push(p);
             } else {
                 let p = {
@@ -115,7 +143,7 @@ class Parser {
             for(let idx in json[id]) {
                 let i = json[id][idx];
                 let subid = i['@id'];
-                let instance = JSON.parse(JSON.stringify(this.lookupTable[subid]));
+                let instance = JSON.parse(JSON.stringify(this.lookup(subid)));
                 results.push(instance);
             }
         }
@@ -152,6 +180,7 @@ class Parser {
                 'bf:relatedTo',
                 'bf:subject',
                 'bf:language',
+                'bf:contributor'
             ];
 
             //debugger;
@@ -178,7 +207,7 @@ class Parser {
         this.workId = workId;
         this.read(json);
 
-        this.work = this.lookupTable[workId];
+        this.work = this.lookup(workId);
 
         this.work.instances = this.resolve('bf:hasInstance', this.work);
 
