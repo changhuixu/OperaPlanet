@@ -199,7 +199,7 @@ export var ntm_2 = {
         "@id": "http://bibframe.org/resources/jrE1459898640/990070525060202771helditem49",
         "@type": "bf:Item",
         "bf:heldBy": {
-          "@id": "_:ub147bL30C12"
+          "@id": "http://id.loc.gov/authorities/names/n84017438"
         },
         "bf:identifiedBy": {
           "@id": "_:ub147bL32C18"
@@ -470,6 +470,12 @@ export var ntm_2 = {
         "@id": "http://id.loc.gov/authorities/subjects/sh85094962",
         "@type": "bf:Topic",
         "rdfs:label": "Operas--Vocal scores with piano"
+      },
+      {
+        "@id": "http://id.loc.gov/authorities/names/n84017438",
+        "@type": "bf:Organization",
+        "rdfs:label": "University of Iowa. Libraries"
       }
+
     ]
 };

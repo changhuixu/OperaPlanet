@@ -4,7 +4,7 @@ export var prm_1 = {
     "group": "prm",
     "embed": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/210387165&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true",
     "work_id": "http://bibframe.org/resources/SEj1470609719/990057789670202771",
-    "collection_id": "http://bibframe.org/resources/amt1460042406",
+    "collection_id": "http://bibframe.org/resources/SEj1470609719",
     "data": [
         {
             "@id": "_:ub121bL199C14",
@@ -52,21 +52,14 @@ export var prm_1 = {
                 "bf:Instance",
                 "bf:Electronic"
             ],
+            "bf:systemRequirements": "World Wide Web browser.",
+            "bf:usageAndAccessPolicy": {
+                "@id": "_:ub514bL28C29"
+            },
             "bf:carrier": {
                 "@id": "http://id.loc.gov/vocabulary/carriers/cr"
             },
             "bf:extent": "1 online resource (82 streaming audio files)",
-            "bf:genreForm": {
-                "@id": "_:ub121bL31C15"
-            },
-            "bf:identifiedBy": [
-                {
-                    "@id": "_:ub121bL44C21"
-                },
-                {
-                    "@id": "_:ub121bL47C18"
-                }
-            ],
             "bf:illustrativeContent": "digital",
             "bf:instanceOf": {
                 "@id": "http://bibframe.org/resources/SEj1470609719/990057789670202771"
@@ -74,17 +67,6 @@ export var prm_1 = {
             "bf:media": {
                 "@id": "http://id.loc.gov/vocabulary/mediaTypes/c"
             },
-            "bf:note": [
-                {
-                    "@id": "_:ub121bL33C10"
-                },
-                {
-                    "@id": "_:ub121bL20C13"
-                },
-                {
-                    "@id": "_:ub121bL28C13"
-                }
-            ],
             "bf:provisionActivity": {
                 "@id": "_:ub121bL37C26"
             },
@@ -194,12 +176,6 @@ export var prm_1 = {
             }
         },
         {
-            "@id": "_:ub121bL28C13",
-            "@type": "bf:Note",
-            "bf:noteType": "Mode of Access",
-            "rdfs:label": "World Wide Web browser."
-        },
-        {
             "@id": "http://id.loc.gov/authorities/names/n82149743",
             "@type": "bf:Person",
             "rdfs:label": "Kenny, Yvonne"
@@ -286,6 +262,23 @@ export var prm_1 = {
                 "bf:Audio",
                 "bf:Work"
             ],
+            "bf:genreForm": [
+                {
+                    "@id": "http://vocab.getty.edu/aat/300028633"
+                },
+                {
+                    "@id": "_:ub514bL170C15"
+                }
+            ],
+            "bf:identifiedBy": [
+                {
+                    "@id": "_:ub121bL44C21"
+                },
+                {
+                    "@id": "_:ub121bL47C18"
+                }
+            ],
+            "bf:credits": "David Parry (conductor) ; Geoffrey Mitchell Choir (chorus) ; Philharmonia Orchestra ; Yvette Bonner (soprano) ; Graeme Danby (bass) ; William Dazeley (baritone) ; Rebecca Evans (soprano) ; John Graham Hall (tenor) ; Victoria Joyce (soprano) ; Stuart Kale (tenor) ; Yvonne Kenny (soprano) ; Frances McCafferty (mezzo-soprano) ; Diana Montague (mezzo-soprano) ; Christopher Purves (baritone) ; Sarah Tynan (soprano) ; Jonathan Veira (bass-baritone)",
             "bf:content": {
                 "@id": "http://id.loc.gov/vocabulary/contentTypes/prm"
             },
@@ -454,12 +447,6 @@ export var prm_1 = {
             "schema:name": "The Marriage of Figaro (Philharmonia Orchestra featuring conductor David Parry)"
         },
         {
-            "@id": "_:ub121bL33C10",
-            "@type": "bf:Note",
-            "bf:noteType": "Performers",
-            "rdfs:label": "David Parry (conductor) ; Geoffrey Mitchell Choir (chorus) ; Philharmonia Orchestra ; Yvette Bonner (soprano) ; Graeme Danby (bass) ; William Dazeley (baritone) ; Rebecca Evans (soprano) ; John Graham Hall (tenor) ; Victoria Joyce (soprano) ; Stuart Kale (tenor) ; Yvonne Kenny (soprano) ; Frances McCafferty (mezzo-soprano) ; Diana Montague (mezzo-soprano) ; Christopher Purves (baritone) ; Sarah Tynan (soprano) ; Jonathan Veira (bass-baritone)"
-        },
-        {
             "@id": "http://id.loc.gov/authorities/names/n80022788",
             "@type": "bf:Person",
             "rdfs:label": "Mozart, Wolfgang Amadeus, 1756-1791"
@@ -468,6 +455,26 @@ export var prm_1 = {
             "@id": "http://id.loc.gov/authorities/names/n88627414",
             "@type": "bf:Person",
             "rdfs:label": "Montague, Diana"
-        }
+        },
+        {
+            "@id": "http://id.loc.gov/authorities/names/n84017438",
+            "@type": "bf:Organization",
+            "rdfs:label": "University of Iowa. Libraries"
+        },
+        {
+            "@id": "_:ub514bL28C29",
+            "@type": "bf:UsageAndAccessPolicy",
+            "rdfs:label": "Access restricted to subscribers."
+        },
+        {
+            "@id": "http://vocab.getty.edu/aat/300028633",
+            "@type": "bf:GenreForm",
+            "rdfs:label": "Sound recordings"
+        },
+        {
+            "@id": "_:ub514bL170C15",
+            "@type": "bf:GenreForm",
+            "rdfs:label": "Streaming audio"
+        },
     ]
 };

@@ -23,6 +23,10 @@ export var prm_2 = {
         "bf:Work",
         "bf:Audio"
       ],
+      "bf:genreForm": {
+        "@id": "http://vocab.getty.edu/aat/300028633"
+      },
+      "bf:credits": "Rebecca Evans, Yvonne Kenny, Sarah Tynan, sopranos ; Diana Montague, Frances McCafferty, mezzo-soprano ; John Graham-Hall, Stuart Kale, tenors ; William Dazeley, Christopher Purves, baritone ; Jonathon Veira, bass-baritone ; Graeme Danby, bass ; Geoffrey Mitchell Choir ; Philharmonia Orchestra ; David Parry, conductor.",
       "bf:content": {
         "@id": "http://id.loc.gov/vocabulary/contentTypes/prm"
       },
@@ -300,11 +304,6 @@ export var prm_2 = {
       "rdfs:label": "Operas"
     },
     {
-      "@id": "_:ub109bL38C18",
-      "@type": "bf:GenreForm",
-      "rdfs:label": "Sound recording"
-    },
-    {
       "@id": "_:ub109bL151C14",
       "@type": [
         "bf:Title",
@@ -334,7 +333,7 @@ export var prm_2 = {
         "bf:InstanceTitle"
       ],
       "bf:mainTitle": "The marriage of Figaro",
-      "rdfs:label": "The marriage of Figaro [sound recording] / Wolfgang Amadeus Mozart."
+      "rdfs:label": "The marriage of Figaro / Wolfgang Amadeus Mozart."
     },
     {
       "@id": "_:ub109bL46C13",
@@ -460,9 +459,6 @@ export var prm_2 = {
       },
       "bf:dimensions": "4 3/4 in.",
       "bf:extent": "3 sound discs (2 hr., 44 min.) :",
-      "bf:genreForm": {
-        "@id": "_:ub109bL38C18"
-      },
       "bf:hasItem": {
         "@id": "http://bibframe.org/resources/cXH1460036074/990030662920202771helditem66"
       },
@@ -488,9 +484,6 @@ export var prm_2 = {
       },
       "bf:note": [
         {
-          "@id": "_:ub109bL52C13"
-        },
-        {
           "@id": "_:ub109bL43C13"
         },
         {
@@ -510,16 +503,10 @@ export var prm_2 = {
       }
     },
     {
-      "@id": "_:ub109bL52C13",
-      "@type": "bf:Note",
-      "bf:noteType": "Performers",
-      "rdfs:label": "Rebecca Evans, Yvonne Kenny, Sarah Tynan, sopranos ; Diana Montague, Frances McCafferty, mezzo-soprano ; John Graham-Hall, Stuart Kale, tenors ; William Dazeley, Christopher Purves, baritone ; Jonathon Veira, bass-baritone ; Graeme Danby, bass ; Geoffrey Mitchell Choir ; Philharmonia Orchestra ; David Parry, conductor."
-    },
-    {
       "@id": "http://bibframe.org/resources/cXH1460036074/990030662920202771helditem66",
       "@type": "bf:Item",
       "bf:heldBy": {
-        "@id": "_:ub109bL19C15"
+        "@id": "http://id.loc.gov/authorities/names/n84017438"
       },
       "bf:identifiedBy": {
         "@id": "_:ub109bL21C18"
@@ -557,6 +544,18 @@ export var prm_2 = {
       "@id": "_:ub109bL61C22",
       "@type": "bf:Place",
       "rdfs:label": "Colchester, Essex, England "
+    },
+    {
+      "@id": "http://id.loc.gov/authorities/names/n84017438",
+      "@type": "bf:Organization",
+      "rdfs:label": "University of Iowa. Libraries"
+    },
+    {
+      "@id": "http://vocab.getty.edu/aat/300028633",
+      "@type": "bf:GenreForm",
+      "rdfs:label": "Sound recordings"
     }
+
+
   ]
 };

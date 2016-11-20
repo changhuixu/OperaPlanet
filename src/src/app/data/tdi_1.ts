@@ -120,8 +120,9 @@ export var tdi_1 = {
             "rdfs:label": "Video recording"
         },
         {
-            "@id": "_:ub139bL21C12",
-            "rdfs:label": "University of Iowa"
+            "@id": "http://id.loc.gov/authorities/names/n84017438",
+            "@type": "bf:Organization",
+            "rdfs:label": "University of Iowa. Libraries"
         },
         {
             "@id": "http://id.loc.gov/authorities/names/no95013200",
@@ -159,9 +160,13 @@ export var tdi_1 = {
                 "bf:MovingImage",
                 "bf:Work"
             ],
+            "bf:genreForm": {
+                "@id": "http://vocab.getty.edu/aat/300028682"
+            },
             "bf:content": {
                 "@id": "http://id.loc.gov/vocabulary/contentTypes/tdi"
             },
+            "bf:credits": "Per-Arne Wahlgren (Count Almaviva) ; Sylvia Lindenstrand (Countess Almaviva) ; Georgine Resick (Susanna) ; Mikael Samuelsson (Figaro) ; Ann-Christine Biel (Cherubino) ; Karin Mang-Habashi (Marcellina) ; Erik Saeden (Dr. Bartolo) ; Torbörn Lilliequist (Don Basillo) ; Bo Leinmark (Don Curzio) ; Karl-Robert Lindgren (Antonio) ; Birgitta Larsson (Barbarina) ; The Chorus and Orchestra of the Drottningholm Theatre ; conducted by Arnold Ö–stman.",
             "bf:contributor": [
                 {
                     "@id": "http://id.loc.gov/authorities/names/no95013200"
@@ -334,7 +339,7 @@ export var tdi_1 = {
             "@id": "http://bibframe.org/resources/hEL1459781623/990028483700202771helditem60",
             "@type": "bf:Item",
             "bf:heldBy": {
-                "@id": "_:ub139bL21C12"
+                "@id": "http://id.loc.gov/authorities/names/n84017438"
             },
             "bf:identifiedBy": {
                 "@id": "_:ub139bL23C18"
@@ -362,12 +367,6 @@ export var tdi_1 = {
             "rdf:value": "014381930122"
         },
         {
-            "@id": "_:ub139bL43C182",
-            "@type": "bf:Note",
-            "bf:noteType": "Performers",
-            "rdfs:label": "Per-Arne Wahlgren (Count Almaviva) ; Sylvia Lindenstrand (Countess Almaviva) ; Georgine Resick (Susanna) ; Mikael Samuelsson (Figaro) ; Ann-Christine Biel (Cherubino) ; Karin Mang-Habashi (Marcellina) ; Erik Saeden (Dr. Bartolo) ; Torbörn Lilliequist (Don Basillo) ; Bo Leinmark (Don Curzio) ; Karl-Robert Lindgren (Antonio) ; Birgitta Larsson (Barbarina) ; The Chorus and Orchestra of the Drottningholm Theatre ; conducted by Arnold Ö–stman."
-        },
-        {
             "@id": "http://id.loc.gov/authorities/names/n91096954",
             "@type": "bf:Person",
             "rdfs:label": "Järvefelt, Göran, 1947-1989."
@@ -379,7 +378,7 @@ export var tdi_1 = {
                 "bf:Title"
             ],
             "bf:mainTitle": "The marriage of Figaro",
-            "rdfs:label": "The marriage of Figaro [videorecording] / libretto, Lorenzo da Ponte ; music, W.A. Mozart ; director, Goeran Jaervefelt ; produced and directed for television by Thomas Olofsson."
+            "rdfs:label": "The marriage of Figaro / libretto, Lorenzo da Ponte ; music, W.A. Mozart ; director, Goeran Jaervefelt ; produced and directed for television by Thomas Olofsson."
         },
         {
             "@id": "http://id.loc.gov/vocabulary/carriers/vd",
@@ -422,9 +421,6 @@ export var tdi_1 = {
             },
             "bf:dimensions": "4 3/4 in.",
             "bf:extent": "1 videodisc (3 hrs.) :",
-            "bf:genreForm": {
-                "@id": "_:ub139bL37C15"
-            },
             "bf:hasItem": {
                 "@id": "http://bibframe.org/resources/hEL1459781623/990028483700202771helditem60"
             },
@@ -458,9 +454,6 @@ export var tdi_1 = {
                 },
                 {
                     "@id": "_:ub139bL42C13"
-                },
-                {
-                    "@id": "_:ub139bL43C182"
                 }
             ],
             "bf:provisionActivity": {
@@ -493,6 +486,11 @@ export var tdi_1 = {
             "bf:place": {
                 "@id": "_:ub139bL49C22"
             }
+        },
+        {
+            "@id": "http://vocab.getty.edu/aat/300028682",
+            "@type": "bf:GenreForm",
+            "rdfs:label": "Video recordings"
         }
     ]
 };

@@ -302,7 +302,7 @@ export var ntm_1 = {
         "@id": "_:ub115bL27C30"
       },
       "bf:heldBy": {
-        "@id": "_:ub115bL20C15"
+        "@id": "http://id.loc.gov/authorities/names/n84017438"
       },
       "bf:identifiedBy": {
         "@id": "_:ub115bL22C18"
@@ -385,6 +385,11 @@ export var ntm_1 = {
     {
       "@id": "_:ub115bL26C25",
       "rdfs:label": "Music Score Collection"
+    },
+    {
+      "@id": "http://id.loc.gov/authorities/names/n84017438",
+      "@type": "bf:Organization",
+      "rdfs:label": "University of Iowa. Libraries"
     }
   ]
 };
