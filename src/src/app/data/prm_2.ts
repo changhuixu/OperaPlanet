@@ -4,6 +4,7 @@ export var prm_2 = {
   "group": "prm",
   "embed": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/210387165&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true",
   "work_id": "http://bibframe.org/resources/cXH1460036074/990030662920202771",
+  "collection_id": "http://bibframe.org/resources/cXH1460036074",
   "data":  [
     {
       "@id": "_:ub109bL43C13",

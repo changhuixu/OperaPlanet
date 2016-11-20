@@ -3,7 +3,7 @@ export var tdi_1 = {
     "label": "Movie",
     "group": "tdi",
     "work_id": "http://bibframe.org/resources/hEL1459781623/990028483700202771",
-
+    "collection_id": "http://bibframe.org/resources/hEL1459781623",
     "data": [
         {
             "@id": "http://id.loc.gov/authorities/names/n95077285",

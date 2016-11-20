@@ -4,6 +4,7 @@ export var ntm_2 = {
     "group": "ntm",
     "embed": "https://www.youtube.com/embed/FUXl8AAJBlE",
     "work_id": "http://bibframe.org/resources/jrE1459898640/990070525060202771",
+    "collection_id": "http://bibframe.org/resources/jrE1459898640",
     "data": [
       {
         "@id": "_:ub147bL30C12",

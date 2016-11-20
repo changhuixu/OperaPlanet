@@ -3,6 +3,7 @@ export var txt_1 = {
   "label": "Libretto",
   "group": "txt",
   "work_id": "http://bibframe.org/resources/amt1460042406/990024552960202771",
+  "collection_id": "http://bibframe.org/resources/amt1460042406",
   "data": [
     {
       "@id": "_:ub103bL18C15",
