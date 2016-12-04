@@ -15,6 +15,7 @@ export class GeneralPageComponent {
   @Output('closed') component_closed:EventEmitter<any> =  new EventEmitter<any>();
 
   private work:any = null;
+  private collection_id:string=null;
 
   private apiData:any = null;
   private uiowaLink;
@@ -26,7 +27,7 @@ export class GeneralPageComponent {
 
   ngOnInit() {
 
-
+    this.collection_id = this.data.collection_id;
     this.work = this.ps.getWork(this.data.work_id, this.data.data);
 
     let d = this.work['wdsr:describedby'];

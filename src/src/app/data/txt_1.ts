@@ -3,6 +3,7 @@ export var txt_1 = {
   "label": "Libretto",
   "group": "txt",
   "work_id": "http://bibframe.org/resources/amt1460042406/990024552960202771",
+  "collection_id": "http://bibframe.org/resources/amt1460042406",
   "data": [
     {
       "@id": "_:ub103bL18C15",
@@ -189,7 +190,7 @@ export var txt_1 = {
         "@id": "_:ub103bL20C13"
       },
       "bf:heldBy": {
-        "@id": "_:ub103bL18C15"
+        "@id": "http://id.loc.gov/authorities/names/n84017438"
       },
       "bf:itemOf": {
         "@id": "http://bibframe.org/resources/amt1460042406/990024552960202771instance18"
@@ -344,7 +345,13 @@ export var txt_1 = {
     {
       "@id": "_:ub103bL28C18",
       "rdfs:label": "available"
+    },
+    {
+      "@id": "http://id.loc.gov/authorities/names/n84017438",
+      "@type": "bf:Organization",
+      "rdfs:label": "University of Iowa. Libraries"
     }
+
   ]
 
 };
