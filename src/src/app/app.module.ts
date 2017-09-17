@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
+
 import { AppComponent } from './app.component';
 import {GraphComponent} from "./components/graph/graph.component";
 import {WindowComponent} from "./components/window/window.component";
@@ -15,6 +15,7 @@ import {GeneralPageComponent} from "./components/pages/GEN.component";
 import {MusicBrainzFragment} from "./components/fragments/MusicBrainzFragment";
 import {LookupPipe} from "./pipes/lookup.pipe";
 import {SafePipe} from "./pipes/safe.pipe";
+import {AlertModule} from "ngx-bootstrap";
 
 
 @NgModule({

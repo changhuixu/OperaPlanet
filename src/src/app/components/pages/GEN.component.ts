@@ -1,5 +1,4 @@
-import {Component, EventEmitter} from '@angular/core';
-import {Input, Output} from "@angular/core/src/metadata/directives";
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {DataService} from "../../services/DataService";
 import {ParseService} from "../../services/ParseService";
 

@@ -1,6 +1,5 @@
+import {PipeTransform, Pipe} from "@angular/core";
 import {DomSanitizer} from "@angular/platform-browser";
-import {PipeTransform} from "@angular/core";
-import {Pipe} from "@angular/core/src/metadata/directives";
 
 @Pipe({ name: 'safe' })
 export class SafePipe implements PipeTransform {

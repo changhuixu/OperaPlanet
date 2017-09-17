@@ -1,8 +1,7 @@
-import {Component, ViewChild, EventEmitter} from '@angular/core';
-import {Input, Output} from "@angular/core/src/metadata/directives";
+import {Component, ViewChild, EventEmitter, Input, Output} from '@angular/core';
 import {ParseService} from "../../services/ParseService";
 import {relator_lookup} from "../../loc_lookup/relators";
-let vis =  require('vis');
+import * as vis from 'vis';
 
 @Component({
   selector: 'graph-component',
